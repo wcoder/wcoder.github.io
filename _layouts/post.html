@@ -10,6 +10,14 @@ layout: default
 
   <div class="post-content" itemprop="articleBody">
     {{ content }}
+	
+	{% if page.tags[0] != nil %}
+	<p>Теги:
+		{% for tag in page.tags %}
+			<mark>{{tag}}</mark>&nbsp;
+		{% endfor %}
+	</p>
+	{% endif %}
   </div>
 
 </article>
