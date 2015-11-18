@@ -17,6 +17,12 @@ exclude:
   - CONTRIBUTING.md
   - Gemfile*
 #excerpt_separator: "<!--more-->"
+defaults:
+  -
+    scope:
+      path: "pages"
+    values:
+      layout: "page"
 
 # edit here to achieve your personal greatness
 url: "http://wcoder.github.io" # the base hostname & protocol for your site
