@@ -8,6 +8,7 @@ gems:
   - jekyll-redirect-from
   - jekyll-sitemap
   - jekyll-feed
+  - jemoji
 feed:
   path: atom.xml
 exclude:
