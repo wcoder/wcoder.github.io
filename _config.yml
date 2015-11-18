@@ -1,11 +1,20 @@
 # top level stuff you probably don't need to touch
-highlighter: pygments
-markdown: rdiscount
-rdiscount:
-  extensions: [smart]
 safe: true
+markdown: kramdown
+kramdown:
+  input: GFM
+  hard_wrap: false
 gems:
+  - jekyll-redirect-from
   - jekyll-sitemap
+  - jekyll-feed
+feed:
+  path: atom.xml
+exclude:
+  - CNAME
+  - README.md
+  - CONTRIBUTING.md
+  - Gemfile*
 #excerpt_separator: "<!--more-->"
 
 # edit here to achieve your personal greatness
