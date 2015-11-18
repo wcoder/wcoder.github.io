@@ -27,9 +27,10 @@ defaults:
 # edit here to achieve your personal greatness
 url: "http://wcoder.github.io" # the base hostname & protocol for your site
 baseurl: "" # the subpath of your site, e.g. /blog
-title: Personal blog
-author: Yauheni Pakala
-email: evgeniy.pakalo@gmail.com
-description: "Personal blog and resume"
-twitter_username: evgeniypakalo
-github_username:  wcoder
+title: "ТехноБлог: Евгений Пакало"
+shortTitle: "ТехноБлог"
+description: "Еще один техноблог, пишу о том что интересно."
+author: "Евгений Пакало"
+email: "evgeniy.pakalo@gmail.com"
+twitter_username: "evgeniypakalo"
+github_username:  "wcoder"
