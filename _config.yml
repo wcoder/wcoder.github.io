@@ -17,7 +17,7 @@ exclude:
   - CONTRIBUTING.md
   - Gemfile*
 #excerpt_separator: "<!--more-->"
-permalink: "/:title.html"
+permalink: "/posts/:title"
 defaults:
   -
     scope:
