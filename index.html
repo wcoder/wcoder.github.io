@@ -3,12 +3,13 @@ layout: default
 ---
 <div class="home">
 
+	<h2>Последние записи:</h2>
+
 	<ul class="post-list">
 		{% assign sortedPosts = site.posts | sort: 'date' %}
 		{% for post in sortedPosts %}
 		<li>
 			<span class="post-meta">{{ post.date | date: "%-d.%m.%Y в %H:%M" }}</span>
-		
 			<h2><a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h2>
 			{{-- post.excerpt --}}
 		</li>
