@@ -1,5 +1,5 @@
 ---
-title: About
+title: Об авторе
 permalink: /about/
 ---
 
