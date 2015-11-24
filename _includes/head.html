@@ -1,5 +1,10 @@
 <head>
 	<meta charset="utf-8">
+	{% if jekyll.environment == "production" %}
+	<script type="text/javascript">
+	"{{ site.enforce_ssl }}"==window.location.host&&"https:"!=window.location.protocol&&(window.location.protocol="https");
+	</script>
+	{% endif %}
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	
@@ -18,8 +23,13 @@
 	<meta name="twitter:site" content="@{{ site.twitter_username }}" />
 	<meta name="twitter:creator" content="@{{ site.twitter_username }}" />
 	
-	<link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}">
+	{% if jekyll.environment == "production" %}
+	<link rel="stylesheet" href="//{{ site.enforce_ssl }}/css/main.css">
+	<link rel="stylesheet" href="//{{ site.enforce_ssl }}/css/github.min.css">
+	{% else %}
+	<link rel="stylesheet" href="/css/main.css">
 	<link rel="stylesheet" href="/css/github.min.css">
+	{% endif %}
 	
 	<link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
 	<link rel="alternate" type="application/atom+xml" title="{{ site.title }}" href="{{ "/atom.xml" | prepend: site.baseurl | prepend: site.url }}" />

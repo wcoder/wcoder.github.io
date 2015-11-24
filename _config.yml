@@ -26,12 +26,12 @@ defaults:
       layout: "page"
 
 # edit here to achieve your personal greatness
-url: "http://wcoder.github.io" # the base hostname & protocol for your site
+url: "https://wcoder.github.io" # the base hostname & protocol for your site
+enforce_ssl: "wcoder.github.io"
 baseurl: "" # the subpath of your site, e.g. /blog
 title: "ТехноБлог Пакало Евгения"
 shortTitle: "ТехноБлог"
 description: "Еще один техноблог, пишу о том что интересно."
 author: "Евгений Пакало"
-email: "evgeniy.pakalo@gmail.com"
 twitter_username: "evgeniypakalo"
 github_username:  "wcoder"
