@@ -11,9 +11,10 @@ github_username:  "wcoder"
 # Site Settings
 url: "https://wcoder.github.io" # the base hostname & protocol for your site
 enforce_ssl: "wcoder.github.io"
-baseurl: "" # the subpath of your site, e.g. /blog
+baseurl: "/" # the subpath of your site, e.g. /blog
 permalink: "/notes/:title"
 timezone: "Europe/Minsk"
+paginate: 10
 
 # Site Build
 safe: true
@@ -28,12 +29,6 @@ gems:
   - jemoji
 feed:
   path: atom.xml
-sass:
-    style: :compressed
-compress_html:
-    clippings: all
-    ingore:
-        envs: [ "test" ]
 exclude:
   - CNAME
   - README.md
