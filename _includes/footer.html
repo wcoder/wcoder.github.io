@@ -1,7 +1,9 @@
 {% if jekyll.environment == "production" %}
 <script src="//{{ site.enforce_ssl }}/js/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+<script src="//wcoder.disqus.com/embed.js"></script>
 {% include ya-metrika.html %}
 {% else%}
 <script src="/js/highlight.pack.js"></script>
-{% endif %}
 <script>hljs.initHighlightingOnLoad();</script>
+{% endif %}
