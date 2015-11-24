@@ -1,4 +1,21 @@
-# top level stuff you probably don't need to touch
+# Site Info
+title: "ТехноБлог Пакало Евгения"
+shortTitle: "ТехноБлог"
+description: "Еще один техноблог, пишу о том что интересно."
+
+# Author Info
+author: "Евгений Пакало"
+twitter_username: "evgeniypakalo"
+github_username:  "wcoder"
+
+# Site Settings
+url: "https://wcoder.github.io" # the base hostname & protocol for your site
+enforce_ssl: "wcoder.github.io"
+baseurl: "" # the subpath of your site, e.g. /blog
+permalink: "/notes/:title"
+timezone: "Europe/Minsk"
+
+# Site Build
 safe: true
 markdown: kramdown
 kramdown:
@@ -11,27 +28,24 @@ gems:
   - jemoji
 feed:
   path: atom.xml
+sass:
+    style: :compressed
+compress_html:
+    clippings: all
+    ingore:
+        envs: [ "test" ]
 exclude:
   - CNAME
   - README.md
   - CONTRIBUTING.md
   - Gemfile*
+  - run_local.bat
 #excerpt_separator: "<!--more-->"
-permalink: "/notes/:title"
+
+# Other Params
 defaults:
   -
     scope:
       path: "pages"
     values:
       layout: "page"
-
-# edit here to achieve your personal greatness
-url: "https://wcoder.github.io" # the base hostname & protocol for your site
-enforce_ssl: "wcoder.github.io"
-baseurl: "" # the subpath of your site, e.g. /blog
-title: "ТехноБлог Пакало Евгения"
-shortTitle: "ТехноБлог"
-description: "Еще один техноблог, пишу о том что интересно."
-author: "Евгений Пакало"
-twitter_username: "evgeniypakalo"
-github_username:  "wcoder"
