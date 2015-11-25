@@ -14,7 +14,6 @@ tags: перевод, ddd, dry
 final class Basket
 {
 	private $products;
-
 	public function addProduct($product)
 	{
 		if (3 == count($this->products)) {
@@ -47,7 +46,6 @@ final class Shipment
 abstract class ProductContainer
 {
 	protected $products;
-
 	public function addProduct($product)
 	{
 		if (3 == count($this->products)) {
@@ -77,15 +75,13 @@ final class Shipment extends ProductContainer {}
 abstract class ProductContainer
 {
 	protected $products;
-
 	public function addProduct($product)
 	{
 		if ($this->getProductLimit() == count($this->products)) {
 			throw new Exception(sprintf("Максимально разрешено %d продукта", $this->getProductLimit()));
 		}
 		$this->products[] = $product;
-	} 
-
+	}
 	abstract protected function getProductLimit();
 }
 ```
