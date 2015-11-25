@@ -101,10 +101,11 @@ abstract class ProductContainer
 
 ## Далее
 Последующие посты:
-* [Why DRY?](http://blog.ploeh.dk/2014/08/07/why-dry/) by Mark Seemann ([@ploeh](https://twitter.com/ploeh))
-* [Aim for DRY, but be willing to fall short](http://www.devjoy.com/2014/09/aim-for-dry-but-be-willing-to-fall-short/) by Richard Dalton ([@richardadalton](https://twitter.com/richardadalton))
+- [Why DRY?](http://blog.ploeh.dk/2014/08/07/why-dry/) by Mark Seemann ([@ploeh](https://twitter.com/ploeh))
+- [Aim for DRY, but be willing to fall short](http://www.devjoy.com/2014/09/aim-for-dry-but-be-willing-to-fall-short/) by Richard Dalton ([@richardadalton](https://twitter.com/richardadalton))
+
 Некоторые посты о DDD:
-* [Domain-Driven Design is linguistic](http://verraes.net/2014/01/domain-driven-design-is-linguistic/)
-* [Why Domain-Driven Design Matters](http://verraes.net/2014/05/why-domain-driven-design-matters/)
+- [Domain-Driven Design is linguistic](http://verraes.net/2014/01/domain-driven-design-is-linguistic/)
+- [Why Domain-Driven Design Matters](http://verraes.net/2014/05/why-domain-driven-design-matters/)
 
 Оригинал: [DRY is about Knowledge](http://verraes.net/2014/08/dry-is-about-knowledge/)
