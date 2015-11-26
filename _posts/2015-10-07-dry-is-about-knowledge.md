@@ -1,7 +1,7 @@
 ---
 layout: post
 title: DRY о знании
-date: 2015-10-07 19:41
+date: 2015-11-07 19:41
 tags: перевод, ddd, dry
 ---
 
