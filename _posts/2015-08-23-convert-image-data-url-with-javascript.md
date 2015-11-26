@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Конвертирование изображения в DataURL с помощью JavaScript
-data: 2015-08-23 20:38
+data: 2015-08-23 20:38:00
 tags: сниппет, javascript
 ---
 
