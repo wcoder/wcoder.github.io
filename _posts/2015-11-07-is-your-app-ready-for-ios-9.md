@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Ваше приложение готово к iOS9?
-date: 2015-10-07 18:25
+date: 2015-11-07 18:25
 tags: перевод, xamarin, xamarin.forms, ios, ios9
 ---
 
