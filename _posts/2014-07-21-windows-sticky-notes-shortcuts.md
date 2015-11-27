@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Сочетания клавиш в Sticky Notes
-date: 2015-07-21 00:38
+date: 2014-07-21 00:38
 tags:
 - windows
 - программы
