@@ -2,7 +2,12 @@
 layout: post
 title: Изменение расположения стандартных папок пользователя
 date: 2015-02-27 03:48
-tags: памятка, linux, linux mint, elementary os, ubuntu
+tags:
+- памятка
+- linux
+- linux mint
+- elementary os
+- ubuntu
 ---
 
 Редактируем файл:
