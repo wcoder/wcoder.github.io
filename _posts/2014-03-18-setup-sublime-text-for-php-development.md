@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Настройка Sublime Text для PHP разработки
-date: 2015-03-18 01:01
+date: 2014-03-18 01:01
 tags:
 - sublime text
 - php
@@ -31,11 +31,11 @@ tags:
 
 ### Источники
 
-* http://www.softwareprojects.com/resources/the-basics/t-sublime-text-editor-for-php-a-love-story-2060.html
-* http://www.paulund.co.uk/web-development-with-sublime-text-2
+* [Sublime Text Editor for PHP](http://www.softwareprojects.com/resources/the-basics/t-sublime-text-editor-for-php-a-love-story-2060.html)
+* [Web Development With Sublime Text](http://www.paulund.co.uk/web-development-with-sublime-text-2)
 
 ### Полезности
 
-* http://net.tutsplus.com/tutorials/tools-and-tips/sublime-text-2-tips-and-tricks/
-* https://tutsplus.com/course/improve-workflow-in-sublime-text-2/
-* http://blog.stuartherbert.com/php/2012/02/28/setting-up-sublime-text-2-for-php-development/
+* [Sublime Text 2 Tips and Tricks](http://net.tutsplus.com/tutorials/tools-and-tips/sublime-text-2-tips-and-tricks/)
+* [Perfect Workflow in Sublime Text 2](https://tutsplus.com/course/improve-workflow-in-sublime-text-2/)
+* [Setting Up Sublime Text 2 For PHP Development](http://blog.stuartherbert.com/php/2012/02/28/setting-up-sublime-text-2-for-php-development/)
