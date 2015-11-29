@@ -60,13 +60,13 @@ tags:
 
 Найдите следующую строку кода:
 
-``` charp
+``` csharp
 rootFrame.NavigationFailed += OnNavigationFailed;
 ```
 
 и добавьте вызов Xamarin.Forms метода `Init`:
 
-``` charp
+``` csharp
 Xamarin.Forms.Forms.Init (e);
 ```
 
@@ -86,7 +86,7 @@ Xamarin.Forms.Forms.Init (e);
 
 Обновите code-behind файл, чтобы инициализировать ваш Xamarin.Forms приложение:
 
-``` charp
+``` csharp
 public sealed partial class MainPage
 {
 	public MainPage()
