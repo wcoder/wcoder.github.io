@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Монтирование SD карты в Ubuntu 13.04
-date: 2015-03-18 01:33
+date: 2014-03-18 01:33
 tags:
 - ubuntu
 - usb
