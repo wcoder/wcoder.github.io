@@ -8,6 +8,7 @@ tags:
 ---
 
 Чтобы клонировать содержимое массива, все, что вам нужно сделать, это вызвать метод `slice`, передав 0 в качестве первого аргумента:
+
 ```js
 var clone = myArray.slice(0);
 ```
@@ -15,6 +16,7 @@ var clone = myArray.slice(0);
 Код выше создает клон исходного массива; имейте в виду, если в вашем массиве существуют объекты - они хранятся как ссылки; т.е. код выше не делает "deep" клон содержимого массива.
 
 Чтобы добавить клон, как нативный метод к массивам, вы могли бы сделать что-то вроде этого:
+
 ```js
 Array.prototype.clone = function () {
 	return this.slice(0);
@@ -43,7 +45,7 @@ function arrayClone (arr) {
 
 Если вы используете [Underscore](http://underscorejs.org/#every) -- можете сделать это еще короче:
 
-``` js
+```js
 function arrayClone (arr) {  
 	if(_.isArray(arr)) {
 		return _.map(arr, arrayClone);
