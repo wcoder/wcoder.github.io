@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Visual Studio - Добавляем Chrome в режиме инкогнито
-date: 2015-07-13 26:33
+date: 2015-07-13 16:33
 tags:
 - программы
 - настройка
