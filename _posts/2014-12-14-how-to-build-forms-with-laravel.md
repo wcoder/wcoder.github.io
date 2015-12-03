@@ -23,10 +23,10 @@ tags:
 	<meta charset="UTF-8">
 	<title>Laravel</title>
 </head>
-<body>
+<body>{% raw %}
 	{{ Form::open(array('url'=>'form-submit')) }}
 	
-	{{ Form::close() }}
+	{{ Form::close() }}{% endraw %}
 </body>
 </html>
 ```
@@ -51,7 +51,7 @@ tags:
 
 Возможно, вам не нравятся значения формы по умолчанию, поэтому давайте посмотрим как их можно изменить:
 
-```
+```{% raw %}
 {{ Form::open(array(
 	'url'=>'form-submit',
 	<!--POST or GET or DELETE-->
@@ -60,69 +60,69 @@ tags:
 	<!--IF form contain file upload input-->
 	'files'=>true
 )) }}
-```
+{% endraw %}```
 
 А теперь расмотрим подробнее поля формы.
 
 ### Текстовое поле
 
-```
+```{% raw %}
 {{ Form::label('username','Username',array('id'=>'','class'=>'')) }}
 {{ Form::text('username','clivern',array('id'=>'','class'=>'')) }}
-```
+{% endraw %}```
 
 ### Поле ввода текста
 
-```
+```{% raw %}
 {{ Form::label('biog','Biog.',array('id'=>'','class'=>'')) }}
 {{ Form::textarea('biog','biog here',array('id'=>'','class'=>'')) }}
-```
+{% endraw %}```
 
 ### Поле ввода пароля
 
-```
+```{% raw %}
 {{ Form::label('password','Password',array('id'=>'','class'=>'')) }}
 {{ Form::password('password','',array('id'=>'','class'=>'')) }}
-```
+{% endraw %}```
 
 ### Поле ввода email'а
 
-```
+```{% raw %}
 {{ Form::label('email','Email',array('id'=>'','class'=>'')) }}
 {{ Form::email('email','hello@clivern.com',array('id'=>'','class'=>'')) }}
-```
+{% endraw %}```
 
 ### Список
 
-```
+```{% raw %}
 {{ Form::label('status','Status',array('id'=>'','class'=>'')) }}
 {{ Form::select('status',array('enabled'=>'Enabled','disabled'=>'Disabled'),'enabled') }}
-```
+{% endraw %}```
 
 ### Переключатель
 
-```
+```{% raw %}
 {{ Form::label('status','Status',array('id'=>'','class'=>'')) }}
 {{ Form::radio('status','enabled',true) }} Enabled
 {{ Form::radio('status','disabled') }} Disabled
-```
+{% endraw %}```
 
 ### Чекбокс
 
-```
+```{% raw %}
 {{ Form::label('status','Status',array('id'=>'','class'=>'')) }}
 {{ Form::checkbox('status','1',true) }} Enabled
-```
+{% endraw %}```
 
 ### Скрытое поле
 
-```
+```{% raw %}
 {{ Form::hidden('record_to_update','1') }}
-```
+{% endraw %}```
 
 ### Кнопки
 
-```
+```{% raw %}
 <!-- submit buttons -->
 {{ Form::submit('Save') }}
 
@@ -131,6 +131,6 @@ tags:
 
 <!-- normal buttons -->
 {{ Form::button('Normal') }}
-```
+{% endraw %}```
 
 Оригинал: [How To Build Forms With Laravel](http://wz2.ru/lfp8)
