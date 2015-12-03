@@ -174,4 +174,4 @@ tags:
 
 ### Результат:
 
-<iframe width="100%" height="300" src="//jsfiddle.net/evgeniypakalo/u1wqLtpj/embedded/result" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+[Смотреть результат](http://jsfiddle.net/evgeniypakalo/u1wqLtpj/embedded/result/)
