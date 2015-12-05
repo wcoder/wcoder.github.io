@@ -9,10 +9,10 @@ tags:
 ---
 
 ```html
-<div ng-controller="BMWController">
+{% raw %}<div ng-controller="BMWController">
     My name is {{ name }} and I am a {{ type }}
     <button ng-click="clickme()">Click Me</button> 
-</div>
+</div>{% endraw %}
 ```
 
 ```js
