@@ -3,7 +3,14 @@ layout: post
 title: Используем Xamarin.Forms DependencyService на примере SQLite
 date: 2014-07-18 14:29
 tags:
-
+- памятка
+- xamarin
+- C#
+- windows phone
+- android
+- ios
+- sqlite
+- сниппет
 ---
 
 > Xamarin.Forms включает DependencyService, чтобы позволить общему коду использовать интерфейсы на конкретных платформах, для предоставления доступа к функциям iOS, Android и Windows Phone SDK, из вашего PCL или Shared проекта.
