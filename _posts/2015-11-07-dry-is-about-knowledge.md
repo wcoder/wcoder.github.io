@@ -2,7 +2,10 @@
 layout: post
 title: DRY о знании
 date: 2015-11-07 19:41
-tags: перевод, ddd, dry
+tags:
+- перевод
+- ddd
+- dry
 ---
 
 Дублирование кода не проблема.

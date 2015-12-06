@@ -2,7 +2,11 @@
 layout: post
 title: Ваше приложение готово к iOS9?
 date: 2015-11-07 18:25
-tags: перевод, xamarin, xamarin.forms, ios, ios9
+tags:
+- перевод
+- xamarin
+- xamarin.forms
+- ios
 ---
 
 iOS 9 вышла около месяца назад, и испытывает самый быстрый темп внедрения чем когда-либо для iOS.

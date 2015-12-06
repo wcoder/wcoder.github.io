@@ -2,7 +2,10 @@
 layout: post
 title: Приступая к работе с Node.js и bcrypt
 date: 2015-11-26 18:28
-tags: nodejs, bcrypt, security
+tags:
+- nodejs
+- bcrypt
+- security
 ---
 
 Для тех из вас, кто ищет безопасный способ хранения паролей пользователей в вашем Node.js приложении, смотрите далее!
