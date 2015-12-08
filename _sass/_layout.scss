@@ -54,20 +54,11 @@
         .menu-icon {
             display: block;
             float: right;
-            width: 36px;
-            height: 26px;
+            width: 48px;
+            height: 29px;
             line-height: 0;
-            padding-top: 10px;
             text-align: center;
-
-            > svg {
-                width: 18px;
-                height: 15px;
-
-                path {
-                    fill: $grey-color-dark;
-                }
-            }
+			text-align: left;
         }
 
         .trigger {
