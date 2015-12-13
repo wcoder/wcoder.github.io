@@ -5,6 +5,7 @@ date: 2015-12-13 19:10
 tags:
 - xamarin
 - ios
+- перевод
 ---
 
 ## Требование
@@ -152,7 +153,7 @@ public sealed class MultiStepProcessHorizontal : UIPageViewController
 		DataSource = dataSource;
 		SetViewControllers(new[] {dataSource.Steps.FirstOrDefault() as UIViewController}, 
 		                  UIPageViewControllerNavigationDirection.Forward, 
-		                   false, 
+		                  false, 
 		                  null);
 	}
 } 
