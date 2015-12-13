@@ -19,7 +19,7 @@ tags:
 
 ## Результат
 
-<video controls preload="false">
+<video controls preload="false" width="500">
    <source src="http://blog.lombaard.co.uk/video/onboarding.mp4" type="video/mp4">
 </video>
 
