@@ -4,6 +4,8 @@ title: Архив
 permalink: /archive/
 ---
 
+[По тегам]({{% site.url %}}/tags/)
+
 ## Заметки
 
 {% for post in site.posts %}
