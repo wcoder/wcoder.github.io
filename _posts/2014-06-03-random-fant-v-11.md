@@ -7,7 +7,7 @@ tags:
 - проекты
 ---
 
-Сегодня обновил [приложение](http://evgeniy.pakalo.name/post/30). 
+Сегодня обновил [приложение](https://wcoder.github.io/notes/random-fant-v-10/). 
 
 ![случайный фант](http://cdn.marketplaceimages.windowsphone.com/v8/images/2ef0042f-9bb6-41eb-aa65-a5b22deaf502?imageType=ws_screenshot_large&rotation=0)
 
@@ -15,4 +15,4 @@ tags:
 * Незначительно обновлен дизайн
 * Добавлено 15 новых фантов
 
-Установить приложение можно [здесь](http://www.windowsphone.com/s?appid=15edf54f-9df4-4976-97b9-98a6b052361b).
+[![Получить](https://assets.windowsphone.com/be748b72-65fa-4290-9b32-831bdf9ee190/Russian-get-it_InvariantCulture_Default.png)](https://www.microsoft.com/store/apps/9wzdncrdjp2b?ocid=badge)
