@@ -12,4 +12,4 @@ tags:
 
 > Небольшое приятное приложение, позволяющее вести простую статистику: например, фиксировать количество пролетевших самолетов, съеденных конфет, выпитых чашек кофе, красивых людей и т. п.
 
-Установить приложение можно [здесь](http://www.windowsphone.com/en-us/store/app/my-counters/12aa9b0e-1423-41e8-8855-931ee60477c0).
+[![Получить](https://assets.windowsphone.com/be748b72-65fa-4290-9b32-831bdf9ee190/Russian-get-it_InvariantCulture_Default.png)](https://www.microsoft.com/store/apps/9wzdncrdjp21?ocid=badge)
