@@ -8,7 +8,7 @@ tags:
 - сниппет
 ---
 
-Класс [StorageFile](https://msdn.microsoft.com/en-us/library/windows/apps/windows.storage.storagefile.aspx) предоставляет различные методы, с помощью которых мы можем получить размер файла. И этот метод `GetBasicPropertiesAsync` пример:
+Класс [StorageFile](https://msdn.microsoft.com/en-us/library/windows/apps/windows.storage.storagefile.aspx) предоставляет различные методы для работы с файлами. Так с помощью метода `GetBasicPropertiesAsync` мы можем получить размер файла:
 
 ```csharp
 public async Task<ulong> GetFileSize(StorageFile file)
