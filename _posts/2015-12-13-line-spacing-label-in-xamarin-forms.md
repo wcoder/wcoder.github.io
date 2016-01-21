@@ -2,6 +2,7 @@
 layout: post
 title: Межстрочный интервал для Label в Xamarin.Forms
 date: 2015-12-13 14:30
+original_url: http://thetechstudio.ghost.io/line-spacing-label-in-xamarin-forms/
 tags:
 - C#
 - xamarin
@@ -82,4 +83,3 @@ protected override void OnElementChanged(ElementChangedEventArgs<Label> e)
 - [Line spacing - Butterick's Practical Typography](http://practicaltypography.com/line-spacing.html)
 - [Line Spacing For Text - Fonts.com](http://www.fonts.com/content/learning/fontology/level-2/text-typography/line-spacing-for-text)
 
-[Оригинал](http://thetechstudio.ghost.io/line-spacing-label-in-xamarin-forms/)
