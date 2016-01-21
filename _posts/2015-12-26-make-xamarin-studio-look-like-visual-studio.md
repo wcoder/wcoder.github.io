@@ -2,6 +2,7 @@
 layout: post
 title: Делаем Xamarin Studio похожей на Visual Studio
 date: 2015-12-26 18:30
+original_url: http://stefandevo.com/2015/12/18/make-xamarin-studio-look-like-visual-studio/
 tags:
 - xamarin studio
 - visual studio
@@ -43,5 +44,3 @@ tags:
 Конечно, есть и более интересные настройки для изменения правил именования, но все они более персональные.
 
 Счастливой разработки с Xamarin Studio!
-
-[Оригинал](http://stefandevo.com/2015/12/18/make-xamarin-studio-look-like-visual-studio/)  
