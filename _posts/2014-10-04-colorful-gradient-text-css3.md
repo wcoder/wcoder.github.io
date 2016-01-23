@@ -2,6 +2,7 @@
 layout: post
 title: Красочный градиент текста с помощью CSS
 date: 2014-10-04 01:42
+original_url: http://creative-punch.net/2014/02/colorful-gradient-text-css3/
 tags:
 - css
 - перевод
@@ -31,6 +32,4 @@ h1 {
 
 ### Демо
 
-[Смотреть результат](http://jsfiddle.net/evgeniypakalo/0kmwdb9n/embedded/result/)
-
-[Оригинал](http://wz2.ru/lfol)
+<iframe width="100%" height="300" src="//jsfiddle.net/evgeniypakalo/0kmwdb9n/embedded/result/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
