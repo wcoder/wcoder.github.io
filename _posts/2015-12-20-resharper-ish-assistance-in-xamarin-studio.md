@@ -2,6 +2,7 @@
 layout: post
 title: Включаем опцию анализа кода в Xamarin Studio
 date: 2015-12-20 15:45
+original_url: http://ghost-azureb4c8.azurewebsites.net/resharper-ish-assistance-in-xamarin-studio/
 tags:
 - перевод
 - xamarin studio
@@ -26,6 +27,4 @@ tags:
 
 ![Исправление мышью](https://raw.githubusercontent.com/wcoder/blog/master/2015-12-20-xamarin-studio/4%20-%20FixStaticAnalysisOptions.png)
 
-Другие полезные ссылки для большей производительности с Xamarin Studio можно увидеть на [странице оригинала статьи](http://ghost-azureb4c8.azurewebsites.net/resharper-ish-assistance-in-xamarin-studio/).
-
-
+Другие полезные ссылки для большей производительности с Xamarin Studio можно увидеть на странице оригинала статьи.
