@@ -1,7 +1,7 @@
 Tech blog
 ======================
 
-The site uses [Jekyll](http://jekyllrb.com), a static site generator. GitHub Pages, where the site is hosted, natively supports Jekyll so every time someone pushes to this repository, the website will be built and updated. For hosting it yourself, see [Setting up a local copy of the website(#setting-up-a-local-copy-of-the-website).
+The site uses [Jekyll](http://jekyllrb.com), a static site generator. GitHub Pages, where the site is hosted, natively supports Jekyll so every time someone pushes to this repository, the website will be built and updated. For hosting it yourself, see [Setting up a local copy of the website](#setting-up-a-local-copy-of-the-website).
 
 Setting up a local copy of the website
 --------------------------------------
@@ -35,3 +35,7 @@ Writing a blog post
 Blogging is very easy with Jekyll. Simply add a new Markdown file to the `_posts` folder following the file name convention: `YEAR-MONTH-DAY-title.md`
 
 Make sure to not include special characters in the file name. The blog entry's publishing date is automatically extracted from the file name.
+
+#### Additional features
+
+- `original_url` - link to original content.
