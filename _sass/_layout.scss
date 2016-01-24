@@ -8,6 +8,10 @@
 
     // Positioning context for the mobile navigation icon
     position: relative;
+
+	a {
+		border-bottom: none;
+	}
 }
 
 .site-title {
@@ -175,10 +179,8 @@
 }
 
 .post-link {
-    display: block;
     font-size: 24px;
 }
-
 
 
 /**
