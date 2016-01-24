@@ -227,3 +227,34 @@
         }
     }
 }
+
+.tag-box {
+	list-style: none;
+	margin: 0;
+	overflow: hidden;
+	padding: 0;
+
+	li {
+		float: left;
+	}
+
+	a {
+		border-bottom: none;
+		display: inline-block;
+		height: 26px;
+		line-height: 26px;
+		padding: 0 5px;
+		position: relative;
+		margin: 0 5px 5px 0;
+		text-decoration: none;
+
+		span {
+			&:before {
+				content: '(';
+			}
+			&:after {
+				content: ')';
+			}
+		}
+	}
+}
