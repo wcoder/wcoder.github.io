@@ -2,6 +2,7 @@
 layout: post
 title: Автоматические форматирование текстового поля с помощью MvvmCross и конвертеров
 date: 2015-09-04 11:51
+original_url: http://www.gregshackles.com/auto-formatting-text-inputs-with-mvvmcross-and-value-converters/
 tags:
 - C#
 - mvvm
@@ -16,7 +17,7 @@ tags:
 Для подобной задачи использование конвертеров было довольно тривиальным. Здесь приведен пример конвертера телефонных номеров:
 
 ``` csharp
-public class PhoneNumberValueConverter : MvxValueConverter  
+public class PhoneNumberValueConverter : MvxValueConverter
 {
 	public override object Convert(object value, Type targetType, object parameter, CultureInfo culture)
 	{
@@ -29,7 +30,7 @@ public class PhoneNumberValueConverter : MvxValueConverter
 
 		return string.Format("({0}) {1}-{2}", numbers.Substring(0, 3), numbers.Substring(3, 3), numbers.Substring(6));
 	}
-	
+
 	public override object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
 	{
 		return Regex.Replace(value.ToString(), @"\D", "");
@@ -42,7 +43,7 @@ public class PhoneNumberValueConverter : MvxValueConverter
 Вот аналогичный конвертер для номеров кредитных карт, разделяет число на четыре группы разделенных пробелом:
 
 ``` csharp
-public class CreditCardNumberValueConverter : MvxValueConverter  
+public class CreditCardNumberValueConverter : MvxValueConverter
 {
 	public override object Convert(object value, Type targetType, object parameter, CultureInfo culture)
 	{
@@ -53,7 +54,7 @@ public class CreditCardNumberValueConverter : MvxValueConverter
 
 		return builder.ToString().Trim();
 	}
-	
+
 	public override object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
 	{
 		return Regex.Replace(value.ToString(), @"\D", "");
@@ -66,6 +67,3 @@ public class CreditCardNumberValueConverter : MvxValueConverter
 ![Анимированный пример](http://www.gregshackles.com/content/images/2014/12/vc-3.gif)
 
 На этом все!
-
-
-Оригинал: [Auto-Formatting Text Inputs with MvvmCross and Value Converters](http://www.gregshackles.com/auto-formatting-text-inputs-with-mvvmcross-and-value-converters/)

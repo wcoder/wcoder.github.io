@@ -2,6 +2,7 @@
 layout: post
 title: Как создавать формы в Laravel
 date: 2014-12-14 03:17
+original_url: http://clivern.com/how-to-build-forms-with-laravel/
 tags:
 - памятка
 - laravel
@@ -24,7 +25,7 @@ tags:
 </head>
 <body>{% raw %}
 	{{ Form::open(array('url'=>'form-submit')) }}
-	
+
 	{{ Form::close() }}{% endraw %}
 </body>
 </html>
@@ -42,7 +43,7 @@ tags:
 </head>
 <body>
 	<form method="POST" action="http://localhost/<laravel dir>/public/form-submit" accept-charset="UTF-8">
-		<input name="_token" type="hidden" value="h7xNdTaJXwLz5v0lkBolVPelpxldoiDR5gcKWkku">  
+		<input name="_token" type="hidden" value="h7xNdTaJXwLz5v0lkBolVPelpxldoiDR5gcKWkku">
 	</form>
 </body>
 </html>
@@ -131,5 +132,3 @@ tags:
 <!-- normal buttons -->
 {{ Form::button('Normal') }}
 {% endraw %}```
-
-Оригинал: [How To Build Forms With Laravel](http://wz2.ru/lfp8)

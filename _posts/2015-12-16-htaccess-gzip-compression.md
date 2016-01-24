@@ -2,6 +2,7 @@
 layout: post
 title: Включаем gzip-сжатие с использование .htaccess
 date: 2015-12-16 21:50
+original_url: http://www.xpertdeveloper.com/2012/04/htaccess-gzip-compression/
 tags:
 - Apache
 - .htaccess
@@ -60,9 +61,9 @@ Gzip&nbsp;&mdash; наилучшая практика чтобы сжать ко
     AddOutputFilterByType DEFLATE text/html text/plain text/css application/json
     AddOutputFilterByType DEFLATE application/javascript
     AddOutputFilterByType DEFLATE text/xml application/xml text/x-component
-    AddOutputFilterByType DEFLATE application/xhtml+xml application/rss+xml 
+    AddOutputFilterByType DEFLATE application/xhtml+xml application/rss+xml
     AddOutputFilterByType DEFLATE application/atom+xml
-    AddOutputFilterByType DEFLATE image/svg+xml application/vnd.ms-fontobject 
+    AddOutputFilterByType DEFLATE image/svg+xml application/vnd.ms-fontobject
     AddOutputFilterByType DEFLATE application/x-font-ttf font/opentype
   </IfModule>
 </IfModule>
@@ -83,11 +84,3 @@ Accept-Encoding:gzip,deflate,sdch
 На&nbsp;изображении выше вы&nbsp;можете увидеть, что фактический размер страницы составляет 707Кб, но&nbsp;после сжатия этот размер составляет 401Кб.
 
 На&nbsp;этом все.
-
-[Оригинал](http://www.xpertdeveloper.com/2012/04/htaccess-gzip-compression/)
-
-
-
-
-
-

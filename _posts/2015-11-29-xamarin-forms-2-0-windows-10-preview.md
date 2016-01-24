@@ -2,6 +2,7 @@
 layout: post
 title: Начало работы с Xamarin.Forms 2.0 и Windows 10 Preview
 date: 2015-11-29 21:35
+original_url: https://blog.xamarin.com/getting-started-with-xamarin-forms-windows-10-preview/
 tags:
 - Xamarin.Forms
 - Xamarin
@@ -116,4 +117,3 @@ public sealed partial class MainPage
 Чтобы узнать больше обо всех новых функциях в [Xamarin.Forms 2.0](https://developer.xamarin.com/releases/xamarin-forms/xamarin-forms-2.0/2.0.0/) обязательно прочтите примечания к выпуску. Полный исходный код примера (приложения MyWeather), вы можете посмотреть на [GitHub](https://github.com/jamesmontemagno/MyWeather.Forms). Поддержка Windows 10 (UWP) находится еще не в финальной стадии, поэтому есть возможность, что вы можете столкнуться с некоторыми шероховатостями. Помогите сделать Xamarin.Forms для UWP лучше, пожалуйста, не забудьте оставить отзыв, [сообщив о проблеме](https://bugzilla.xamarin.com/enter_bug.cgi?alias=&assigned_to=&attachurl=&blocked=&bug_file_loc=http%3A%2F%2F&bug_severity=normal&bug_status=NEW&cf_tags=&comment=&contenttypeentry=&contenttypemethod=autodetect&contenttypeselection=text%2Fplain&data=&deadline=&dependson=&description=&estimated_time=&form_name=enter_bug&maketemplate=Remember%20values%20as%20bookmarkable%20template&op_sys=Mac%20OS&product=Forms&rep_platform=PC&short_desc=&target_milestone=UWP&version=1.5.1), если таковые возникли.
 
 ----
-Оригинал: [Getting Started with Xamarin.Forms 2.0’s Windows 10 Preview](https://blog.xamarin.com/getting-started-with-xamarin-forms-windows-10-preview/)

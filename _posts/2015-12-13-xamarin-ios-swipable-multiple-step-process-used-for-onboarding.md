@@ -2,6 +2,7 @@
 layout: post
 title: Реализация OnBoarding процесса в приложении Xamarin.iOS
 date: 2015-12-13 19:10
+original_url: http://blog.lombaard.co.uk/blog/2015/10/27/xamarin-ios-swipable-multiple-step-process-used-for-onboarding/
 tags:
 - xamarin
 - ios
@@ -54,13 +55,13 @@ public class MakeGoodthingsHappenStep : UIViewController, IMultiStepProcessStep
 	    base.ViewDidAppear(animated);
 	    StepActivated?.Invoke(this, new MultiStepProcessStepEventArgs { Index = StepIndex });
 	}
-	
+
 	public override void ViewWillDisappear(bool animated)
 	{
 	    base.ViewWillDisappear(animated);
 	    StepDeactivated?.Invoke(this, new MultiStepProcessStepEventArgs { Index = StepIndex });
 	}
-	
+
 	public int StepIndex { get; set; }
 	public event EventHandler<MultiStepProcessStepEventArgs> StepActivated;
 	public event EventHandler<MultiStepProcessStepEventArgs> StepDeactivated;
@@ -75,7 +76,7 @@ public class MakeGoodthingsHappenStep : UIViewController, IMultiStepProcessStep
 public class MultiStepProcessDataSource : UIPageViewControllerDataSource
 {
 	private readonly List<IMultiStepProcessStep> _steps;
-	
+
 	public MultiStepProcessDataSource(List<IMultiStepProcessStep> steps)
 	{
 		if (steps == null)
@@ -90,18 +91,18 @@ public class MultiStepProcessDataSource : UIPageViewControllerDataSource
 		{
 		    throw new ArgumentException("all steps must be a UIViewController", nameof(steps));
 		}
-		
+
 		_steps = steps;
-		
+
 		for (int i = 0; i < _steps.Count; i++)
 		{
 			var step = _steps[i];
 			step.StepIndex = i;
 		}
 	}
-	
+
 	public List<IMultiStepProcessStep> Steps => _steps;
-	
+
 	public override UIViewController GetPreviousViewController(UIPageViewController pageViewController,
 		UIViewController referenceViewController)
 	{
@@ -110,17 +111,17 @@ public class MultiStepProcessDataSource : UIPageViewControllerDataSource
 		{
 			return null;
 		}
-		
+
 		var index = _steps.IndexOf(step);
 		if (index <= 0)
 		{
 			return null;
 		}
-		
+
 		return   _steps[index - 1] as UIViewController;
 	}
-	
-	public override UIViewController GetNextViewController(UIPageViewController pageViewController, 
+
+	public override UIViewController GetNextViewController(UIPageViewController pageViewController,
 	                                                       UIViewController referenceViewController)
 	{
 		var step = referenceViewController as IMultiStepProcessStep;
@@ -133,10 +134,10 @@ public class MultiStepProcessDataSource : UIPageViewControllerDataSource
 		{
 			return null;
 		}
-		
+
 		return _steps[(step.StepIndex + 1)] as UIViewController;
 	}
-}   
+}
 ```
 
 ## UIPageViewController
@@ -146,17 +147,17 @@ public class MultiStepProcessDataSource : UIPageViewControllerDataSource
 ```csharp
 public sealed class MultiStepProcessHorizontal : UIPageViewController
 {
-	public MultiStepProcessHorizontal(MultiStepProcessDataSource dataSource) 
-	    :base(UIPageViewControllerTransitionStyle.Scroll, 
+	public MultiStepProcessHorizontal(MultiStepProcessDataSource dataSource)
+	    :base(UIPageViewControllerTransitionStyle.Scroll,
 	         UIPageViewControllerNavigationOrientation.Horizontal)
 	{
 		DataSource = dataSource;
-		SetViewControllers(new[] {dataSource.Steps.FirstOrDefault() as UIViewController}, 
-		                  UIPageViewControllerNavigationDirection.Forward, 
-		                  false, 
+		SetViewControllers(new[] {dataSource.Steps.FirstOrDefault() as UIViewController},
+		                  UIPageViewControllerNavigationDirection.Forward,
+		                  false,
 		                  null);
 	}
-} 
+}
 ```
 
 ## UIPageControl
@@ -194,13 +195,13 @@ private List<IMultiStepProcessStep> GetSteps()
         new DiscoverStep(),
         new GetStartedStep()
     };
-    
-    steps.ForEach(s => 
+
+    steps.ForEach(s =>
     {
         s.StepActivated += HandleStepActivated;
         s.StepDeactivated += HandleStepDeactivated;
     });
-    
+
     return steps;
 }
 ```
@@ -217,32 +218,18 @@ public List<IMultiStepProcessStep> Steps => _steps ?? (_steps = GetSteps());
 public override void LoadView()
 {
     View = new UIView();
-    
+
     _pageViewController = new MultiStepProcessHorizontal(new MultiStepProcessDataSource(Steps));
-    
+
     _pageControl = new UIPageControl
     {
         CurrentPage = 0,
         Pages = Steps.Count
     };
-        
+
     View.Add(_pageViewController.View);
     View.Add(_pageControl);
 }
 ```
 
 На этом все!
-
-[Оригинал](http://blog.lombaard.co.uk/blog/2015/10/27/xamarin-ios-swipable-multiple-step-process-used-for-onboarding/)
-
-
-
-
-
-
-
-
-
-
-
-

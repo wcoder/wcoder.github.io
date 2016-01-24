@@ -2,6 +2,7 @@
 layout: post
 title: DRY о знании
 date: 2015-11-07 19:41
+original_url: http://verraes.net/2014/08/dry-is-about-knowledge/
 tags:
 - перевод
 - ddd
@@ -17,7 +18,7 @@ tags:
 final class Basket
 {
 	private $products;
-	
+
 	public function addProduct($product)
 	{
 		if (3 == count($this->products)) {
@@ -50,14 +51,14 @@ final class Shipment
 abstract class ProductContainer
 {
 	protected $products;
-	
+
 	public function addProduct($product)
 	{
 		if (3 == count($this->products)) {
 			throw new Exception("Максимально разрешено 3 продукта");
 		}
 		$this->products[] = $product;
-	} 
+	}
 }
 
 final class Basket extends ProductContainer {}
@@ -81,7 +82,7 @@ final class Shipment extends ProductContainer {}
 abstract class ProductContainer
 {
 	protected $products;
-	
+
 	public function addProduct($product)
 	{
 		if ($this->getProductLimit() == count($this->products)) {
@@ -89,7 +90,7 @@ abstract class ProductContainer
 		}
 		$this->products[] = $product;
 	}
-	
+
 	abstract protected function getProductLimit();
 }
 ```
@@ -115,5 +116,3 @@ abstract class ProductContainer
 
 - [Domain-Driven Design is linguistic](http://verraes.net/2014/01/domain-driven-design-is-linguistic/)
 - [Why Domain-Driven Design Matters](http://verraes.net/2014/05/why-domain-driven-design-matters/)
-
-Оригинал: [DRY is about Knowledge](http://verraes.net/2014/08/dry-is-about-knowledge/)

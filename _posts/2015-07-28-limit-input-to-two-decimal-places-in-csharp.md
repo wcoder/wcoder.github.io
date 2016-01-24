@@ -2,6 +2,7 @@
 layout: post
 title: Ограничиваем ввод до двух знаков после запятой в C#
 date: 2015-07-28 15:09
+original_url: http://windowsapptutorials.com/tips/general-tips/limit-input-to-two-decimal-places-in-c/
 tags:
 - перевод
 - C#
@@ -48,5 +49,3 @@ private void Amounnt_OnKeyDown(object sender, KeyEventArgs e)
 	e.Handled = !ValidAmount.IsValidMoneyInput(AmountToSend.Text, e.Key.ToString(), e.PlatformKeyCode);
 }
 ```
-
-Оригинал: [Limit Input to Two Decimal Places in C#](http://windowsapptutorials.com/tips/general-tips/limit-input-to-two-decimal-places-in-c/)

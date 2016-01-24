@@ -2,6 +2,7 @@
 layout: post
 title: Ваше приложение готово к iOS9?
 date: 2015-11-07 18:25
+original_url: https://blog.xamarin.com/is-your-app-ready-for-ios-9/
 tags:
 - перевод
 - xamarin
@@ -26,7 +27,7 @@ iOS9 предлагает новые способности для [многоз
 Чтобы поддержать многозадачность в iPad, вы должны сделать следующее:
 
 1. Билд для iOS9 (или выше).
-2. Использовать storyboard (или `.xib`) файл для 
+2. Использовать storyboard (или `.xib`) файл для
 3. Использовать storyboard с [Auto Layout](https/developer.xamarin.com/guides/ios/user_interface/designer/designer_auto_layout/) и [Size Classes](https://developer.xamarin.com/guides/ios/platform_features/introduction_to_unified_storyboards/#Size_Classes) для построения ваших интерфейсов.
 4. Поддержите все четыре ориентации устройства: Portrait, Upside-down Portrait, Landscape Left, и Landscape Right.
 
@@ -79,5 +80,3 @@ iOS9 предлагает новые способности для [многоз
 ## Ресурсы
 
 Чтобы сделать это как можно проще для вас, чтобы принести поддержку iOS9 в ваши приложения сегодня, ознакомьтесь с нашими [бесплатными лекциями в Xamarin University](https://university.xamarin.com/lightninglectures/updating-your-xamarinios-apps-to-ios9) по обновлению приложений для iOS9. Для полного, детального списка новых функций доступных в iOS9, взгляните на [Introduction to iOS 9](http://developer.xamarin.com/guides/ios/platform_features/introduction_to_ios9/). Обучаетесь на практике? Мы так же имеем много [примеров](http://developer.xamarin.com/samples/ios/iOS9/) для вас, чтобы проверить, увидеть как реализовать те или иные крутые фичи iOS9. Добавить поддержку iOS9 в ваши Xamarin.Forms приложения также легко! Craig Dunn [написал в блоге](http://conceptdev.blogspot.com.by/2015/09/ios-9-ify-your-xamarinforms-app_29.html) подробно, как это сделать в Xamarin.Forms приложении.
-
-Оригинал: [Is Your App Ready For iOS 9?](https://blog.xamarin.com/is-your-app-ready-for-ios-9/)
