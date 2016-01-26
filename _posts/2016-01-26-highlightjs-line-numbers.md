@@ -20,6 +20,7 @@ tags:
 ```
 bower install highlightjs-line-numbers.js
 ```
+
 ### npm
 
 ```
@@ -35,16 +36,12 @@ npm install highlightjs-line-numbers.js
 Подключаем файл плагина на страницу, **после highlight.js**:
 
 ```html
-<script src="path/to/highlight.min.js"></script>
-
 <script src="path/to/highlightjs-line-numbers.min.js"></script>
 ```
 
 Инициализируем, **после highlight.js**:
 
 ```js
-hljs.initHighlightingOnLoad();
-
 hljs.initLineNumbersOnLoad();
 ```
 
