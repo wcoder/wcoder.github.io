@@ -21,3 +21,10 @@ Intent intent = new Intent(OldActivity.this, NewActivity.class);
 intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK)
 startActivity(intent);
 ```
+
+Подробнее о флагах:
+
+- `FLAG_ACTIVITY_NEW_TASK` — запускает Activity в новом таске. Если уже существует таск с экземпляром данной Activity, то этот таск становится активным, и срабатываем метод `onNewIntent()`.
+- `FLAG_ACTIVITY_CLEAR_TOP` — если экземпляр данной Activity уже существует в стеке данного таска, то все Activity, находящиеся поверх нее разрушаются и этот экземпляр становится вершиной стека. Также вызовется `onNewIntent()`
+
+Остальную, более детальную информацию можно найти в офф. документации: [Tasks and Back Stack](http://developer.android.com/guide/components/tasks-and-back-stack.html)
