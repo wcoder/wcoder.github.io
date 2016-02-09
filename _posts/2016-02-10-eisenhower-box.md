@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Как быть более продуктивным и ликвидировать потерю времени используя "Матрицу Эйзенхауэра"
-date: 2016-01-10 00:10
+date: 2016-02-10 00:20
 original_url: http://jamesclear.com/eisenhower-box
 tags:
 - продуктивность
