@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Очищаем Activity стек в Android
-date: 2016-02-10 00:17
+date: 2016-02-01 19:55
 original_url: http://tips.androidhive.info/2013/10/how-to-clear-all-activity-stack-in-android/
 tags:
 - android
