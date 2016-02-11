@@ -14,7 +14,7 @@ layout: default
 		{{ content }}
 	
 		{% if page.original_url %}
-			<p><a href="{{ page.original_url }}">Оригинал</a></p>
+			<p><a href="{{ page.original_url }}" id="original">Оригинал</a></p>
 		{% endif %}
 	
 		{% if page.tags[0] != nil %}
