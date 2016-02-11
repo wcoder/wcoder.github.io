@@ -26,6 +26,7 @@ kramdown:
 gems:
   - jekyll-redirect-from
   - jekyll-sitemap
+  - jekyll-paginate
   - jekyll-feed
   - jemoji
 feed:
