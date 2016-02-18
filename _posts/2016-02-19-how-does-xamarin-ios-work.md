@@ -24,4 +24,4 @@ Xamarin.iOS снова компилирует исходный код на яз�
 
 Чтобы обойти это ограничение, **mtouch** компилирует CIL перед исполнением. Этот процесс команда mono описывает как AOT(ahead of time)-компиляция.
 
-Подробнее об ограничениях: https://developer.xamarin.com/guides/ios/advanced_topics/limitations/
+Подробнее об ограничениях: [https://developer.xamarin.com/guides/ios/advanced_topics/limitations/](https://developer.xamarin.com/guides/ios/advanced_topics/limitations/)
