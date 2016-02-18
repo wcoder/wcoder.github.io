@@ -6,7 +6,7 @@ layout: default
 	{% if paginator.page == site.paginate %}
 	<h2>Последние записи:</h2>
 	{% endif %}
-	
+
 	<ul class="post-list">
 		{% assign sortedPosts = paginator.posts %}
 		{% for post in sortedPosts %}
@@ -17,18 +17,18 @@ layout: default
 		</li>
 		{% endfor %}
 	</ul>
-	
+
 	<div class="pagination">
 		{% if paginator.next_page %}
-			<a class="pagination-item older" href="{{ site.baseurl }}page{{paginator.next_page}}">← Предыдущие записи</a>
+			<a class="pagination-item older" href="/page{{paginator.next_page}}">← Предыдущие записи</a>
 		{% endif %}
 		{% if paginator.previous_page %}
 			{% if paginator.page == 2 %}
-				<a class="pagination-item newer" href="{{ site.baseurl }}">Новые записи →</a>
+				<a class="pagination-item newer" href="/">Новые записи →</a>
 			{% else %}
-				<a class="pagination-item newer" href="{{ site.baseurl }}page{{paginator.previous_page}}">Следующие записи →</a>
+				<a class="pagination-item newer" href="/page{{paginator.previous_page}}">Следующие записи →</a>
 			{% endif %}
 		{% endif %}
 	</div>
-	
+
 </div>
