@@ -1,13 +1,19 @@
-{% if jekyll.environment == "production" %}
-<script src="//{{ site.enforce_ssl }}/js/highlight.pack.js"></script>
-<script src="//{{ site.enforce_ssl }}/js/highlightjs-line-numbers.min.js"></script>
-{% include ya-metrika.html %}
+{% if page.optimize %}
+	<!-- optimized -->
 {% else %}
-<script src="/js/highlight.pack.js"></script>
-<script src="/js/highlightjs-line-numbers.min.js"></script>
+	{% if jekyll.environment == "production" %}
+		<script src="//{{ site.enforce_ssl }}/js/highlight.pack.js"></script>
+		<script src="//{{ site.enforce_ssl }}/js/highlightjs-line-numbers.min.js"></script>
+		{% include ya-metrika.html %}
+	{% else %}
+		<script src="/js/highlight.pack.js"></script>
+		<script src="/js/highlightjs-line-numbers.min.js"></script>
+	{% endif %}
+	
+	<script>
+		hljs.initHighlightingOnLoad();
+		hljs.initLineNumbersOnLoad();
+	</script>
+	<script src="/js/share-buttons.js"></script>
 {% endif %}
-<script>
-	hljs.initHighlightingOnLoad();
-	hljs.initLineNumbersOnLoad();
-</script>
-<script src="/js/share-buttons.js"></script>
+
