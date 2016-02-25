@@ -1,10 +1,9 @@
 {% if page.optimize %}
-	<!-- optimized -->
+	
 {% else %}
 	{% if jekyll.environment == "production" %}
 		<script src="//{{ site.enforce_ssl }}/js/highlight.pack.js"></script>
 		<script src="//{{ site.enforce_ssl }}/js/highlightjs-line-numbers.min.js"></script>
-		{% include ya-metrika.html %}
 	{% else %}
 		<script src="/js/highlight.pack.js"></script>
 		<script src="/js/highlightjs-line-numbers.min.js"></script>
@@ -17,3 +16,6 @@
 	<script src="/js/share-buttons.js"></script>
 {% endif %}
 
+{% if jekyll.environment == "production" %}
+	{% include ya-metrika.html %}
+{% endif %}
