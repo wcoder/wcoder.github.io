@@ -46,3 +46,4 @@ defaults:
       path: "pages"
     values:
       layout: "page"
+      optimize: true
