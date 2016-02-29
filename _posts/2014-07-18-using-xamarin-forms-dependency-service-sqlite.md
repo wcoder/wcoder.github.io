@@ -4,7 +4,7 @@ title: Используем Xamarin.Forms DependencyService на примере 
 date: 2014-07-18 14:29
 tags:
 - памятка
-- xamarin
+- Xamarin.Forms
 - C#
 - windows phone
 - android
