@@ -68,6 +68,7 @@ Rotation="90"
 `RowHeight` указывает ширину ячеек вашего `ListView`.
 
 Полный исходный код:
+
 ```xml
 <Frame
 	x:Name="Attachments"
