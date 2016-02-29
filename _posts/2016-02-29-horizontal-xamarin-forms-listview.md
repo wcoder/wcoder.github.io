@@ -27,6 +27,7 @@ tags:
 ```
 RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width,Factor=1}"
 ```
+
 и
 ```
 RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,Property=Height,Factor=1}"
@@ -39,8 +40,8 @@ RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,Prop
 AnchorX="0"
 AnchorY="0"
 ```
-и, ограничить элемент:
 
+и, ограничить элемент:
 ```
 RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width,Factor=1}"
 RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,Property=Height,Factor=1}"
@@ -51,18 +52,21 @@ RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,Prop
 HorizontalOptions="Center"
 VerticalOptions="StartAndExpand"
 ```
+
 но, это на ваш вкус. Чтобы список выглядел лучше.
 
 Теперь самая важная часть, поворот `ListView`:
 ```
 Rotation="270"
 ```
+
 Теперь у нас есть список cбоку. Мы хотим, чтобы наш контент располагался правой стороной кверху (включая скроллинг).
 
 В нашем `ViewCell` мы устанавливаем `ContentView` имеющее свойство:
 ```
 Rotation="90"
 ```
+
 Это таким же образом будет работать и для любого другого `View`, поэтому может быть заменено на `Grid`, `StackLayout` и др.
 
 `RowHeight` указывает ширину ячеек вашего `ListView`.
