@@ -6,7 +6,7 @@ tags:
 - C#
 - .Net
 - XAML
-- Xamarin
+- Xamarin.Forms
 - ios
 - android
 - windows phone
