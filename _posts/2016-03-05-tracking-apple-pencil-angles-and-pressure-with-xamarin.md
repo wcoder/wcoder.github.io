@@ -12,14 +12,14 @@ tags:
 
 Ходят слухи, что Apple будет поддерживать Apple Pencil в новых iPad. Если это так, то многие разработчики захотят использовать новые возможности `UITouch` - силу, угол, высоту - поддерживаются невероятно точным стилусом.
 
-В основном, это просто:
-* сила это `UITouch.Force`
-* угол это `UITouch.GetAzimuthAngle(UIView)`
-* угол над горизонтом это `UITouch.AltitudeAngle`
+В основном это просто:
+* сила - `UITouch.Force`
+* угол - `UITouch.GetAzimuthAngle(UIView)`
+* угол над горизонтом - `UITouch.AltitudeAngle`
 
-Во всяком случае, вот часть кода:
+Вот часть кода на F#:
 
-```fsharp
+```
 namespace UITouch0
 
 open System
