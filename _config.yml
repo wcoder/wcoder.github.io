@@ -18,7 +18,7 @@ timezone: "Europe/Minsk"
 paginate: 10
 
 # Site Build
-safe: true
+# safe: true
 markdown: kramdown
 kramdown:
   input: GFM
