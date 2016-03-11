@@ -28,7 +28,6 @@ gems:
   - jekyll-sitemap
   - jekyll-paginate
   - jekyll-feed
-  - jemoji
 feed:
   path: atom.xml
 exclude:
