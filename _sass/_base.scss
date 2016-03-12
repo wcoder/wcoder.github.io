@@ -40,9 +40,9 @@ ul, ol, dl, figure,
 
 
 /**
- * Images
+ * Images and video
  */
-img {
+img, video {
     max-width: 100%;
     vertical-align: middle;
 }
@@ -136,6 +136,7 @@ code {
     border-radius: 3px;
     color: #444;
     display: inline-block;
+    font-family: Consolas, monospace;
 }
 
 .hljs-line-numbers {
