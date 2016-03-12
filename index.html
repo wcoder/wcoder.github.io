@@ -21,13 +21,14 @@ optimize: true
 
 	<div class="pagination">
 		{% if paginator.next_page %}
-			<a class="pagination-item older" href="/page{{paginator.next_page}}">← Предыдущие записи</a>
+			<a class="pagination-item older" href="/page{{paginator.next_page}}">&larr; Предыдущие записи</a>
 		{% endif %}
+		&nbsp;&nbsp;&nbsp;&nbsp;
 		{% if paginator.previous_page %}
 			{% if paginator.page == 2 %}
-				<a class="pagination-item newer" href="/">Новые записи →</a>
+				<a class="pagination-item newer" href="/">Новые записи &rarr;</a>
 			{% else %}
-				<a class="pagination-item newer" href="/page{{paginator.previous_page}}">Следующие записи →</a>
+				<a class="pagination-item newer" href="/page{{paginator.previous_page}}">Следующие записи &rarr;</a>
 			{% endif %}
 		{% endif %}
 	</div>
