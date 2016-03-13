@@ -2,7 +2,7 @@
 layout: post
 title: Gulp сниппеты
 date: 2016-03-14 01:00
-original_url:
+original_url: http://jonathanmh.com/gulp-recipes/
 tags:
 - gulp
 - сниппет
