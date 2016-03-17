@@ -124,7 +124,7 @@ public override UITableViewCell GetCell (UITableView tableView, NSIndexPath inde
 }
 ```
 
-![результат](http://arteksoftware.com/content/images/2014/Aug/CustomTableViewCells-1.png)
+![результат](https://dl.dropboxusercontent.com/u/30506652/blog/articles/ios_tableview_cell_xib/CustomTableViewCells-1.png)
 
 Пример приложения можно найти в [репозитории на GitHub](https://github.com/RobGibbens/XibTableCellDesign).
 
