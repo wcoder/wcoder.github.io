@@ -16,7 +16,7 @@ tags:
 
 ![Выбор фотографии в Windows Phone 8.1](https://blog.kulman.sk/images/wpa81.gif)
 
-Код этого относительно простой, хотя модель `AndContinue` может помучать
+Код этого относительно простой, хотя модель `AndContinue` может заставить помучаться
 
 ```csharp
 var openPicker = new FileOpenPicker
