@@ -15,7 +15,7 @@ Open source:
 ============
 
 - [highlightjs-line-numbers.js](https://github.com/wcoder/highlightjs-line-numbers.js) - плагин для нумерации строк в highlight.js
-- [MvvmCrossStarterKit](https://github.com/wcoder/MvvmCrossStarterKit) - проект для начальный разработки с использованием Xamarin + MvvmCross
+- [MvvmCrossStarterKit](https://github.com/wcoder/MvvmCrossStarterKit) - стартовый проект для разработки с использованием Xamarin + MvvmCross
 - [XPusher](https://github.com/wcoder/XPusher) - кросс-платформенное мобильное приложение для оправки push-уведомлений
 - [fb2librarynet](https://github.com/wcoder/fb2librarynet) - кросс-платформенная .NET библиотека для работы c fb2
 - [stockquote.js](https://github.com/wcoder/stockquote.js) - jQuery плагин для получения котировок акций, из различных сервисов
