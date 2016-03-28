@@ -2,13 +2,14 @@
 layout: post
 title: Более лучший способ выбора изображений из галерии или камеры в UWP приложениях
 date: 2016-03-20 22:00
-original_url: https://blog.kulman.sk/choosing-an-image-from-gallery-or-camera-in-uwp/
 tags:
 - C#
 - windows phone
 - UWP
 - перевод
 ---
+
+> Перевод статьи [Choosing an image from gallery or camera a bit better in Universal Windows apps](https://blog.kulman.sk/choosing-an-image-from-gallery-or-camera-in-uwp/)
 
 При разработке Windows Phone приложений могут возникнуть случаи, когда нужно разрешить пользователю выбрать какую-либо фотографию из галереи или сделать новый снимок с помощью камеры телефона. Одним из примеров этого может быть процесс регистрации, когда пользователь может выбрать фото для профиля.
 
