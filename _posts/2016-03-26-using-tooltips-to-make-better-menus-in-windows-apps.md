@@ -2,13 +2,14 @@
 layout: post
 title: Используем подсказки в UWP приложениях
 date: 2016-03-26 17:40
-original_url: https://blog.kulman.sk/using-tooltips-to-make-better-menus-in-windows-apps/
 tags:
 - xaml
 - UWP
 - сниппет
 - перевод
 ---
+
+> Перевод статьи [Using Tooltips to make better menus in Windows apps](https://blog.kulman.sk/using-tooltips-to-make-better-menus-in-windows-apps/)
 
 Если вы используете Windows приложения с навигационным меню, состоящим из иконок, то, вы наверное заметили, что в некоторых из этих приложений при наведении на иконку, отображается текст подсказки над иконкой. Это удобно для пользователей, т.к. позволяет им быстро понять смысл иконки без необходимости нажимать на них или расширять меню (если доступно).
 
