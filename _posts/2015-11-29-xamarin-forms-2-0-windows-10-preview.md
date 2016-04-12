@@ -6,7 +6,7 @@ original_url: https://blog.xamarin.com/getting-started-with-xamarin-forms-window
 tags:
 - Xamarin.Forms
 - Xamarin
-- Windows 10
+- UWP
 - C#
 - перевод
 ---
