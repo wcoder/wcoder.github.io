@@ -3,7 +3,6 @@ layout: post
 title: Настройка цвета строки заголовка в приложении Windows 10 на XAML
 date: 2015-09-26 14:22
 tags:
-- windows 10
 - xaml
 - C#
 - UWP
