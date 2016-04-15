@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Пользовательские жесты в приложениях Xamarin.Forms
-date:
+date: 2016-04-15 17:07
 original_url: http://www.xamarinhelp.com/custom-gestures-in-xamarin-forms/
 tags:
 - C#
