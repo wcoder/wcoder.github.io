@@ -12,15 +12,15 @@ tags:
 
 
 Таймер будет выполнять кусок кода в некотором временнном интервале. 
-В Xamarin, каждая из платформ предоставляет свой собственный таймер и таймер Xamarin Forms использует их. Это не `System.Threading.Timer` из обычного профиля на основе PCL, однако если вы используете .NET Standard вы будете иметь доступ к `System.Threading.Timer`.
+В Xamarin, каждая из платформ предоставляет свой собственный таймер, а таймер в Xamarin Forms использует их. Это не `System.Threading.Timer` из обычного профиля на основе PCL, однако если вы используете .NET Standard вы будете иметь доступ к `System.Threading.Timer`.
 
-Однако в центре внимания этой статьи мы рассмотрим таймер Xamarin Forms.
+Далее мы рассмотрим таймер в Xamarin Forms.
 
 ![Таймер в Xamarin Forms](https://cloud.githubusercontent.com/assets/766193/24835513/ee05767e-1d0c-11e7-8951-5c41cd3760e9.png)
 
 #### Таймер в Xamarin Forms
 
-Для начала, вот основной таймер.
+Для начала, вот основной таймер, который используется в Xamarin Forms:
 
 ```csharp
 Device.StartTimer(TimeSpan.FromSeconds(30), () =>
@@ -31,7 +31,7 @@ Device.StartTimer(TimeSpan.FromSeconds(30), () =>
 });
 ```
 
-На уровне платформы, используются следующие.
+На уровне платформы, используются следующие реализации:
 
 #### iOS
 
