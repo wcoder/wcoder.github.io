@@ -1,6 +1,6 @@
 ---
 title: Проекты
-permalink: /projects/
+permalink: /projects-list/
 ---
 
 Активные:
