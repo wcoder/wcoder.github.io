@@ -105,7 +105,7 @@ module Main =
 И выглядит это так:
 
 <video controls width="584" height="778" preload="none" controls="controls">
-  <source src="http://www.knowing.net/wp-content/uploads/2016/03/ScreenFlow-2.mp4?_=1">
+  <source src="https://github.com/wcoder/blog/raw/master/tracking-apple-pencil-angles-and-pressure-with-xamarin/ScreenFlow-2.mp4">
   Элемент video не поддерживается вашим браузером.
-   <a href="http://www.knowing.net/wp-content/uploads/2016/03/ScreenFlow-2.mp4?_=1">Скачайте видео</a>.
+   <a href="https://github.com/wcoder/blog/raw/master/tracking-apple-pencil-angles-and-pressure-with-xamarin/ScreenFlow-2.mp4">Скачайте видео</a>.
 </video>
