@@ -16,7 +16,7 @@ tags:
 
 "Loading..." появляется при выполнении работ с сетью (или других длительных задач) и выглядит так:
 
-![Наложение выглядит так](https://dl.dropboxusercontent.com/u/30506652/blog/articles/ios_loading/Loading.png)
+![Наложение выглядит так](https://raw.githubusercontent.com/wcoder/blog/master/display-a-loading-message-with-xamarin/Loading.png)
 
 Для отображения наложения, выполните следующие действия:
 
