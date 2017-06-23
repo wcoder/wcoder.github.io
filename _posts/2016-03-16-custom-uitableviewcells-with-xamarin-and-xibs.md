@@ -35,11 +35,11 @@ public override void ViewDidLoad ()
 
 > Add -> New File -> iOS -> Table View Cell
 
-![Создание xib файла](https://dl.dropboxusercontent.com/u/30506652/blog/articles/ios_tableview_cell_xib/Untitled.jpg)
+![Создание xib файла](https://raw.githubusercontent.com/wcoder/blog/master/uitableviewcells-xamarin-xibs/Untitled.jpg)
 
 Далее, открываем создавшийся *.xib* файл, перетаскиваем элементы управления из панели элементов. Укажем контролам имена, для последующего с ними взаимодействия.
 
-![Дизайн ячейки в Xamarin Studio](https://dl.dropboxusercontent.com/u/30506652/blog/articles/ios_tableview_cell_xib/Untitled2.jpg)
+![Дизайн ячейки в Xamarin Studio](https://raw.githubusercontent.com/wcoder/blog/master/uitableviewcells-xamarin-xibs/Untitled2.jpg)
 
 После этого дизайнер сгенерирует нам оутлеты (outlet) для доступа к UI элементам, они будут располагаться в файле *MyCustomCell.designer.cs*
 
@@ -124,7 +124,7 @@ public override UITableViewCell GetCell (UITableView tableView, NSIndexPath inde
 }
 ```
 
-![результат](https://dl.dropboxusercontent.com/u/30506652/blog/articles/ios_tableview_cell_xib/CustomTableViewCells-1.png)
+![результат](https://raw.githubusercontent.com/wcoder/blog/master/uitableviewcells-xamarin-xibs/CustomTableViewCells-1.png)
 
 Пример приложения можно найти в [репозитории на GitHub](https://github.com/RobGibbens/XibTableCellDesign).
 
