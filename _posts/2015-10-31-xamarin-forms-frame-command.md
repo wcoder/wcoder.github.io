@@ -3,13 +3,13 @@ layout: post
 title: Выполняем команду при нажатии на Frame
 date: 2015-10-31 23:10
 tags:
-- xamarin.forms
+- Xamarin.Forms
 - mvvm
 ---
 
 Для примера, у нас есть следующая разметка:
 
-``` xaml
+```xaml
 <Frame BackgroundColor="#f39c12" Padding="5">
     <StackLayout VerticalOptions="Center">
         <Image Source="Image/Icon/Play.png" HorizontalOptions="Center" />
@@ -24,7 +24,7 @@ tags:
 
 ### Решение:
 
-``` xaml
+```xaml
 <Frame.GestureRecognizers>
     <TapGestureRecognizer Command="{Binding PlayCommand}" />
 </Frame.GestureRecognizers>
@@ -32,7 +32,7 @@ tags:
 
 ### Результат:
 
-``` xaml
+```xaml
 <Frame BackgroundColor="#f39c12" Padding="5">
     <Frame.GestureRecognizers>
         <TapGestureRecognizer Command="{Binding PlayCommand}" />
