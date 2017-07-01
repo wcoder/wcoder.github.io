@@ -5,7 +5,7 @@ date: 2016-04-15 17:07
 original_url: http://www.xamarinhelp.com/custom-gestures-in-xamarin-forms/
 tags:
 - C#
-- xamarin.forms
+- Xamarin.Forms
 ---
 
 Xamarin Forms приходит с ограниченным количеством распознаваемых жестов, в частности `TapGestureRecognizer`. Часто возникают задачи, где стандартных средств недостаточно, поэтому вам нужно будет реализовать пользовательские жесты самостоятельно. В этом примере я добавил в Xamarin.Forms проект два события `Pressed` и `Released`.
