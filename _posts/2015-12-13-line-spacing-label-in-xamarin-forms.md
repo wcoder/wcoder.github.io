@@ -6,7 +6,7 @@ original_url: http://thetechstudio.ghost.io/line-spacing-label-in-xamarin-forms/
 tags:
 - C#
 - xamarin
-- xamarin.forms
+- Xamarin.Forms
 - ios
 - android
 - перевод
