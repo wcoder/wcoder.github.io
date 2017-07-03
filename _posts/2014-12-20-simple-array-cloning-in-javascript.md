@@ -57,6 +57,13 @@ function arrayClone (arr) {
 }
 ```
 
+С версии ECMAScript 2015 был введен метод [Object.assign()](https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Object/assign), с его помощью глубокое клонирование можно реализовать еще проще:
+
+```js
+var clone = Object.assign([], myArray);
+```
+
+
 ### Заключение
 
 Если вам нужно глубокое клонирование произвольно-вложенных объектов и/или массивов, крошечный [node-clone](https://github.com/pvorb/node-clone) прекрасно с этим справиться. Он будет правильно обрабатывать даже клонирование объектов с циклическими ссылками!
