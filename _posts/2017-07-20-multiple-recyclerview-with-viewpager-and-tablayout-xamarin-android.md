@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Множественные RecyclerView через ViewPager и TabLayout в Xamarin.Android
-date: 2017-07-02 00:50
+date: 2017-07-20 15:50
 original_url: http://code2xamarin.net/multiple-recyclerview-with-viewpager-and-tablayout-xamarin-android/
 tags:
 - xamarin
