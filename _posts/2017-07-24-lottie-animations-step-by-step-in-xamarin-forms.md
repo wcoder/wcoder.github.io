@@ -7,7 +7,6 @@ tags:
 - Xamarin.Forms
 - ios
 - android
-- сниппет
 - перевод
 ---
 
