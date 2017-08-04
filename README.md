@@ -42,12 +42,12 @@ Make sure to not include special characters in the file name. The blog entry's p
 
 ## Docker
 
-Run:
 ```
-./docker_run.sh
+docker run --name "blog" -v "$PWD":/usr/src/app -p "4000:4000" starefossen/github-pages
 ```
-
-Stop:
+```
+docker start blog
+```
 ```
 docker stop blog
 ```
