@@ -4,10 +4,10 @@ title: Проверка доступности сети в универсаль�
 date: 2015-09-13 13:12
 tags:
 - сниппет
-- C#
+- c#
 - windows
 - windows phone
-- UWP
+- uwp
 ---
 
 Если вы создаете универсальное приложение для Windows Phone 8.1/Windows 8.1 следующий класс поможет вам проверить доступность сети.
@@ -24,10 +24,10 @@ public class NetworkAvailabilty
 		get { return _networkAvailabilty ?? (_networkAvailabilty = new NetworkAvailabilty()); }
 		set { _networkAvailabilty = value; }
 	}
-	
+
 	private bool _isNetworkAvailable;
 	public event Action<bool> OnNetworkAvailabilityChange = delegate { };
-	
+
 	public bool IsNetworkAvailable
 	{
 		get
@@ -41,7 +41,7 @@ public class NetworkAvailabilty
 			OnNetworkAvailabilityChange(value);
 		}
 	}
-	
+
 	private void CheckInternetAccess()
 	{
 		var connectionProfile = NetworkInformation.GetInternetConnectionProfile();
@@ -50,13 +50,13 @@ public class NetworkAvailabilty
 							 NetworkConnectivityLevel.InternetAccess);
 		Debug.WriteLine("has network changed: " + IsNetworkAvailable);
 	}
-	
+
 	private void NetworkInformationOnNetworkStatusChanged(object sender)
 	{
 		CheckInternetAccess();
 		Debug.WriteLine("network status changed");
 	}
-	
+
 	private NetworkAvailabilty()
 	{
 		NetworkInformation.NetworkStatusChanged += NetworkInformationOnNetworkStatusChanged;

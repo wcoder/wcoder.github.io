@@ -3,7 +3,7 @@ layout: post
 title: Форматирование JSON в C#
 date: 2015-08-24 00:15
 tags:
-- C#
+- c#
 - json
 ---
 

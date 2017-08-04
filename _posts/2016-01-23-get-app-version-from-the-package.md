@@ -4,8 +4,8 @@ title: Получаем версию UWP приложения из пакета 
 date: 2016-01-23 20:00
 original_url: http://grogansoft.com/blog/?p=1189
 tags:
-- C#
-- UWP
+- c#
+- uwp
 - сниппет
 - перевод
 ---

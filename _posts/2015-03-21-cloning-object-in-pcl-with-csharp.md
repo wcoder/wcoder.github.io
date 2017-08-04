@@ -5,9 +5,9 @@ date: 2015-03-21 23:25
 original_url: http://mallibone-blog.azurewebsites.net/post/cloning-objects-in-the-pcl
 tags:
 - перевод
-- C#
-- .Net
-- PCL
+- c#
+- .net
+- pcl
 ---
 
 ![Клонирование](https://habrastorage.org/files/9f3/c8b/e62/9f3c8be623364c939661893b1f4ac244.jpg)

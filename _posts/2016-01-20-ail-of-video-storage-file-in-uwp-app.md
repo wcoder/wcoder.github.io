@@ -4,8 +4,8 @@ title: Получаем миниатурю видео-файла в UWP прил
 date: 2016-01-20 12:20
 original_url: http://windowsapptutorials.com/tips/storagefile/how-to-get-thumbnail-of-video-storage-file-in-windows-phone-app/
 tags:
-- C#
-- UWP
+- c#
+- uwp
 - сниппет
 - перевод
 ---

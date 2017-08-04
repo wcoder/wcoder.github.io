@@ -4,8 +4,8 @@ title: Конвертирование StorageFile в BitmapImage в универ
 date: 2015-12-27 14:10
 tags:
 - сниппет
-- С#
-- UWP
+- c#
+- uwp
 ---
 
 `StorageFile` может быть сконвертирован в `BitmapImage` используя данную функцию:

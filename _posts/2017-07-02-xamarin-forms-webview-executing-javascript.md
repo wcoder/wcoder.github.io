@@ -4,9 +4,9 @@ title: Выполнение JavaScript в WebView Xamarin Forms
 date: 2017-07-02 00:50
 original_url: https://xamarinhelp.com/xamarin-forms-webview-executing-javascript/
 tags:
-- Xamarin.Forms
+- xamarin forms
 - javascript
-- C#
+- c#
 - перевод
 ---
 

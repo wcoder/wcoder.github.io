@@ -4,11 +4,11 @@ title: Введение в UrhoSharp для HoloLens
 date: 2017-06-28 13:00
 original_url: https://xamarinhelp.com/hololens-xamarin-urhosharp/
 tags:
-- UrhoSharp
-- HoloLens
-- Xamarin
-- C#
-- 3D
+- urhosharp
+- hololens
+- xamarin
+- c#
+- 3d
 - перевод
 ---
 

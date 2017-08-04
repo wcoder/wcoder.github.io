@@ -3,7 +3,7 @@ layout: post
 title: Настройка Яндекс.Почты в Windows Phone
 date: 2014-04-01 12:57
 tags:
-- Яндекс
+- яндекс
 - windows phone
 - настройка
 ---

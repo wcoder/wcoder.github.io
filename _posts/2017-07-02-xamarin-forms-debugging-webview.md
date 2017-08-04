@@ -4,9 +4,9 @@ title: Отладка Xamarin Forms WebView в Chrome
 date: 2017-07-02 11:45
 original_url: https://xamarinhelp.com/xamarin-forms-debugging-webview/
 tags:
-- Xamarin.Forms
+- xamarin forms
 - debug
-- C#
+- c#
 - перевод
 ---
 

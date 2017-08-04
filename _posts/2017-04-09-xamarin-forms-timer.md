@@ -4,14 +4,14 @@ title: Таймер в Xamarin Forms
 date: 2017-04-09 10:07
 original_url: https://xamarinhelp.com/xamarin-forms-timer/
 tags:
-- Xamarin.Forms
-- C#
+- xamarin forms
+- c#
 - сниппет
 - перевод
 ---
 
 
-Таймер будет выполнять кусок кода в некотором временном интервале. 
+Таймер будет выполнять кусок кода в некотором временном интервале.
 В Xamarin, каждая из платформ предоставляет свой собственный таймер, а таймер в Xamarin Forms использует их. Это не `System.Threading.Timer` из обычного профиля на основе PCL, однако если вы используете .NET Standard вы будете иметь доступ к `System.Threading.Timer`.
 
 Далее мы рассмотрим таймер в Xamarin Forms.
@@ -95,4 +95,4 @@ public void StartTimer(TimeSpan interval, Func<bool> callback)
 #### Состояние приложения
 
 Если ваше приложение настроено в фоновом режиме, таймер будет продолжать работать, пока он не будет по крайней мере прерван или убит.
-  
+

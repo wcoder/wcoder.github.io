@@ -6,7 +6,7 @@ original_url: https://blog.xamarin.com/is-your-app-ready-for-ios-9/
 tags:
 - перевод
 - xamarin
-- Xamarin.Forms
+- xamarin forms
 - ios
 ---
 

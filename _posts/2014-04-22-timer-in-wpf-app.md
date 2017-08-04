@@ -3,8 +3,8 @@ layout: post
 title: Таймер в WPF приложении
 date: 2014-04-22 10:42
 tags:
-- .Net
-- C#
+- .net
+- c#
 - wpf
 - сниппет
 ---

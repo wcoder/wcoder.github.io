@@ -3,7 +3,7 @@ layout: post
 title: Выполняем команду при нажатии на Frame
 date: 2015-10-31 23:10
 tags:
-- Xamarin.Forms
+- xamarin forms
 - mvvm
 ---
 

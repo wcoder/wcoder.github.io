@@ -4,7 +4,7 @@ title: Включаем gzip-сжатие с использование .htacces
 date: 2015-12-16 21:50
 original_url: http://www.xpertdeveloper.com/2012/04/htaccess-gzip-compression/
 tags:
-- Apache
+- apache
 - .htaccess
 - перевод
 ---

@@ -5,7 +5,7 @@ date: 2016-03-05 23:10
 original_url: http://www.knowing.net/index.php/2016/03/03/tracking-apple-pencil-angles-and-pressure-with-xamarin/
 tags:
 - xamarin
-- F#
+- f#
 - ios
 - перевод
 ---

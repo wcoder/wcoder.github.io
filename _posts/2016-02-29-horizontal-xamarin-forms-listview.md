@@ -4,7 +4,7 @@ title: Горизонтальный ListView в Xamarin.Forms
 date: 2016-02-29 23:50
 original_url: http://liamtait.com/horizontal-xamarin-forms-listview/
 tags:
-- Xamarin.Forms
+- xamarin forms
 - ios
 - android
 - windows phone

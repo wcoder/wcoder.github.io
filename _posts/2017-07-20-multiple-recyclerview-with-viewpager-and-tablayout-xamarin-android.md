@@ -7,7 +7,7 @@ tags:
 - xamarin
 - android
 - xamarin.android
-- C#
+- c#
 - перевод
 ---
 

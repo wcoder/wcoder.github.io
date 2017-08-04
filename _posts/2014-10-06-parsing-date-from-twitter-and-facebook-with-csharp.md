@@ -6,8 +6,8 @@ tags:
 - api
 - twitter
 - facebook
-- C#
-- .Net
+- c#
+- .net
 ---
 
 Порой, при запросе к API твитера или фейсбука имеем следующий формат возвращаемой даты:
@@ -26,7 +26,7 @@ public static class Extensions
 		const string format = "ddd MMM dd HH:mm:ss zzzz yyyy";
 		return DateTime.ParseExact(date, format, CultureInfo.InvariantCulture);
 	}
-	
+
 	public static DateTime ParseFacebookDateTime(this string date)
 	{
 		const string format = "ddd, dd MMM yyyy HH:mm:ss zzzz";

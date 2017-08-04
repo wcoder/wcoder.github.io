@@ -4,8 +4,8 @@ title: Пользовательские жесты в приложениях Xam
 date: 2016-04-15 17:07
 original_url: http://www.xamarinhelp.com/custom-gestures-in-xamarin-forms/
 tags:
-- C#
-- Xamarin.Forms
+- c#
+- xamarin forms
 ---
 
 Xamarin Forms приходит с ограниченным количеством распознаваемых жестов, в частности `TapGestureRecognizer`. Часто возникают задачи, где стандартных средств недостаточно, поэтому вам нужно будет реализовать пользовательские жесты самостоятельно. В этом примере я добавил в Xamarin.Forms проект два события `Pressed` и `Released`.
@@ -22,22 +22,22 @@ public class PressedGestureRecognizer : Element, IGestureRecognizer
 {
 	public static readonly BindableProperty CommandProperty = BindableProperty.Create("Command",
 		typeof(ICommand), typeof(PressedGestureRecognizer), (object)null, BindingMode.OneWay,
-		(BindableProperty.ValidateValueDelegate)null, (BindableProperty.BindingPropertyChangedDelegate)null, 
-		(BindableProperty.BindingPropertyChangingDelegate)null, (BindableProperty.CoerceValueDelegate)null, 
+		(BindableProperty.ValidateValueDelegate)null, (BindableProperty.BindingPropertyChangedDelegate)null,
+		(BindableProperty.BindingPropertyChangingDelegate)null, (BindableProperty.CoerceValueDelegate)null,
 		(BindableProperty.CreateDefaultValueDelegate)null);
-	
+
 	public static readonly BindableProperty CommandParameterProperty = BindableProperty.Create("CommandParameter",
-		typeof(object), typeof(PressedGestureRecognizer), (object)null, BindingMode.TwoWay, 
-		(BindableProperty.ValidateValueDelegate)null, (BindableProperty.BindingPropertyChangedDelegate)null, 
-		(BindableProperty.BindingPropertyChangingDelegate)null, (BindableProperty.CoerceValueDelegate)null, 
+		typeof(object), typeof(PressedGestureRecognizer), (object)null, BindingMode.TwoWay,
+		(BindableProperty.ValidateValueDelegate)null, (BindableProperty.BindingPropertyChangedDelegate)null,
+		(BindableProperty.BindingPropertyChangingDelegate)null, (BindableProperty.CoerceValueDelegate)null,
 		(BindableProperty.CreateDefaultValueDelegate)null);
-	
+
 	public ICommand Command
 	{
 		get { return (ICommand)this.GetValue(CommandProperty); }
 		set { this.SetValue(CommandProperty, (object)value); }
 	}
-	
+
 	public object CommandParameter
 	{
 		get { return this.GetValue(CommandParameterProperty); }
@@ -63,20 +63,20 @@ namespace Mobile.UWP.Renderer
 		protected override void OnElementChanged(ElementChangedEventArgs<Label> e)
 		{
 			base.OnElementChanged(e);
-			
+
 			if (e.OldElement == null)
 			{
 				if (!e.NewElement.GestureRecognizers.Any())
 					return;
-				
+
 				if (e.NewElement.GestureRecognizers.Any(x => x.GetType() == typeof(PressedGestureRecognizer)))
 					Control.PointerPressed += Control_PointerPressed;
-				
+
 				if (e.NewElement.GestureRecognizers.Any(x => x.GetType() == typeof(ReleasedGestureRecognizer)))
 					Control.PointerReleased += Control_PointerReleased;
 			}
 		}
-		
+
 		private void Control_PointerPressed(object sender, Windows.UI.Xaml.Input.PointerRoutedEventArgs e)
 		{
 			foreach (var recognizer in this.Element.GestureRecognizers.Where(x => x.GetType() == typeof(PressedGestureRecognizer)))
@@ -87,7 +87,7 @@ namespace Mobile.UWP.Renderer
 						gesture.Command.Execute(gesture.CommandParameter);
 			}
 		}
-		
+
 		private void Control_PointerReleased(object sender, Windows.UI.Xaml.Input.PointerRoutedEventArgs e)
 		{
 			foreach (var recognizer in this.Element.GestureRecognizers.Where(x => x.GetType() == typeof(ReleasedGestureRecognizer)))
@@ -117,12 +117,12 @@ namespace Mobile.Droid.Renderer
             {
                 if (!e.NewElement.GestureRecognizers.Any())
                     return;
-                if (e.NewElement.GestureRecognizers.Any(x => x.GetType() == typeof(PressedGestureRecognizer) 
+                if (e.NewElement.GestureRecognizers.Any(x => x.GetType() == typeof(PressedGestureRecognizer)
                                                             || x.GetType() == typeof(ReleasedGestureRecognizer)))
                     Control.Touch += Control_Touch;
             }
         }
-        
+
         private void Control_Touch(object sender, TouchEventArgs e)
         {
             switch (e.Event.Action)
@@ -168,7 +168,7 @@ namespace Mobile.iOS.Renderer
             {
                 Element = element;
                 this.Text = element.Text;
-            }            
+            }
             public override void TouchesBegan(NSSet touches, UIEvent evt)
             {
                 base.TouchesBegan(touches, evt);
@@ -192,19 +192,19 @@ namespace Mobile.iOS.Renderer
                 }
             }
         }
-        
+
         protected override void OnElementChanged(ElementChangedEventArgs<Label> e)
         {
             if (Control == null)
                 SetNativeControl(new TouchLabel(Element) { });
-            
+
             base.OnElementChanged(e);
-            
+
             if (e.OldElement == null)
             {
                 if (!e.NewElement.GestureRecognizers.Any())
                     return;
-                
+
                 Control.UserInteractionEnabled = true;
             }
         }
@@ -225,8 +225,8 @@ namespace Mobile.iOS.Renderer
 	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
 	xmlns:gesture="clr-namespace:Mobile.Gestures;assembly=Mobile"
 	x:Class="Mobile.View.MainPage" BackgroundColor="Black">
-	
-	<Label Text="Press Me" WidthRequest="250" HeightRequest="100" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" TextColor="{Binding TextColor}" BackgroundColor="{Binding BackgroundColor}" VerticalOptions="Center" HorizontalOptions="Center">    
+
+	<Label Text="Press Me" WidthRequest="250" HeightRequest="100" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" TextColor="{Binding TextColor}" BackgroundColor="{Binding BackgroundColor}" VerticalOptions="Center" HorizontalOptions="Center">
 		<Label.GestureRecognizers>
 			<gesture:PressedGestureRecognizer Command="{Binding PressedGestureCommand}" />
 			<gesture:ReleasedGestureRecognizer Command="{Binding ReleasedGestureCommand}" />

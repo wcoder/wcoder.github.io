@@ -5,7 +5,7 @@ date: 2015-07-28 15:09
 original_url: http://windowsapptutorials.com/tips/general-tips/limit-input-to-two-decimal-places-in-c/
 tags:
 - перевод
-- C#
+- c#
 ---
 
 Иногда бывает нужно ограничить ввод до двух знаков после запятой.

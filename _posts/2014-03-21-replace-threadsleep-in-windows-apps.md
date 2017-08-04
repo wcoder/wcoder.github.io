@@ -3,9 +3,9 @@ layout: post
 title: Замена Thread.Sleep в Windows Store приложениях
 date: 2014-03-21 20:40
 tags:
-- C#
+- c#
 - windows
-- .Net
+- .net
 ---
 
 Пусть вам требуется имитировать медленный вызов некоторой службы.

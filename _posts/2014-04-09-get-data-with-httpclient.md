@@ -3,8 +3,8 @@ layout: post
 title: Запрос данных с сервера используя HttpClient
 date: 2014-04-09 20:30
 tags:
-- C#
-- .Net
+- c#
+- .net
 - сниппет
 ---
 
@@ -15,10 +15,10 @@ public async static Task<string> GetHttpResponse(string url)
 {
 	HttpRequestMessage request = new HttpRequestMessage(HttpMethod.Get, url);
 	request.Headers.Add("User-Agent", "Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.2; WOW64; Trident/6.0)");
-	
+
 	HttpClient client = new HttpClient();
 	HttpResponseMessage response = await client.SendAsync(request, HttpCompletionOption.ResponseHeadersRead);
-	
+
 	if (response.StatusCode == HttpStatusCode.OK)
 		return await response.Content.ReadAsStringAsync();
 	else

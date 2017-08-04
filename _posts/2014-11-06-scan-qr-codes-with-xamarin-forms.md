@@ -4,8 +4,8 @@ title: Сканирование QR-кодов, штрих-кодов в прил
 date: 2014-11-06 06:16
 original_url: http://blog.thomaslebrun.net/2014/09/xamarin-scanning-qrcode-in-a-xamarin-forms-application
 tags:
-- C#
-- .Net
+- c#
+- .net
 - xamarin
 - ios
 - android
@@ -13,7 +13,7 @@ tags:
 - перевод
 ---
 
-Реализация сканирования QR-кодов, штрих-кодов в приложениях Xamarin.Forms является действительно простой задачей, благодаря  проекту ZXing, который был портирован на Xamarin (и для всех устройств: iOS, Android и Windows Phone). 
+Реализация сканирования QR-кодов, штрих-кодов в приложениях Xamarin.Forms является действительно простой задачей, благодаря  проекту ZXing, который был портирован на Xamarin (и для всех устройств: iOS, Android и Windows Phone).
 
 ![ZXing.Net.Mobile](https://components.xamarin.com/resources/icons/component-984/icon_114x114.png)
 
@@ -39,7 +39,7 @@ public class QrCodeScanningService : IQrCodeScanningService
     {
         var scanner = new ZXing.Mobile.MobileBarcodeScanner(App.RootFrame.Dispatcher);
         var scanResults = await scanner.Scan();
-        
+
         return scanResults.Text;
     }
 }
@@ -54,7 +54,7 @@ public class QrCodeScanningService : IQrCodeScanningService
     {
         var scanner = new ZXing.Mobile.MobileBarcodeScanner(Application.Context);
         var scanResults = await scanner.Scan();
-        
+
         return scanResults.Text;
     }
 }
@@ -84,7 +84,7 @@ var scanButton = new Button
 scanButton.Clicked += async (sender, args) =>
 {
     var url = await DependencyService.Get<IQrCodeScanningService>().ScanAsync();
-    
+
     Device.OpenUri(new Uri(url));
 };
 ```

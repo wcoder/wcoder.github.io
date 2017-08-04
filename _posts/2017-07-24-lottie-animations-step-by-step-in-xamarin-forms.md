@@ -4,7 +4,7 @@ title: Шаг за шагом добавляем Lottie анимации в Xama
 date: 2017-07-24 15:56
 original_url: https://xamgirl.com/lottie-animations-step-by-step-in-xamarin-forms/
 tags:
-- Xamarin.Forms
+- xamarin forms
 - ios
 - android
 - перевод

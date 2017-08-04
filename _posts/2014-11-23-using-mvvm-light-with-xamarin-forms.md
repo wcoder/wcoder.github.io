@@ -3,10 +3,10 @@ layout: post
 title: Памятка по использованию MVVM Light в проекте Xamarin Forms
 date: 2014-11-23 14:00
 tags:
-- C#
-- .Net
-- XAML
-- Xamarin.Forms
+- c#
+- .net
+- xaml
+- xamarin forms
 - ios
 - android
 - windows phone
@@ -89,7 +89,7 @@ namespace MyNewApp
 			ServiceLocator.SetLocatorProvider(() => SimpleIoc.Default);
 			SimpleIoc.Default.Register<MainPageViewModel>();
 		}
-		
+
 		public MainPageViewModel Main
 		{
 			get
@@ -116,7 +116,7 @@ namespace MyNewApp
 	public class App
 	{
 		private static ViewModelLocator _locator;
-		
+
 		public static ViewModelLocator Locator
 		{
 			get
@@ -124,7 +124,7 @@ namespace MyNewApp
 				return _locator ?? (_locator = new ViewModelLocator());
 			}
 		}
-		
+
 		public static Page GetMainPage()
 		{
 			return new MainPage();

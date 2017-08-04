@@ -5,8 +5,8 @@ date: 2014-04-26 09:32
 tags:
 - wpf
 - xaml
-- C#
-- .Net
+- c#
+- .net
 - сниппет
 ---
 
@@ -47,14 +47,14 @@ namespace WpfApplication1.Converters
 		public object Convert(object value, Type targetType, object parameter, System.Globalization.CultureInfo culture)
 		{
 			// parameter - параметр, переданный конвертеру
-			
+
 			if (value != null)
 			{
 				return ((string) value).Trim();
 			}
 			return "";
 		}
-		
+
 		public object ConvertBack(object value, Type targetType, object parameter, System.Globalization.CultureInfo culture)
 		{
 			throw new NotImplementedException();

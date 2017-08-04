@@ -4,7 +4,7 @@ title: Узнаем размера файла по URL с помощью C#
 date: 2015-12-29 23:40
 original_url: http://windowsapptutorials.com/tips/general-tips/retrieve-file-size-from-remote-url-using-c-sharp/
 tags:
-- C#
+- c#
 - сниппет
 - перевод
 ---
@@ -20,7 +20,7 @@ private static string GetFileSize(Uri uriPath)
 {
 	var webRequest = HttpWebRequest.Create(uriPath);
 	webRequest.Method = "HEAD";
-	
+
 	using (var webResponse = webRequest.GetResponse())
 	{
 		var fileSize = webResponse.Headers.Get("Content-Length");

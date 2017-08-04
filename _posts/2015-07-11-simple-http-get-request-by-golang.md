@@ -3,7 +3,7 @@ layout: post
 title: Пример простого HTTP GET запроса на Go
 date: 2015-07-11 23:13
 tags:
-- Go
+- go
 ---
 
 ![Go: Пример простого HTTP GET запроса](https://raw.githubusercontent.com/wcoder/blog/0d4789ac028877ebbcccef0815fe5765051474d2/go-http-get/golang.png)
@@ -28,14 +28,14 @@ func main() {
 	if err != nil {
 		log.Fatal(err)
 	}
-	
+
 	defer resp.Body.Close()
-	
+
 	body, err := ioutil.ReadAll(resp.Body)
 	if err != nil {
 		log.Fatal(err)
 	}
-	
+
 	_, err = os.Stdout.Write(body)
 	if err != nil {
 		log.Fatal(err)

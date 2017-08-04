@@ -4,8 +4,8 @@ title: Реализация подтверждения выхода из при�
 date: 2014-08-05 01:23
 tags:
 - windows phone
-- C#
-- .Net
+- c#
+- .net
 ---
 
 В этом посте я покажу, как создать простую функцию для подтверждения выхода из приложения.
@@ -27,12 +27,12 @@ private void ClearBackEntries()
 
 ```xml
 <!--MainPage.xaml-->
-<phone:PhoneApplicationPage    
+<phone:PhoneApplicationPage
 	...
 	BackKeyPress="PhoneApplication_OnBackKeyPress">
-	
+
 	<!-- ...-->
-	
+
 </phone:PhoneApplicationPage>
 ```
 
@@ -53,7 +53,7 @@ if (MessageBox.Show(message, title, MessageBoxButton.OKCancel) == MessageBoxResu
 {
 	ClearBackEntries();
 }
-else { 
+else {
 	e.Cancel = true;
 }
 ```
