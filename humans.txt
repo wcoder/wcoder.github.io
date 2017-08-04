@@ -5,7 +5,7 @@
 	Location: Brest, Belarus
 
 /* SITE */
-	Last update: 2015/12/24
+	Last update: 2017/08/04
 	Language: Russian
 	Doctype: HTML5
 	Components: Jekyll, JavaScript

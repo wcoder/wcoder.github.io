@@ -3,4 +3,4 @@ Host: https://wcoder.github.io
 User-agent: *
 Disallow:
 
-Sitemap: http://wcoder.github.io/sitemap.xml
+Sitemap: https://wcoder.github.io/sitemap.xml
