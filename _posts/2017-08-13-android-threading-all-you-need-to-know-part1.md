@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Многопоточность в Android: Все что вам нужно знать. Часть 1 - Введение
+title: Многопоточность в Android. Все что вам нужно знать. Часть 1 - Введение
 date: 2017-08-13 11:40
 original_url: https://www.toptal.com/android/android-threading-all-you-need-to-know
 tags:
