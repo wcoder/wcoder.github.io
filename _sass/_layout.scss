@@ -9,7 +9,7 @@ body {
  * Site header
  */
 .site-header {
-    background-color: #fff;
+    background-color: $brand-color;
     border-bottom: 1px solid $grey-color-light;
     min-height: 56px;
 
@@ -27,12 +27,15 @@ body {
     line-height: 56px;
     letter-spacing: -1px;
     margin-bottom: 0;
-    float: left;
+	float: left;
 
     &,
     &:visited {
-        color: $grey-color-dark;
-    }
+        color: $header-link-color;
+	}
+	&:hover {
+		color: $header-link-hover-color;
+	}
 }
 
 .site-nav {
@@ -44,13 +47,17 @@ body {
     }
 
     .page-link {
-        color: $text-color;
+        color: $header-link-color;
         line-height: $base-line-height;
 
         // Gaps between nav items, but not on the last one
         &:not(:last-child) {
             margin-right: 20px;
-        }
+		}
+
+		&:hover {
+			color: $header-link-hover-color;
+		}
     }
 
     @include media-query($on-palm) {

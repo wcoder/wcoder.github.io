@@ -91,7 +91,7 @@ h1, h2, h3, h4, h5, h6 {
  * Links
  */
 a {
-	color: #008ace;
+	color: $brand-color;
 	border-bottom: 1px solid;
 	border-color: rgba(0,138,206,0.3);
 	text-decoration: none;
@@ -103,8 +103,8 @@ a {
 	}
 
 	&:hover {
-		color: #c00!important;
-		border-color: rgba(204,0,0,0.3) !important;
+		color: $brand-red-color;
+		border-color: rgba(204,0,0,0.3);
 	}
 }
 

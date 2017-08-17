@@ -16,11 +16,15 @@ $spacing-unit:     30px;
 
 $text-color:       #111;
 $background-color: #fdfdfd;
-$brand-color:      #2a7ae2;
+$brand-color:      #01579B;
+$brand-red-color:  #c00;
 
 $grey-color:       #828282;
 $grey-color-light: lighten($grey-color, 40%);
 $grey-color-dark:  darken($grey-color, 25%);
+
+$header-link-color: #fff;
+$header-link-hover-color: gold;
 
 // Width of the content area
 $content-width:    800px;
