@@ -67,7 +67,8 @@ body {
         background-color: $background-color;
         border: 1px solid $grey-color-light;
         border-radius: 5px;
-        text-align: right;
+		text-align: right;
+		z-index: 1000;
 
         .menu-icon {
             display: block;
@@ -90,12 +91,17 @@ body {
 
         .page-link {
             display: block;
-            padding: 5px 10px;
+			padding: 5px 10px;
+			color: $grey-color-dark;
+			margin-left: 20px;
 
             &:not(:last-child) {
                 margin-right: 0;
             }
-            margin-left: 20px;
+
+			&:hover {
+				color: $brand-red-color;
+			}
         }
     }
 }
@@ -218,9 +224,10 @@ body {
 }
 
 .post-title {
-    font-size: $post-content-header-font-size;
-    letter-spacing: -1px;
-    line-height: 1;
+	font-size: $post-content-header-font-size;
+	letter-spacing: -1px;
+	line-height: $base-line-height;
+	font-weight: 500;
 }
 
 .post-content {
