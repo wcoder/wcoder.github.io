@@ -173,4 +173,4 @@ public class ExampleService extends IntentService {
 }
 ```
 
-Продолжение следует...
+[Часть 2. 7 шаблонов использования многопоточности в Android](https://wcoder.github.io/notes/android-threading-all-you-need-to-know-part2)
