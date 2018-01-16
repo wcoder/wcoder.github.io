@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Как запустить несколько экземпляров Visual Studio for Mac?
-date: 2018-01-16 21:40
+date: 2018-01-16 21:51
 tags:
 - visual studio
 - macos
