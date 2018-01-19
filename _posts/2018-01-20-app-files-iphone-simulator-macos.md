@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Как посмотреть доступную файловую систему iOS приложения в iPhone Simulator?
+title: Как посмотреть файлы iOS приложения в iPhone Simulator?
 date: 2018-01-20 00:00
 tags:
 - ios
