@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Установка NuGet Packet Manager для Visual Studio for Mac?
+title: Установка NuGet Package Manager для Visual Studio for Mac?
 date: 2018-01-19 23:15
 tags:
 - visual studio
