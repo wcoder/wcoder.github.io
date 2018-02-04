@@ -14,10 +14,10 @@ tags:
 
 Для этого примера было создано 4 варианта скользящих панелей (Sliding Panel):
 
-- PageUp
-- PageRight
-- PageDown
-- PageLeft
+- [PageUp](#pageup)
+- [PageRight](#pageright)
+- [PageDown](#pagedown)
+- [PageLeft](#pageleft)
 
 На следующем рисунке показано, как были названы панели и значки, используемые в этом примере.
 
