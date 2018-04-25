@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Удаление параметров копирования / вставки в UITextField
+title: Удаление параметров копирования/вставки из UITextField в Xamarin.iOS
 date: 2018-04-25 18:10
 tags:
 - xamarin.ios
