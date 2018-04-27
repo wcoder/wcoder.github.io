@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Уменьшение размера Framework в iOS
+title: Понимание размера Framework в iOS
 date: 2018-04-27 12:30
 tags:
 - ios
