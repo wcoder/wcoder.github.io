@@ -2,7 +2,6 @@
 layout: post
 title: Множественные RecyclerView через ViewPager и TabLayout в Xamarin.Android
 date: 2017-07-20 15:50
-original_url: http://code2xamarin.net/multiple-recyclerview-with-viewpager-and-tablayout-xamarin-android/
 tags:
 - xamarin
 - android
@@ -363,8 +362,6 @@ void createFragment(List<RecyclerViewDataModel> list)
 ```
 
 ## Результат
-
-![Результат](http://code2xamarin.net/content/images/2016/11/YdT0kygyYS.gif)
 
 [Исходный код проекта на GitHub](https://github.com/beraybentesen/Xamarin.MultipleRecyclerView)
 
