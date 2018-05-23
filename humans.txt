@@ -1,11 +1,11 @@
 /* TEAM */
 	Author: Yauheni Pakala
-	Contact: evgeniy.pakalo [Ж] gmail.com
+	Contact: evgeniy.pakalo [*] gmail.com
 	Twitter: @evgeniypakalo
 	Location: Brest, Belarus
 
 /* SITE */
-	Last update: 2017/08/04
+	Last update: 05/23/2018
 	Language: Russian
 	Doctype: HTML5
 	Components: Jekyll, JavaScript
