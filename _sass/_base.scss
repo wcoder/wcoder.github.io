@@ -9,7 +9,6 @@ dl, dd, ol, ul, figure {
 }
 
 
-
 /**
  * Basic styling
  */
@@ -26,7 +25,6 @@ body {
 }
 
 
-
 /**
  * Set `margin-bottom` to maintain vertical rhythm
  */
@@ -38,7 +36,6 @@ ul, ol, dl, figure,
 }
 
 
-
 /**
  * Images and video
  */
@@ -46,7 +43,6 @@ img, video {
     max-width: 100%;
     vertical-align: middle;
 }
-
 
 
 /**
@@ -59,7 +55,6 @@ figure > img {
 figcaption {
     font-size: $small-font-size;
 }
-
 
 
 /**
@@ -77,38 +72,35 @@ li {
 }
 
 
-
 /**
  * Headings
  */
 h1, h2, h3, h4, h5, h6 {
-	font-family: 'Fira Sans', Helvetica, Arial, sans-serif;
-	font-weight: 500;
+    font-family: Helvetica, Arial, sans-serif;
+    font-weight: 500;
 }
-
 
 
 /**
  * Links
  */
 a {
-	color: $brand-color;
-	border-bottom: 1px solid;
-	border-color: rgba(0,138,206,0.3);
-	text-decoration: none;
-	cursor: pointer;
+    color: $brand-color;
+    border-bottom: 1px solid;
+    border-color: rgba(0,138,206,0.3);
+    text-decoration: none;
+    cursor: pointer;
 
-	&:visited {
-		color: #909;
-		border-color: rgba(153,0,153,0.3);
-	}
+    &:visited {
+        color: #909;
+        border-color: rgba(153,0,153,0.3);
+    }
 
-	&:hover {
-		color: $brand-red-color;
-		border-color: rgba(204,0,0,0.3);
-	}
+    &:hover {
+        color: $brand-red-color;
+        border-color: rgba(204,0,0,0.3);
+    }
 }
-
 
 
 /**
@@ -140,17 +132,6 @@ code {
     font-family: Consolas, monospace;
 }
 
-.hljs-line-numbers {
-    text-align: right;
-    border-right: 1px solid #ccc;
-    color: #999;
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;
-    -khtml-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-}
 
 /**
  * Wrapper
@@ -169,12 +150,10 @@ code {
 }
 
 
-
 /**
  * Clearfix
  */
 %clearfix {
-
     &:after {
         content: "";
         display: table;
