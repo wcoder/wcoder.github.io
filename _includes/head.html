@@ -1,10 +1,10 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name='yandex-verification' content='7cd440e16ce6e1c3' />
-
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	
 	<title>{% if page.title %}{{ page.title }} - {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
+	
 	<meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
 	<meta name="author" content="{{ site.author }}">
 
@@ -28,6 +28,19 @@
 	<link rel="stylesheet" href="/css/github.min.css">
 	{% endif %}
 
+	<meta name="mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="application-name" content="ТехноБлог">
+	<meta name="apple-mobile-web-app-title" content="ТехноБлог">
+	<meta name="theme-color" content="#333">
+	<meta name="msapplication-navbutton-color" content="#333">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+	<meta name="msapplication-starturl" content="/">
+	
+	<link rel="manifest" href="manifest.json">
+
+	<meta name='yandex-verification' content='7cd440e16ce6e1c3' />
+	
 	<link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.url }}">
 	<link rel="alternate" type="application/atom+xml" title="{{ site.title }}" href="{{ "/atom.xml" | prepend: site.url }}" />
 </head>
