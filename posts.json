@@ -1,7 +1,11 @@
 ---
 layout: null
 ---
-
 {
-  "posts": []
+  "posts": [{% for post in site.posts %}{
+      "link": "{{ site.url }}{{ post.id }}",
+      "title": {{ post.title | jsonify }},
+      "date": {{ post.date | jsonify }},
+      "tags": {{ post.tags | jsonify }}
+  }{% if forloop.rindex0 > 0 %}, {% endif %}{% endfor %}]
 }
