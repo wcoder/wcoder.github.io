@@ -2,6 +2,7 @@
 layout: null
 ---
 {
+  "updated": {{ site.time | jsonify }},
   "posts": [{% for post in site.posts %}{
       "link": "{{ site.url }}{{ post.id }}",
       "title": {{ post.title | jsonify }},
