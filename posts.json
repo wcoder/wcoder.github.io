@@ -2,4 +2,6 @@
 layout: null
 ---
 
-{{ site.posts | jsonify }}
+{
+  "posts": []
+}
