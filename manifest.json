@@ -1,6 +1,9 @@
+---
+layout: null
+---
 {
-  "name": "{{ site.title }}",
-  "short_name": "{{ site.shortTitle }}",
+  "name": {{ site.title | jsonify }},
+  "short_name": {{ site.shortTitle | jsonify }},
   "lang": "ru-RU",
   "start_url": "/",
   "display": "standalone",
