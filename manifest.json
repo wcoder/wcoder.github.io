@@ -1,6 +1,6 @@
 {
-  "name": "ТехноБлог Пакало Евгения",
-  "short_name": "ТехноБлог",
+  "name": "{{ site.title }}",
+  "short_name": "{{ site.shortTitle }}",
   "lang": "ru-RU",
   "start_url": "/",
   "display": "standalone",
