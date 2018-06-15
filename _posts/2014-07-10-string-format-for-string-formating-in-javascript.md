@@ -28,3 +28,8 @@ console.log(s1);
 var s2 = "My name: {0}, age: {1}!".f("Neo", 20);
 console.log(s2);
 ```
+
+UPD: ES 6
+```js
+const stringFormat = (s, a) => s.replace(/\{(\d+)\}/g, (m, n) => a[n] || m);
+```
