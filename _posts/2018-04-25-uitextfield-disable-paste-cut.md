@@ -58,3 +58,4 @@ public override bool CanPerform(ObjCRuntime.Selector action, Foundation.NSObject
 
 - [RegisterAttribute](https://developer.xamarin.com/api/type/MonoTouch.Foundation.RegisterAttribute/)
 - [canPerformAction(_:withSender:)](https://developer.apple.com/documentation/uikit/uiresponder/1621105-canperformaction)
+- [Каждому View по всплывающему меню – Яндекс.Карты iOS](https://medium.com/yandex-maps-ios/tooltip-menu-for-every-view-1aede0d4d3e7)
