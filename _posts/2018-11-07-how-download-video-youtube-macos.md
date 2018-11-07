@@ -21,7 +21,7 @@ tags:
 - Откройте Terminal
 - Выполните команду установки (при условии, что у вас уже установлен [Homebrew](https://brew.sh/))
 
-```
+```sh
 brew install youtube-dl
 ```
 
@@ -29,7 +29,7 @@ brew install youtube-dl
 
 Простой пример скачивания видео:
 
-```
+```sh
 youtube-dl https://www.youtube.com/watch?v=bS5P_LAqiVg
 ```
 
@@ -39,31 +39,31 @@ youtube-dl https://www.youtube.com/watch?v=bS5P_LAqiVg
 
 Скачать как аудио:
 
-```
+```sh
 youtube-dl -x https://www.youtube.com/watch?v=--HaFAtC17U
 ```
 
 Вывести список доступных форматов скачивания:
 
-```
+```sh
 youtube-dl -F https://www.youtube.com/watch?v=bS5P_LAqiVg
 ```
 
 Скачивание в выбранном формате (код формата можно получить из команды выше):
 
-```
+```sh
 youtube-dl -f 137 https://www.youtube.com/watch?v=bS5P_LAqiVg
 ```
 
 Скачать весь плейлист:
 
-```
+```sh
 youtube-dl https://www.youtube.com/playlist?list=PLpVeA1tdgfCBrwbhK1RPdpJTLYOOrMyty
 ```
 
 Скачать только выбранные видео из плейлиста:
 
-```
+```sh
 youtube-dl --playlist-items 1,3,6 https://www.youtube.com/playlist?list=PLpVeA1tdgfCBrwbhK1RPdpJTLYOOrMyty
 ```
 
