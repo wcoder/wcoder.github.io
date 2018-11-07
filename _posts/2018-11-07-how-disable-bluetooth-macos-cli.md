@@ -18,6 +18,8 @@ tags:
 brew install blueutil
 ```
 
+> Необходимо наличие установленного [Homebrew](https://brew.sh/)
+
 ## Использование
 
 **Включение bluetooth**:
