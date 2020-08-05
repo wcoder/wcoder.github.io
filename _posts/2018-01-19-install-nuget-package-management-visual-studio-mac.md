@@ -9,7 +9,13 @@ tags:
 - nuget
 ---
 
-Чтобы иметь больше возможностей для работы с NuGet в Visual Studio for Mac вам понадобиться установить расширение, для этого вам необходимо выполнить следующие действия:
+### Обновлено
+
+Версия Visual Studio для Mac 2019+ уже содержит эту возможность по умолчанию. [Подробнее](https://docs.microsoft.com/en-us/visualstudio/mac/nuget-walkthrough?view=vsmac-2019)
+
+---
+
+Чтобы иметь больше возможностей для работы с NuGet в Visual Studio for Mac вам понадобиться установить расширение, а для этого выполнить несколько шагов:
 
 ### Скачать расширение
 
@@ -58,4 +64,4 @@ https://github.com/mrward/monodevelop-addins/blob/gh-pages/7.3/MonoDevelop.Packa
 
 ![Окно управления пакетами](https://raw.githubusercontent.com/wcoder/blog/master/2018-01-18-vs-macos-nuget/7.png)
 
-На этом все. Теперь вы сможете можете легко управлять NuGet библиотеками как и версии для Windows.
+На этом все. Теперь вы можете легко управлять NuGet библиотеками как и в версии Visual Studio для Windows.
