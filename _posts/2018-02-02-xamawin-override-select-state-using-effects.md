@@ -53,6 +53,7 @@ namespace Effects.Droid.Effects
             var listView = (Android.Widget.ListView)Control;
 
             listView.ChoiceMode = ChoiceMode.None; // !!!
+            listView.SetSelector(Android.Resource.Color.Transparent); // !!!
         }
 
         protected override void OnDetached()
