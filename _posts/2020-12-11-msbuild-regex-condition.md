@@ -33,8 +33,9 @@ XToolkit.Tests - ignore
 ```xml
 <Target Name="MyTarget">
     <Message 
-      Condition="...your condition..."
-      Text="The value of SomeVariable is: MyTarget" Importance="High" />
+        Condition="...your condition..."
+        Text="Applied to project: $(ProjectName)"
+        Importance="High" />
 </Target>
 ```
 
