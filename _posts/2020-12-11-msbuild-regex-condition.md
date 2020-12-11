@@ -1,6 +1,6 @@
 ---
 layout: post
-title: MSBuild: Using regex in condition
+title: Using condition with regex in MSBuild
 date: 2020-12-11 18:40
 tags:
 - msbuild
