@@ -2,7 +2,6 @@
 layout: post
 title: Как скачать видео с YouTube в macOS?
 date: 2018-11-07 18:40
-draft: true
 tags:
 - macos
 - youtube
