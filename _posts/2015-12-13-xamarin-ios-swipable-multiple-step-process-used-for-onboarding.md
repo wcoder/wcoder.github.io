@@ -2,7 +2,7 @@
 layout: post
 title: Реализация OnBoarding процесса в приложении Xamarin.iOS
 date: 2015-12-13 19:10
-original_url: http://blog.lombaard.co.uk/blog/2015/10/27/xamarin-ios-swipable-multiple-step-process-used-for-onboarding/
+original_url: http://web.archive.org/web/20180218070658/https://blog.lombaard.co.uk/blog/2015/10/27/xamarin-ios-swipable-multiple-step-process-used-for-onboarding/
 tags:
 - xamarin
 - ios
