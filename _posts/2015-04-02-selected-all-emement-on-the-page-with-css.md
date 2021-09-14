@@ -15,4 +15,6 @@ tags:
 }
 ```
 
-[Смотреть результат](https://jsfiddle.net/evgeniypakalo/n12uordc/embedded/result)
+## Результат
+
+<iframe width="100%" height="300" src="//jsfiddle.net/evgeniypakalo/n12uordc/embedded/result" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
