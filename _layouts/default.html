@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html prefix="og: http://ogp.me/ns#" lang="ru">
+<html prefix="og: http://ogp.me/ns#" lang="{{ page.locale | default: site.locale | split: '_' | first }}">
 {% include head.html %}
 <body>
 	<header class="site-header">

@@ -2,6 +2,7 @@
 layout: post
 title: Using condition with regex in MSBuild
 date: 2020-12-11 18:40
+locale: en_US
 tags:
 - msbuild
 - regex

@@ -3,6 +3,7 @@ name: "YP Tech Notes" # for feed
 title: "YP Tech Notes"
 shortTitle: "Tech Notes"
 description: "Еще один техноблог, пишу о том что интересно."
+locale: "ru_RU"
 
 # Author Info
 author: "Евгений Пакало"

@@ -13,7 +13,7 @@
 	<meta property="og:url" content="{{ page.url | replace:'index.html','' | prepend: site.url }}" />
 	<meta property="og:type" content="{{ layout.content_type | default: 'website' }}" />
 	<meta property="og:site_name" content="{{ site.title }}" />
-	<meta property="og:locale" content="ru_RU" />
+	<meta property="og:locale" content="{{ page.locale | default: site.locale }}" />
 
 	<meta name="twitter:card" content="summary" />
 	<meta name="twitter:site" content="@{{ site.twitter_username }}" />

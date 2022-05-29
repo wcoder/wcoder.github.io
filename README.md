@@ -63,6 +63,7 @@ Make sure to not include special characters in the file name. The blog entry's p
 ### Additional features
 
 - `original_url` - link to original content.
+- `locale` - language of the content (sample: `en_US`, default: `site.locale`).
 
 &nbsp;
 
