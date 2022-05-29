@@ -55,6 +55,7 @@ Make sure to not include special characters in the file name. The blog entry's p
 - `original_url` - link to original content.
 - `tags` - list of tags.
 - `locale` - language of the content (sample: `en_US`, default: `site.locale`).
+- `layout.content_type` - content type of the page (post: `article`, default: `website`).
 
 &nbsp;
 
