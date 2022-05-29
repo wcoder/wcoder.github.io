@@ -3,8 +3,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 
-	{% capture titles %}{{ page.title }},{{ site.title }}{% endcapture %}
-	{% assign page_title = titles | split: ',' | join: ' - ' %}
+	{% assign page_title = page.title | default: '0' | append: ' - ' | replace: '0 - ', '' | append: site.title %}
 	<title>{{ page_title }}</title>
 
 	{% assign page_excerpt = page.excerpt | strip_html | strip_newlines | truncate: 160 | default: site.description %}
