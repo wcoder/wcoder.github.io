@@ -31,18 +31,8 @@ gem install nokogiri -- --use-system-libraries --with-xml2-include=/usr/include/
 
 ### Docker
 
-**Important!** Currently, this solution is broken. (05/23/2018)
-
 ```sh
-docker run --name "blog" -v "$PWD":/usr/src/app -p "4000:4000" starefossen/github-pages
-```
-
-```sh
-docker start blog
-```
-
-```sh
-docker stop blog
+docker-compose up
 ```
 
 The site should now be running locally...
@@ -63,9 +53,10 @@ Make sure to not include special characters in the file name. The blog entry's p
 ### Additional features
 
 - `original_url` - link to original content.
+- `tags` - list of tags.
 - `locale` - language of the content (sample: `en_US`, default: `site.locale`).
 
 &nbsp;
 
 ---
-&copy; 2018 Yauheni Pakala
+&copy; 2018-2022 Yauheni Pakala

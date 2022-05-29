@@ -4,7 +4,7 @@ title: Архив
 permalink: /archive/
 ---
 
-[По тегам]({{% site.url %}}/tags/)
+[По тегам]({{ site.url }}/tags/)
 
 ## Заметки ({{ site.posts | size }})
 

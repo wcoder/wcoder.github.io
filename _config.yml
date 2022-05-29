@@ -3,12 +3,18 @@ name: "YP Tech Notes" # for feed
 title: "YP Tech Notes"
 shortTitle: "Tech Notes"
 description: "Еще один техноблог, пишу о том что интересно."
+keywords: "tech, notes"
 locale: "ru_RU"
+author: "Yauheni Pakala"
 
-# Author Info
-author: "Евгений Пакало"
-twitter_username: "evgeniypakalo"
 github_username:  "wcoder"
+
+twitter:
+  card: summary
+  username: yauhenipakala
+
+webmaster_verifications:
+  yandex: 7cd440e16ce6e1c3
 
 # Site Settings
 url: "https://wcoder.github.io" # the base hostname & protocol for your site
@@ -26,11 +32,14 @@ kramdown:
   hard_wrap: false
   syntax_highlighter_opts:
     disable : true
-gems:
+plugins:
+  - jekyll-github-metadata
+  - jekyll-mentions
   - jekyll-redirect-from
   - jekyll-sitemap
   - jekyll-paginate
   - jekyll-feed
+  - jemoji
 feed:
   path: atom.xml
 exclude:
@@ -38,7 +47,6 @@ exclude:
   - README.md
   - CONTRIBUTING.md
   - Gemfile*
-  - run_local.bat
 #excerpt_separator: "<!--more-->"
 
 # Other Params
@@ -48,4 +56,3 @@ defaults:
       path: "pages"
     values:
       layout: "page"
-      optimize: true

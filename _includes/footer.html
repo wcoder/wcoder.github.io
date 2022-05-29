@@ -1,19 +1,13 @@
-{% if page.optimize %}
-
-{% else %}
-	{% if jekyll.environment == "production" %}
-		<script src="//{{ site.enforce_ssl }}/js/highlight.pack.js"></script>
-		<script src="//{{ site.enforce_ssl }}/js/highlightjs-line-numbers.min.js"></script>
-	{% else %}
-		<script src="/js/highlight.pack.js"></script>
-		<script src="/js/highlightjs-line-numbers.min.js"></script>
-	{% endif %}
+{% if layout.content_type == 'article' %}
+	{% capture content_root %}{% if jekyll.environment == "production" %}//{{ site.enforce_ssl }}{% endif %}{% endcapture %}
+	<script src="{{ content_root }}/js/highlight.pack.js"></script>
+	<script src="{{ content_root }}/js/highlightjs-line-numbers.min.js"></script>
 
 	<script>
 		hljs.initHighlightingOnLoad();
 		hljs.initLineNumbersOnLoad();
 	</script>
-	<script src="/js/share-buttons.js"></script>
+	<script src="{{ content_root }}/js/share-buttons.js"></script>
 {% endif %}
 
 {% if jekyll.environment == "production" %}
