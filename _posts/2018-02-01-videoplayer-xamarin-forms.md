@@ -40,17 +40,21 @@ tags:
 
 ```xml
 <?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:local="clr-namespace:DemoVideo"
-             xmlns:rox="clr-namespace:Rox;assembly=Rox.Xamarin.Video.Portable"
-             x:Class="DemoVideo.MainPage">
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:DemoVideo"
+    xmlns:rox="clr-namespace:Rox;assembly=Rox.Xamarin.Video.Portable"
+    x:Class="DemoVideo.MainPage">
+
     <Grid>
-        <rox:VideoView AutoPlay="True"
-                   LoopPlay="True"
-                   ShowController="True"
-                   Source="https://instagram.fsod3-1.fna.fbcdn.net/vp/a4483470041412903563bd594a7172f8/5A615E69/t50.2886-16/20845171_798391080343591_101942135397285888_n.mp4" />
+        <rox:VideoView
+            AutoPlay="True"
+            LoopPlay="True"
+            ShowController="True"
+            Source="https://instagram.fsod3-1.fna.fbcdn.net/vp/a4483470041412903563bd594a7172f8/5A615E69/t50.2886-16/20845171_798391080343591_101942135397285888_n.mp4" />
     </Grid>
+
 </ContentPage>
 ```
 

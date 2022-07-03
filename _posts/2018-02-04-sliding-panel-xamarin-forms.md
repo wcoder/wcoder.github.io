@@ -33,28 +33,47 @@ tags:
 
 ```xml
 <?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:local="clr-namespace:DemoSlidingPanel"
-             x:Class="DemoSlidingPanel.MainPage">
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:DemoSlidingPanel"
+    x:Class="DemoSlidingPanel.MainPage">
 
-    <AbsoluteLayout VerticalOptions="FillAndExpand" x:Name="Page">
+    <AbsoluteLayout
+        x:Name="Page"
+        VerticalOptions="FillAndExpand" >
 
-        <StackLayout  AbsoluteLayout.LayoutBounds="0,0,1,1" AbsoluteLayout.LayoutFlags="All" BackgroundColor="White">
-            <Image Source="DownBlue.png" HorizontalOptions="CenterAndExpand" VerticalOptions="StartAndExpand" >
+        <StackLayout
+            AbsoluteLayout.LayoutBounds="0,0,1,1"
+            AbsoluteLayout.LayoutFlags="All"
+            BackgroundColor="White">
+            <Image
+                Source="DownBlue.png"
+                HorizontalOptions="CenterAndExpand"
+                VerticalOptions="StartAndExpand">
                 <Image.GestureRecognizers>
-                    <TapGestureRecognizer Tapped="DownBlue_Tapped"/>
+                    <TapGestureRecognizer Tapped="DownBlue_Tapped" />
                     <PanGestureRecognizer PanUpdated="DownBlue_Tapped" />
                 </Image.GestureRecognizers>
             </Image>
         </StackLayout>
 
-        <StackLayout x:Name="PageUp" AbsoluteLayout.LayoutBounds="0,0,1,1" AbsoluteLayout.LayoutFlags="All"
-                     Orientation="Vertical" VerticalOptions="FillAndExpand" Spacing="0">
-            <StackLayout VerticalOptions="FillAndExpand" BackgroundColor="#006df0">
-                <Image Source="UpWhite.png" HorizontalOptions="CenterAndExpand" VerticalOptions="EndAndExpand" >
+        <StackLayout
+            x:Name="PageUp"
+            AbsoluteLayout.LayoutBounds="0,0,1,1"
+            AbsoluteLayout.LayoutFlags="All"
+            Orientation="Vertical"
+            VerticalOptions="FillAndExpand"
+            Spacing="0">
+            <StackLayout
+                VerticalOptions="FillAndExpand"
+                BackgroundColor="#006df0">
+                <Image
+                    Source="UpWhite.png"
+                    HorizontalOptions="CenterAndExpand"
+                    VerticalOptions="EndAndExpand">
                     <Image.GestureRecognizers>
-                        <TapGestureRecognizer Tapped="UpWhite_Tapped"/>
+                        <TapGestureRecognizer Tapped="UpWhite_Tapped" />
                         <PanGestureRecognizer PanUpdated="UpWhite_Tapped" />
                     </Image.GestureRecognizers>
                 </Image>
@@ -76,10 +95,7 @@ tags:
 
 ```csharp
 using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 using Xamarin.Forms;
 
 namespace DemoSlidingPanel
@@ -93,17 +109,15 @@ namespace DemoSlidingPanel
             PageUp.TranslationY = -1000;
         }
 
-        async void UpWhite_Tapped(object sender, System.EventArgs e)
+        async void UpWhite_Tapped(object sender, EventArgs e)
         {
             await PageUp.TranslateTo(0, -Page.Height, 500, Easing.SinIn);
         }
 
-        async void DownBlue_Tapped(object sender, System.EventArgs e)
+        async void DownBlue_Tapped(object sender, EventArgs e)
         {
             await PageUp.TranslateTo(0, 0, 500, Easing.SinIn);
         }
-
-
     }
 }
 ```
@@ -118,27 +132,46 @@ namespace DemoSlidingPanel
 
 ```xml
 <?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:local="clr-namespace:DemoSlidingPanel"
-             x:Class="DemoSlidingPanel.MainPage">
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:DemoSlidingPanel"
+    x:Class="DemoSlidingPanel.MainPage">
 
-    <AbsoluteLayout VerticalOptions="FillAndExpand" x:Name="Page">
-        <StackLayout  AbsoluteLayout.LayoutBounds="0,0,1,1" AbsoluteLayout.LayoutFlags="All" BackgroundColor="White">
-                <Image Source="LeftBlue.png" HorizontalOptions="EndAndExpand" VerticalOptions="CenterAndExpand" >
+    <AbsoluteLayout
+        x:Name="Page"
+        VerticalOptions="FillAndExpand">
+        <StackLayout
+            AbsoluteLayout.LayoutBounds="0,0,1,1"
+            AbsoluteLayout.LayoutFlags="All"
+            BackgroundColor="White">
+                <Image
+                    Source="LeftBlue.png"
+                    HorizontalOptions="EndAndExpand"
+                    VerticalOptions="CenterAndExpand">
                     <Image.GestureRecognizers>
-                        <TapGestureRecognizer Tapped="LeftBlue_Tapped"/>
+                        <TapGestureRecognizer Tapped="LeftBlue_Tapped" />
                         <PanGestureRecognizer PanUpdated="LeftBlue_Tapped" />
                     </Image.GestureRecognizers>
                 </Image>
         </StackLayout>
 
-        <StackLayout x:Name="PageRight" AbsoluteLayout.LayoutBounds="0,0,1,1" AbsoluteLayout.LayoutFlags="All"
-                     Orientation="Vertical" VerticalOptions="FillAndExpand" Spacing="0">
-            <StackLayout VerticalOptions="FillAndExpand" BackgroundColor="#006df0">
-                <Image Source="RightWhite.png" HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand" >
+        <StackLayout
+            x:Name="PageRight"
+            AbsoluteLayout.LayoutBounds="0,0,1,1"
+            AbsoluteLayout.LayoutFlags="All"
+            Orientation="Vertical"
+            VerticalOptions="FillAndExpand"
+            Spacing="0">
+            <StackLayout
+                VerticalOptions="FillAndExpand"
+                BackgroundColor="#006df0">
+                <Image
+                    Source="RightWhite.png"
+                    HorizontalOptions="StartAndExpand"
+                    VerticalOptions="CenterAndExpand">
                     <Image.GestureRecognizers>
-                        <TapGestureRecognizer Tapped="RightWhite_Tapped"/>
+                        <TapGestureRecognizer Tapped="RightWhite_Tapped" />
                         <PanGestureRecognizer PanUpdated="RightWhite_Tapped" />
                     </Image.GestureRecognizers>
                 </Image>
@@ -160,10 +193,7 @@ namespace DemoSlidingPanel
 
 ```csharp
 using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 using Xamarin.Forms;
 
 namespace DemoSlidingPanel
@@ -177,17 +207,15 @@ namespace DemoSlidingPanel
             PageRight.TranslationX = 1000;
         }
 
-
-        async void LeftBlue_Tapped(object sender, System.EventArgs e)
+        async void LeftBlue_Tapped(object sender, EventArgs e)
         {
             await PageRight.TranslateTo(0, 0, 500, Easing.SinIn);
         }
 
-        async void RightWhite_Tapped(object sender, System.EventArgs e)
+        async void RightWhite_Tapped(object sender, EventArgs e)
         {
             await PageRight.TranslateTo(Page.Width, 0, 500, Easing.SinIn);
         }
-
     }
 }
 ```
@@ -202,27 +230,46 @@ namespace DemoSlidingPanel
 
 ```xml
 <?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:local="clr-namespace:DemoSlidingPanel"
-             x:Class="DemoSlidingPanel.MainPage">
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:DemoSlidingPanel"
+    x:Class="DemoSlidingPanel.MainPage">
 
-    <AbsoluteLayout VerticalOptions="FillAndExpand" x:Name="Page">
-        <StackLayout  AbsoluteLayout.LayoutBounds="0,0,1,1" AbsoluteLayout.LayoutFlags="All" BackgroundColor="White">
-            <Image Source="UpBlue.png" HorizontalOptions="CenterAndExpand" VerticalOptions="EndAndExpand" >
+    <AbsoluteLayout
+        x:Name="Page"
+        VerticalOptions="FillAndExpand">
+        <StackLayout
+            AbsoluteLayout.LayoutBounds="0,0,1,1"
+            AbsoluteLayout.LayoutFlags="All"
+            BackgroundColor="White">
+            <Image
+                Source="UpBlue.png"
+                HorizontalOptions="CenterAndExpand"
+                VerticalOptions="EndAndExpand">
                 <Image.GestureRecognizers>
-                    <TapGestureRecognizer Tapped="UpBlue_Tapped"/>
+                    <TapGestureRecognizer Tapped="UpBlue_Tapped" />
                     <PanGestureRecognizer PanUpdated="UpBlue_Tapped" />
                 </Image.GestureRecognizers>
             </Image>
         </StackLayout>
 
-        <StackLayout x:Name="PageDown" AbsoluteLayout.LayoutBounds="0,0,1,1" AbsoluteLayout.LayoutFlags="All"
-                     Orientation="Vertical" VerticalOptions="FillAndExpand" Spacing="0">
-            <StackLayout VerticalOptions="FillAndExpand" BackgroundColor="#006df0">
-                <Image Source="DownWhite.png" HorizontalOptions="CenterAndExpand" VerticalOptions="StartAndExpand" >
+        <StackLayout
+            x:Name="PageDown"
+            AbsoluteLayout.LayoutBounds="0,0,1,1"
+            AbsoluteLayout.LayoutFlags="All"
+            Orientation="Vertical"
+            VerticalOptions="FillAndExpand"
+            Spacing="0">
+            <StackLayout
+                VerticalOptions="FillAndExpand"
+                BackgroundColor="#006df0">
+                <Image
+                    Source="DownWhite.png"
+                    HorizontalOptions="CenterAndExpand"
+                    VerticalOptions="StartAndExpand">
                     <Image.GestureRecognizers>
-                        <TapGestureRecognizer Tapped="DownWhite_Tapped"/>
+                        <TapGestureRecognizer Tapped="DownWhite_Tapped" />
                         <PanGestureRecognizer PanUpdated="DownWhite_Tapped" />
                     </Image.GestureRecognizers>
                 </Image>
@@ -244,10 +291,7 @@ namespace DemoSlidingPanel
 
 ```csharp
 using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 using Xamarin.Forms;
 
 namespace DemoSlidingPanel
@@ -261,16 +305,15 @@ namespace DemoSlidingPanel
             PageDown.TranslationY = 1000;
         }
 
-        async void UpBlue_Tapped(object sender, System.EventArgs e)
+        async void UpBlue_Tapped(object sender, EventArgs e)
         {
             await PageDown.TranslateTo(0, 0, 500, Easing.SinIn);
         }
 
-        async void DownWhite_Tapped(object sender, System.EventArgs e)
+        async void DownWhite_Tapped(object sender, EventArgs e)
         {
             await PageDown.TranslateTo(0, Page.Height, 500, Easing.SinIn);
         }
-
     }
 }
 ```
@@ -285,27 +328,46 @@ namespace DemoSlidingPanel
 
 ```xml
 <?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:local="clr-namespace:DemoSlidingPanel"
-             x:Class="DemoSlidingPanel.MainPage">
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:DemoSlidingPanel"
+    x:Class="DemoSlidingPanel.MainPage">
 
-    <AbsoluteLayout VerticalOptions="FillAndExpand" x:Name="Page">
-        <StackLayout  AbsoluteLayout.LayoutBounds="0,0,1,1" AbsoluteLayout.LayoutFlags="All" BackgroundColor="White">
-                <Image Source="LeftBlue.png" HorizontalOptions="EndAndExpand" VerticalOptions="CenterAndExpand" >
+    <AbsoluteLayout
+        x:Name="Page"
+        VerticalOptions="FillAndExpand">
+        <StackLayout
+            AbsoluteLayout.LayoutBounds="0,0,1,1"
+            AbsoluteLayout.LayoutFlags="All"
+            BackgroundColor="White">
+                <Image
+                    Source="LeftBlue.png"
+                    HorizontalOptions="EndAndExpand"
+                    VerticalOptions="CenterAndExpand">
                     <Image.GestureRecognizers>
-                        <TapGestureRecognizer Tapped="LeftBlue_Tapped"/>
+                        <TapGestureRecognizer Tapped="LeftBlue_Tapped" />
                         <PanGestureRecognizer PanUpdated="LeftBlue_Tapped" />
                     </Image.GestureRecognizers>
                 </Image>
         </StackLayout>
 
-        <StackLayout x:Name="PageLeft" AbsoluteLayout.LayoutBounds="0,0,1,1" AbsoluteLayout.LayoutFlags="All"
-                     Orientation="Vertical" VerticalOptions="FillAndExpand" Spacing="0">
-            <StackLayout VerticalOptions="FillAndExpand" BackgroundColor="#006df0">
-                <Image Source="LeftWhite.png" HorizontalOptions="EndAndExpand" VerticalOptions="CenterAndExpand" >
+        <StackLayout
+            x:Name="PageLeft"
+            AbsoluteLayout.LayoutBounds="0,0,1,1"
+            AbsoluteLayout.LayoutFlags="All"
+            Orientation="Vertical"
+            VerticalOptions="FillAndExpand"
+            Spacing="0">
+            <StackLayout
+                VerticalOptions="FillAndExpand"
+                BackgroundColor="#006df0">
+                <Image
+                    Source="LeftWhite.png"
+                    HorizontalOptions="EndAndExpand"
+                    VerticalOptions="CenterAndExpand">
                     <Image.GestureRecognizers>
-                        <TapGestureRecognizer Tapped="LeftWhite_Tapped"/>
+                        <TapGestureRecognizer Tapped="LeftWhite_Tapped" />
                         <PanGestureRecognizer PanUpdated="LeftWhite_Tapped" />
                     </Image.GestureRecognizers>
                 </Image>
@@ -327,10 +389,7 @@ namespace DemoSlidingPanel
 
 ```csharp
 using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 using Xamarin.Forms;
 
 namespace DemoSlidingPanel
@@ -344,16 +403,15 @@ namespace DemoSlidingPanel
             PageLeft.TranslationX = -1000;
         }
 
-        async void LeftWhite_Tapped(object sender, System.EventArgs e)
+        async void LeftWhite_Tapped(object sender, EventArgs e)
         {
             await PageLeft.TranslateTo(-Page.Width, 0, 500, Easing.SinIn);
         }
 
-        async void RightBlue_Tapped(object sender, System.EventArgs e)
+        async void RightBlue_Tapped(object sender, EventArgs e)
         {
             await PageLeft.TranslateTo(0, 0, 500, Easing.SinIn);
         }
-
     }
 }
 ```
