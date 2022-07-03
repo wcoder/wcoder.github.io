@@ -42,6 +42,8 @@ plugins:
   - jemoji
 feed:
   path: atom.xml
+sass:
+  style: compressed
 exclude:
   - CNAME
   - README.md
