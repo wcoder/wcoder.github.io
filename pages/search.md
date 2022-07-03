@@ -32,6 +32,7 @@ permalink: /search/
 {
     color: #000000;
     background: #FFFFFF;
+    min-height: 500px;
 }
 
 #ya-site-results .b-pager__current,
