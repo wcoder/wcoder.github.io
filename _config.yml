@@ -54,7 +54,6 @@ exclude:
 
 # http://jch.penibelst.de/
 compress_html:
-  profile: true
   clippings: [div, p, ul, td, h1, h2]
   comments: ["<!-- ", " -->"]
 
