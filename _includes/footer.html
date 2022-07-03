@@ -1,17 +1,25 @@
-{% if layout.content_type == 'article' %}
-	{% capture content_root %}{% if jekyll.environment == "production" %}//{{ site.enforce_ssl }}{% endif %}{% endcapture %}
-	<script src="{{ content_root }}/js/highlight.pack.js"></script>
-	<script src="{{ content_root }}/js/highlightjs-line-numbers.min.js"></script>
+<hr />
+<div class="wrapper">
+    <footer class="footer">
+        {% include copyrights.html %}
+        {% include license.html %}
+    </footer>
+</div>
 
-	<script>
-		hljs.initHighlightingOnLoad();
-		hljs.initLineNumbersOnLoad();
-	</script>
-	<script src="{{ content_root }}/js/share-buttons.js"></script>
+{% if layout.content_type == 'article' %}
+    {% capture content_root %}{% if jekyll.environment == "production" %}//{{ site.enforce_ssl }}{% endif %}{% endcapture %}
+    <script src="{{ content_root }}/js/highlight.pack.js"></script>
+    <script src="{{ content_root }}/js/highlightjs-line-numbers.min.js"></script>
+
+    <script>
+        hljs.initHighlightingOnLoad();
+        hljs.initLineNumbersOnLoad();
+    </script>
+    <script src="{{ content_root }}/js/share-buttons.js"></script>
 {% endif %}
 
 {% if jekyll.environment == "production" %}
-	{% include ya-metrika.html %}
+    {% include ya-metrika.html %}
 {% endif %}
 
 <!--Generated with Jekyll at {{ site.time | date: '%b. %d, %Y %r (%Z)'}}-->
