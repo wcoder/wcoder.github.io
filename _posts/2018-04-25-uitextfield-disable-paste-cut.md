@@ -28,21 +28,29 @@ public class CustomTextField : UITextField
 В следующем коде показано как это сделать и для других возможных параметров:
 
 ```csharp
-public override bool CanPerform(ObjCRuntime.Selector action, Foundation.NSObject withSender)
+using Foundation;
+using ObjCRuntime;
+using System.Linq;
+
+// ...
+
+public override bool CanPerform(Selector action, NSObject withSender)
 {
-    if (action == new ObjCRuntime.Selector("paste:")
-        || action == new ObjCRuntime.Selector("cut:")
-        || action == new ObjCRuntime.Selector("copy:")
-        || action == new ObjCRuntime.Selector("_share:")
-        || action == new ObjCRuntime.Selector("_define:"))
+    switch (action.Name)
     {
-        return false;
+        case "paste:":
+        case "cut:":
+        case "copy:":
+        case "_share:":
+        case "_define:":
+            return false;
     }
+
     return base.CanPerform(action, withSender);
 }
 ```
 
-Вы можете заметить, что вам нужно создать экземпляр класса **Selector**, чтобы сравнить каждый из параметров, которые вы хотите игнорировать, и что идентификатор каждого из параметров - это строка, которую вы должны передать в конструкторе экземпляра селектора.
+Как можно заметить, мы сравниваем имя пришедшего экземпляра `Selector` (что собирается отобразиться) с теми, которые мы хотим игнорировать.
 
 ### Шаг 3
 
