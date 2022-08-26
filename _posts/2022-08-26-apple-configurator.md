@@ -9,7 +9,7 @@ tags:
 - заметка
 ---
 
-Apple Configurator stores their `.ipsw` archives in this path:
+By default Apple Configurator stores their `.ipsw` archives in this path:
 
 ```
 ~/Library/Group\ Containers/K36BKF7T3D.group.com.apple.configurator/Library/Caches/Firmware/
@@ -21,7 +21,7 @@ Files look like this:
 iPhone13,2,iPhone13,3_15.6.1_19G82_Restore.ipsw
 ```
 
-iTunes Updater in Finder stores their files in this path:
+By default iTunes Updater in Finder stores their files in this path:
 
 ```
 ~/Library/iTunes/iPhone\ Software\ Updates/
