@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Xamarin.iOS: How to open app's folder in Files.app programmatically"
-date: 2022-12-23 15:05
+date: 2022-12-23 20:30
 locale: en_US
 tags:
 - xamarin.ios
