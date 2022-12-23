@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Xamarin.iOS: How to open app's folder in Files.app programmatically"
-date: 2022-12-23 18:05
+date: 2022-12-23 15:05
 locale: en_US
 tags:
 - xamarin.ios
@@ -13,7 +13,7 @@ tags:
 
 ## Prerequisite
 
-Also note, that there is a prerequisite. You need to make this directory "public" so it shows on its own in the "On my iPhone" section in Files app. This requires `Info.plist` modification, and you can find [documentation about this here](https://learn.microsoft.com/en-us/xamarin/ios/app-fundamentals/file-system#sharing-with-the-files-app). Check it out to enable this for your app.
+Also note, that there is a prerequisite. You need to make app directory "public" so it shows on its own in the "On my iPhone" section in Files app. This requires `Info.plist` modification, and you can find [documentation about this here](https://learn.microsoft.com/en-us/xamarin/ios/app-fundamentals/file-system#sharing-with-the-files-app). Check it out to enable this for your app.
 
 ## How to open Files app
 
