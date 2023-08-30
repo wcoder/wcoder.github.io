@@ -60,4 +60,4 @@ Make sure to not include special characters in the file name. The blog entry's p
 &nbsp;
 
 ---
-&copy; 2018-2022 Yauheni Pakala
+&copy; 2018-now Yauheni Pakala
