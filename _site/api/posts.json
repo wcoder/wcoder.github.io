@@ -1,0 +1,799 @@
+{
+  "updated": "2025-11-11 11:59:43 +0300",
+  "posts": [{
+      "link": "https://wcoder.github.io/notes/xamarin-ios-how-to-open-app-folder-in-files-app",
+      "title": "Xamarin.iOS: How to open app's folder in Files.app programmatically",
+      "date": "2022-12-23 20:30:00 +0300",
+      "tags": ["xamarin.ios","ios",".net","заметка"]
+  }, {
+      "link": "https://wcoder.github.io/notes/apple-configurator",
+      "title": "Apple Configurator",
+      "date": "2022-08-26 12:49:00 +0300",
+      "tags": ["apple","ios","заметка"]
+  }, {
+      "link": "https://wcoder.github.io/notes/msbuild-regex-condition",
+      "title": "Using condition with regex in MSBuild",
+      "date": "2020-12-11 18:40:00 +0300",
+      "tags": ["msbuild","regex"]
+  }, {
+      "link": "https://wcoder.github.io/notes/ios-framework-size",
+      "title": "Понимание размера Framework в iOS",
+      "date": "2018-04-27 12:30:00 +0300",
+      "tags": ["ios","заметка"]
+  }, {
+      "link": "https://wcoder.github.io/notes/uitextfield-disable-paste-cut",
+      "title": "Удаление параметров копирования/вставки из UITextField в Xamarin.iOS",
+      "date": "2018-04-25 18:10:00 +0300",
+      "tags": ["xamarin.ios","заметка","сниппет"]
+  }, {
+      "link": "https://wcoder.github.io/notes/resilient-network-connectivity-xamarin-forms",
+      "title": "Отказоустойчивое подключение к сети в Xamarin.Forms & MAUI",
+      "date": "2018-03-17 18:25:00 +0300",
+      "tags": ["xamarin","xamarin forms","MAUI","перевод"]
+  }, {
+      "link": "https://wcoder.github.io/notes/use-skiasharp-to-convert-svg-to-xamarin-forms-imagesource",
+      "title": "Использование SkiaSharp для конвертации SVG в Xamarin.Forms ImageSource",
+      "date": "2018-03-17 17:10:00 +0300",
+      "tags": ["xamarin","xamarin forms","skiasharp","svg","перевод"]
+  }, {
+      "link": "https://wcoder.github.io/notes/sliding-panel-xamarin-forms",
+      "title": "Реализуем Sliding Panel с использованием Xamarin.Forms & MAUI",
+      "date": "2018-02-04 22:18:00 +0300",
+      "tags": ["mobile","xamarin forms","MAUI","перевод"]
+  }, {
+      "link": "https://wcoder.github.io/notes/xamawin-override-select-state-using-effects",
+      "title": "Отключаем выделение выбранного элемента ListView с использованием эффектов в Xamarin Forms",
+      "date": "2018-02-02 23:05:00 +0300",
+      "tags": ["android","ios","xamarin forms","сниппет","перевод"]
+  }, {
+      "link": "https://wcoder.github.io/notes/videoplayer-xamarin-forms",
+      "title": "Воспроизведение видео в приложении Xamarin Forms",
+      "date": "2018-02-01 23:10:00 +0300",
+      "tags": ["android","ios","xamarin forms","video","перевод"]
+  }, {
+      "link": "https://wcoder.github.io/notes/app-files-iphone-simulator-macos",
+      "title": "Как посмотреть файлы iOS приложения в iPhone Simulator?",
+      "date": "2018-01-20 00:00:00 +0300",
+      "tags": ["ios","macos","заметка"]
+  }, {
+      "link": "https://wcoder.github.io/notes/install-nuget-package-management-visual-studio-mac",
+      "title": "Установка NuGet Package Manager для Visual Studio for Mac",
+      "date": "2018-01-19 23:15:00 +0300",
+      "tags": ["visual studio","macos","заметка","nuget"]
+  }, {
+      "link": "https://wcoder.github.io/notes/open-multiple-instances-of-visual-studio-mac",
+      "title": "Как запустить несколько экземпляров Visual Studio for Mac?",
+      "date": "2018-01-16 21:51:00 +0300",
+      "tags": ["visual studio","macos","заметка"]
+  }, {
+      "link": "https://wcoder.github.io/notes/creating-a-uiimage-with-a-url-in-xamarin-ios",
+      "title": "Получение изображения по URL в Xamarin.iOS",
+      "date": "2018-01-16 21:40:00 +0300",
+      "tags": ["xamarin.ios","c#","сниппет"]
+  }, {
+      "link": "https://wcoder.github.io/notes/open-visual-studio-code-terminal-command-code",
+      "title": "Как открыть Visual Studio Code из терминала в macOS?",
+      "date": "2018-01-15 21:00:00 +0300",
+      "tags": ["visual studio code","macos","заметка","настройка"]
+  }, {
+      "link": "https://wcoder.github.io/notes/android-threading-all-you-need-to-know-part2",
+      "title": "Многозадачность в Android. Часть 2 - 7 шаблонов использования многопоточности в Android",
+      "date": "2017-08-31 21:20:00 +0300",
+      "tags": ["многопоточность","android","перевод"]
+  }, {
+      "link": "https://wcoder.github.io/notes/android-threading-all-you-need-to-know-part1",
+      "title": "Многопоточность в Android. Все что вам нужно знать. Часть 1 - Введение",
+      "date": "2017-08-13 11:40:00 +0300",
+      "tags": ["многопоточность","android","перевод"]
+  }, {
+      "link": "https://wcoder.github.io/notes/lottie-animations-step-by-step-in-xamarin-forms",
+      "title": "Шаг за шагом добавляем Lottie анимации в Xamarin Forms приложение",
+      "date": "2017-07-24 15:56:00 +0300",
+      "tags": ["xamarin forms","ios","android","перевод"]
+  }, {
+      "link": "https://wcoder.github.io/notes/multiple-recyclerview-with-viewpager-and-tablayout-xamarin-android",
+      "title": "Множественные RecyclerView через ViewPager и TabLayout в Xamarin.Android",
+      "date": "2017-07-20 15:50:00 +0300",
+      "tags": ["xamarin","android","xamarin.android","c#","перевод"]
+  }, {
+      "link": "https://wcoder.github.io/notes/xamarin-forms-debugging-webview",
+      "title": "Отладка Xamarin Forms WebView в Chrome",
+      "date": "2017-07-02 11:45:00 +0300",
+      "tags": ["xamarin forms","debug","c#","перевод"]
+  }, {
+      "link": "https://wcoder.github.io/notes/xamarin-forms-webview-executing-javascript",
+      "title": "Выполнение JavaScript в WebView Xamarin Forms",
+      "date": "2017-07-02 00:50:00 +0300",
+      "tags": ["xamarin forms","javascript","c#","перевод"]
+  }, {
+      "link": "https://wcoder.github.io/notes/hololens-xamarin-urhosharp",
+      "title": "Введение в UrhoSharp для HoloLens",
+      "date": "2017-06-28 13:00:00 +0300",
+      "tags": ["urhosharp","hololens","xamarin","c#","3d","перевод"]
+  }, {
+      "link": "https://wcoder.github.io/notes/xamarin-forms-timer",
+      "title": "Таймер в Xamarin Forms",
+      "date": "2017-04-09 10:07:00 +0300",
+      "tags": ["xamarin forms","c#","сниппет","перевод"]
+  }, {
+      "link": "https://wcoder.github.io/notes/country-codes-11",
+      "title": "Коды стран мира v.1.1",
+      "date": "2016-04-15 17:28:00 +0300",
+      "tags": ["проекты","uwp"]
+  }, {
+      "link": "https://wcoder.github.io/notes/custom-gestures-in-xamarin-forms",
+      "title": "Пользовательские жесты в приложениях Xamarin.Forms",
+      "date": "2016-04-15 17:07:00 +0300",
+      "tags": ["c#","xamarin forms"]
+  }, {
+      "link": "https://wcoder.github.io/notes/js-console-time",
+      "title": "Измеряем время выполнения с помощью console.time и console.timeEnd",
+      "date": "2016-04-05 22:20:00 +0300",
+      "tags": ["javascript","benchmarking","перевод"]
+  }, {
+      "link": "https://wcoder.github.io/notes/using-tooltips-to-make-better-menus-in-windows-apps",
+      "title": "Используем подсказки в UWP приложениях",
+      "date": "2016-03-26 17:40:00 +0300",
+      "tags": ["xaml","uwp","сниппет","перевод"]
+  }, {
+      "link": "https://wcoder.github.io/notes/choosing-an-image-from-gallery-or-camera-in-uwp",
+      "title": "Более лучший способ выбора изображений из галерии или камеры в UWP приложениях",
+      "date": "2016-03-20 22:00:00 +0300",
+      "tags": ["c#","windows phone","uwp","перевод"]
+  }, {
+      "link": "https://wcoder.github.io/notes/custom-uitableviewcells-with-xamarin-and-xibs",
+      "title": "Создание кастомных ячеек для UITableView с помощью Xamarin и XIB",
+      "date": "2016-03-16 23:40:00 +0300",
+      "tags": ["ios","xamarin"]
+  }, {
+      "link": "https://wcoder.github.io/notes/gulp-recipes",
+      "title": "Gulp сниппеты",
+      "date": "2016-03-14 01:00:00 +0300",
+      "tags": ["gulp","сниппет","перевод"]
+  }, {
+      "link": "https://wcoder.github.io/notes/tracking-apple-pencil-angles-and-pressure-with-xamarin",
+      "title": "Отслеживание угла наклона и силы нажания Apple Pencil с помощью Xamarin",
+      "date": "2016-03-05 23:10:00 +0300",
+      "tags": ["xamarin","f#","ios","перевод"]
+  }, {
+      "link": "https://wcoder.github.io/notes/playing-audio-mp3-file-in-xamarin-forms",
+      "title": "Воспроизведение аудио-файлов в Xamarin.Forms",
+      "date": "2016-03-02 23:20:00 +0300",
+      "tags": ["c#","xamarin forms","ios","android","перевод"]
+  }, {
+      "link": "https://wcoder.github.io/notes/the-little-singleton",
+      "title": "Маленький Singleton",
+      "date": "2016-03-01 00:00:00 +0300",
+      "tags": ["паттерны","тестирование","перевод"]
+  }, {
+      "link": "https://wcoder.github.io/notes/horizontal-xamarin-forms-listview",
+      "title": "Горизонтальный ListView в Xamarin.Forms",
+      "date": "2016-02-29 23:50:00 +0300",
+      "tags": ["xamarin forms","ios","android","windows phone","перевод"]
+  }, {
+      "link": "https://wcoder.github.io/notes/display-a-loading-message-with-xamarin",
+      "title": "Выводим индикатор загрузки в iOS c помощью Xamarin",
+      "date": "2016-02-27 23:50:00 +0300",
+      "tags": ["xamarin","ios","сниппет","перевод"]
+  }, {
+      "link": "https://wcoder.github.io/notes/how-does-xamarin-ios-work",
+      "title": "Немного подробнее о том, как работает Xamarin.iOS",
+      "date": "2016-02-19 00:45:00 +0300",
+      "tags": ["c#","xamarin","xamarin.ios","перевод"]
+  }, {
+      "link": "https://wcoder.github.io/notes/rename-azure-subscription",
+      "title": "Как переименовать Windows Azure подписку?",
+      "date": "2016-02-15 22:20:00 +0300",
+      "tags": ["azure","перевод"]
+  }, {
+      "link": "https://wcoder.github.io/notes/eisenhower-box",
+      "title": "Как быть более продуктивным и ликвидировать потерю времени используя \"Матрицу Эйзенхауэра\"",
+      "date": "2016-02-10 00:20:00 +0300",
+      "tags": ["продуктивность","перевод"]
+  }, {
+      "link": "https://wcoder.github.io/notes/clear-all-activity-stack-in-android",
+      "title": "Очищаем Activity стек в Android",
+      "date": "2016-02-01 19:55:00 +0300",
+      "tags": ["android","java","перевод","сниппет"]
+  }, {
+      "link": "https://wcoder.github.io/notes/highlightjs-line-numbers",
+      "title": "Нумерация строк в highlight.js",
+      "date": "2016-01-26 22:25:00 +0300",
+      "tags": ["javascript","opensource","проекты"]
+  }, {
+      "link": "https://wcoder.github.io/notes/watermarking-hmtl5-video-with-a-logo",
+      "title": "HTML5 видео с водяным знаком",
+      "date": "2016-01-24 16:25:00 +0300",
+      "tags": ["css","html5","сниппет"]
+  }, {
+      "link": "https://wcoder.github.io/notes/get-app-version-from-the-package",
+      "title": "Получаем версию UWP приложения из пакета приложения",
+      "date": "2016-01-23 20:00:00 +0300",
+      "tags": ["c#","uwp","сниппет","перевод"]
+  }, {
+      "link": "https://wcoder.github.io/notes/disable-hardware-back-button-in-uwp",
+      "title": "Отключаем аппаратную кнопку Back в UWP приложении",
+      "date": "2016-01-20 23:25:00 +0300",
+      "tags": ["c#","uwp","сниппет"]
+  }, {
+      "link": "https://wcoder.github.io/notes/ail-of-video-storage-file-in-uwp-app",
+      "title": "Получаем миниатурю видео-файла в UWP приложении",
+      "date": "2016-01-20 12:20:00 +0300",
+      "tags": ["c#","uwp","сниппет","перевод"]
+  }, {
+      "link": "https://wcoder.github.io/notes/how-to-get-the-file-size-of-storage-file-in-windows-app",
+      "title": "Получаем размер файла в UWP приложении",
+      "date": "2016-01-19 23:32:00 +0300",
+      "tags": ["c#","uwp","сниппет"]
+  }, {
+      "link": "https://wcoder.github.io/notes/bitmap-icon-use-an-image-like-an-icon",
+      "title": "BitmapIcon - используем изображение как иконку",
+      "date": "2016-01-10 01:11:00 +0300",
+      "tags": ["uwp","xaml","сниппет"]
+  }, {
+      "link": "https://wcoder.github.io/notes/retrieve-file-size-from-remote-url-using-c-sharp",
+      "title": "Узнаем размера файла по URL с помощью C#",
+      "date": "2015-12-29 23:40:00 +0300",
+      "tags": ["c#","сниппет","перевод"]
+  }, {
+      "link": "https://wcoder.github.io/notes/convert-storagefile-to-a-bitmapimage-in-universal-windows-apps",
+      "title": "Конвертирование StorageFile в BitmapImage в универсальных приложениях Windows",
+      "date": "2015-12-27 14:10:00 +0300",
+      "tags": ["сниппет","c#","uwp"]
+  }, {
+      "link": "https://wcoder.github.io/notes/make-xamarin-studio-look-like-visual-studio",
+      "title": "Делаем Xamarin Studio похожей на Visual Studio",
+      "date": "2015-12-26 18:30:00 +0300",
+      "tags": ["xamarin studio","visual studio","перевод"]
+  }, {
+      "link": "https://wcoder.github.io/notes/resharper-ish-assistance-in-xamarin-studio",
+      "title": "Включаем опцию анализа кода в Xamarin Studio",
+      "date": "2015-12-20 15:45:00 +0300",
+      "tags": ["перевод","xamarin studio"]
+  }, {
+      "link": "https://wcoder.github.io/notes/htaccess-gzip-compression",
+      "title": "Включаем gzip-сжатие с использование .htaccess",
+      "date": "2015-12-16 21:50:00 +0300",
+      "tags": ["apache",".htaccess","перевод"]
+  }, {
+      "link": "https://wcoder.github.io/notes/xamarin-ios-swipable-multiple-step-process-used-for-onboarding",
+      "title": "Реализация OnBoarding процесса в приложении Xamarin.iOS",
+      "date": "2015-12-13 19:10:00 +0300",
+      "tags": ["xamarin","ios","перевод"]
+  }, {
+      "link": "https://wcoder.github.io/notes/line-spacing-label-in-xamarin-forms",
+      "title": "Межстрочный интервал для Label в Xamarin.Forms",
+      "date": "2015-12-13 14:30:00 +0300",
+      "tags": ["c#","xamarin","xamarin forms","ios","android","перевод"]
+  }, {
+      "link": "https://wcoder.github.io/notes/xamarin-forms-2-0-windows-10-preview",
+      "title": "Начало работы с Xamarin.Forms 2.0 и Windows 10 Preview",
+      "date": "2015-11-29 21:35:00 +0300",
+      "tags": ["xamarin forms","xamarin","uwp","c#","перевод"]
+  }, {
+      "link": "https://wcoder.github.io/notes/nodejs-bcrypt",
+      "title": "Приступая к работе с Node.js и bcrypt",
+      "date": "2015-11-26 18:28:00 +0300",
+      "tags": ["nodejs","bcrypt","security"]
+  }, {
+      "link": "https://wcoder.github.io/notes/dry-is-about-knowledge",
+      "title": "DRY о знании",
+      "date": "2015-11-07 19:41:00 +0300",
+      "tags": ["перевод","ddd","dry"]
+  }, {
+      "link": "https://wcoder.github.io/notes/is-your-app-ready-for-ios-9",
+      "title": "Ваше приложение готово к iOS9?",
+      "date": "2015-11-07 18:25:00 +0300",
+      "tags": ["перевод","xamarin","xamarin forms","ios"]
+  }, {
+      "link": "https://wcoder.github.io/notes/ios-untrusted-enterprise-developer",
+      "title": "Возникает сообщение «Untrusted Enterprise Developer»",
+      "date": "2015-11-01 00:41:00 +0300",
+      "tags": ["ios","памятка"]
+  }, {
+      "link": "https://wcoder.github.io/notes/xamarin-forms-frame-command",
+      "title": "Выполняем команду при нажатии на Frame",
+      "date": "2015-10-31 23:10:00 +0300",
+      "tags": ["xamarin forms","mvvm"]
+  }, {
+      "link": "https://wcoder.github.io/notes/customize-title-bar-color-in-windows-10-xaml-apps",
+      "title": "Настройка цвета строки заголовка в приложении Windows 10 на XAML",
+      "date": "2015-09-26 14:22:00 +0300",
+      "tags": ["xaml","c#","uwp"]
+  }, {
+      "link": "https://wcoder.github.io/notes/long-shadow-css3",
+      "title": "Делаем длинную тень для текста на CSS3",
+      "date": "2015-09-20 17:50:00 +0300",
+      "tags": ["заметка","css","scss"]
+  }, {
+      "link": "https://wcoder.github.io/notes/convert-storagefile-to-bytes-uwp",
+      "title": "Конвертирование StorageFile в массив байтов в универсальных приложениях Windows",
+      "date": "2015-09-18 16:23:00 +0300",
+      "tags": ["сниппет","c#","windows"]
+  }, {
+      "link": "https://wcoder.github.io/notes/check-network-uwp",
+      "title": "Проверка доступности сети в универсальных приложениях Windows",
+      "date": "2015-09-13 13:12:00 +0300",
+      "tags": ["сниппет","c#","windows","windows phone","uwp"]
+  }, {
+      "link": "https://wcoder.github.io/notes/about-rasp-brsu",
+      "title": "О проекте электронной версии расписания физико-математического факультета BRSU",
+      "date": "2015-09-12 15:13:00 +0300",
+      "tags": ["проекты"]
+  }, {
+      "link": "https://wcoder.github.io/notes/auto-formatting-text-inputs-with-mvvmcross-and-value-converters",
+      "title": "Автоматические форматирование текстового поля с помощью MvvmCross и конвертеров",
+      "date": "2015-09-04 11:51:00 +0300",
+      "tags": ["c#","mvvm","mvvmcross","перевод"]
+  }, {
+      "link": "https://wcoder.github.io/notes/loading-pure-css",
+      "title": "Индикатор загрузки на чистом CSS",
+      "date": "2015-09-03 11:28:00 +0300",
+      "tags": ["css","scss"]
+  }, {
+      "link": "https://wcoder.github.io/notes/weather-indicator-in-elementory-os",
+      "title": "Установка индикатора погоды в Elementory OS",
+      "date": "2015-08-29 22:18:00 +0300",
+      "tags": ["elementary os","настройка"]
+  }, {
+      "link": "https://wcoder.github.io/notes/format-json-csharp",
+      "title": "Форматирование JSON в C#",
+      "date": "2015-08-24 00:15:00 +0300",
+      "tags": ["c#","json"]
+  }, {
+      "link": "https://wcoder.github.io/notes/document-loaded-with-javascript",
+      "title": "Определяем что документ был загружен с помощью JavaScript",
+      "date": "2015-08-23 20:19:00 +0300",
+      "tags": ["сниппет","javascript"]
+  }, {
+      "link": "https://wcoder.github.io/notes/git-update-commit",
+      "title": "Обновление комментария к коммиту в Git",
+      "date": "2015-08-23 19:13:00 +0300",
+      "tags": ["git"]
+  }, {
+      "link": "https://wcoder.github.io/notes/git-reset-last-commit",
+      "title": "Отмена последнего коммита в Git",
+      "date": "2015-08-23 19:00:00 +0300",
+      "tags": ["git"]
+  }, {
+      "link": "https://wcoder.github.io/notes/convert-image-data-url-with-javascript",
+      "title": "Конвертирование изображения в DataURL с помощью JavaScript",
+      "date": "2015-08-23 00:00:00 +0300",
+      "tags": ["сниппет","javascript"]
+  }, {
+      "link": "https://wcoder.github.io/notes/bootable-flash-drive-with-windows10",
+      "title": "Делаем загрузочную флешку с Windows 10",
+      "date": "2015-08-16 19:33:00 +0300",
+      "tags": ["памятка","программы","windows","windows 10"]
+  }, {
+      "link": "https://wcoder.github.io/notes/limit-input-to-two-decimal-places-in-csharp",
+      "title": "Ограничиваем ввод до двух знаков после запятой в C#",
+      "date": "2015-07-28 15:09:00 +0300",
+      "tags": ["перевод","c#"]
+  }, {
+      "link": "https://wcoder.github.io/notes/computer-hibernation-with-time",
+      "title": "Переход компьютера в режим гибернации через определенное время",
+      "date": "2015-07-21 19:42:00 +0300",
+      "tags": ["windows","гибернация","командная строка"]
+  }, {
+      "link": "https://wcoder.github.io/notes/hyper-v-synthetic-scsi-controller-error",
+      "title": "Решаем возникающую ошибку «Synthetic SCSI Controller Error» при загрузке ISO образа",
+      "date": "2015-07-15 01:40:00 +0300",
+      "tags": ["hyper-v","виртуализация","решения"]
+  }, {
+      "link": "https://wcoder.github.io/notes/advanced-memory-management-on-ios-and-android-xamarin",
+      "title": "Расширенное управление памятью в Xamarin iOS и Android",
+      "date": "2015-07-14 00:07:00 +0300",
+      "tags": ["xamarin","ios","android","презентация"]
+  }, {
+      "link": "https://wcoder.github.io/notes/progress-indicator-with-jquery",
+      "title": "Прогресс выполнения Ajax запроса в jQuery",
+      "date": "2015-07-13 17:51:00 +0300",
+      "tags": ["ajax","jquery","html5","сниппет"]
+  }, {
+      "link": "https://wcoder.github.io/notes/blog-tags-with-pure-css",
+      "title": "Теги для блога на чистом CSS",
+      "date": "2015-07-13 17:30:00 +0300",
+      "tags": ["css"]
+  }, {
+      "link": "https://wcoder.github.io/notes/add-chrome-incognito-mode-as-a-browser-visual-studio",
+      "title": "Visual Studio - Добавляем Chrome в режиме инкогнито",
+      "date": "2015-07-13 16:33:00 +0300",
+      "tags": ["программы","настройка","visual studio","google chrome","internet explorer"]
+  }, {
+      "link": "https://wcoder.github.io/notes/convert-string-base64-javascript",
+      "title": "Переводим строку в base64 и обратно на JavaScript",
+      "date": "2015-07-12 23:38:00 +0300",
+      "tags": ["javascript","сниппет"]
+  }, {
+      "link": "https://wcoder.github.io/notes/github-widget-for-site",
+      "title": "Github-виджет для сайта",
+      "date": "2015-07-12 22:56:00 +0300",
+      "tags": ["github"]
+  }, {
+      "link": "https://wcoder.github.io/notes/simple-http-get-request-by-golang",
+      "title": "Пример простого HTTP GET запроса на Go",
+      "date": "2015-07-11 23:13:00 +0300",
+      "tags": ["go"]
+  }, {
+      "link": "https://wcoder.github.io/notes/simple-timer-with-pure-javascript",
+      "title": "Простой таймер на чистом JavaScript",
+      "date": "2015-06-14 22:29:00 +0300",
+      "tags": ["javascript","сниппет"]
+  }, {
+      "link": "https://wcoder.github.io/notes/disallow-chrome-to-translate-the-page",
+      "title": "Запрещаем Хрому переводить страницу",
+      "date": "2015-05-25 19:32:00 +0300",
+      "tags": ["google chrome","html"]
+  }, {
+      "link": "https://wcoder.github.io/notes/remove-ticino-from-context-menu-windows",
+      "title": "Как убрать \"Ticino\" из контекстного меню Windows?",
+      "date": "2015-05-05 02:58:00 +0300",
+      "tags": ["помощь"]
+  }, {
+      "link": "https://wcoder.github.io/notes/tabs-with-pure-css",
+      "title": "Вкладки на чистом CSS",
+      "date": "2015-04-23 03:00:00 +0300",
+      "tags": ["css"]
+  }, {
+      "link": "https://wcoder.github.io/notes/bootable-flash-drive",
+      "title": "Делаем загрузочную флешку",
+      "date": "2015-04-19 22:43:00 +0300",
+      "tags": ["памятка","программы"]
+  }, {
+      "link": "https://wcoder.github.io/notes/drop-down-navigation-menu-with-pure-css",
+      "title": "Меню навигации с выпадающим списком на чистом CSS",
+      "date": "2015-04-02 03:57:00 +0300",
+      "tags": ["css"]
+  }, {
+      "link": "https://wcoder.github.io/notes/selected-all-emement-on-the-page-with-css",
+      "title": "Выделение всех элементов на странице с помощью CSS",
+      "date": "2015-04-02 02:47:00 +0300",
+      "tags": ["css"]
+  }, {
+      "link": "https://wcoder.github.io/notes/cloning-object-in-pcl-with-csharp",
+      "title": "C# клонирование объектов в PCL",
+      "date": "2015-03-21 23:25:00 +0300",
+      "tags": ["перевод","c#",".net","pcl"]
+  }, {
+      "link": "https://wcoder.github.io/notes/what-is-human-txt",
+      "title": "Что такое humans.txt?",
+      "date": "2015-03-21 22:34:00 +0300",
+      "tags": ["сайты"]
+  }, {
+      "link": "https://wcoder.github.io/notes/remove-all-photos-from-vk",
+      "title": "Как удалить все фотографии со страницы Вконтакте?",
+      "date": "2015-03-05 05:11:00 +0300",
+      "tags": ["javascript","vk"]
+  }, {
+      "link": "https://wcoder.github.io/notes/linux-user-default-dirs",
+      "title": "Изменение расположения стандартных папок пользователя",
+      "date": "2015-02-27 03:48:00 +0300",
+      "tags": ["памятка","linux","linux mint","elementary os","ubuntu"]
+  }, {
+      "link": "https://wcoder.github.io/notes/linux-screensaver-caffeine",
+      "title": "Временное отключение экранной заставки при просмотре видео c помощью Caffeine",
+      "date": "2015-02-27 03:32:00 +0300",
+      "tags": ["программы","linux","ubuntu","elementary os","linux mint","заставка","настройка"]
+  }, {
+      "link": "https://wcoder.github.io/notes/javascript-web-alarms-api",
+      "title": "Расширенный JavaScript API - Web Alarms API",
+      "date": "2015-02-13 05:39:00 +0300",
+      "tags": ["javascript"]
+  }, {
+      "link": "https://wcoder.github.io/notes/linux-mint-monitor-youtube",
+      "title": "Как решить проблему выключения монитора при просмотре youtube в Linux Mint 17?",
+      "date": "2015-02-13 05:03:00 +0300",
+      "tags": ["linux","linux mint","ubuntu","youtube","html5","настройка"]
+  }, {
+      "link": "https://wcoder.github.io/notes/tree-with-pure-css",
+      "title": "Ёлка на чистом CSS",
+      "date": "2015-01-03 02:32:00 +0300",
+      "tags": ["css"]
+  }, {
+      "link": "https://wcoder.github.io/notes/ten-ways-to-generate-a-random-password-from-the-command-line",
+      "title": "10 способов генерации случайных паролей из коммандной строки",
+      "date": "2014-12-24 04:23:00 +0300",
+      "tags": ["linux","памятка","команды","перевод","bash"]
+  }, {
+      "link": "https://wcoder.github.io/notes/csharp-get-ip-from-host",
+      "title": "Получение IP-адреса по имени хоста с помощью C#",
+      "date": "2014-12-21 03:42:00 +0300",
+      "tags": ["c#",".net","сниппет"]
+  }, {
+      "link": "https://wcoder.github.io/notes/simple-array-cloning-in-javascript",
+      "title": "Простое клонирование/копирование массива в JavaScript",
+      "date": "2014-12-20 09:23:00 +0300",
+      "tags": ["перевод","javascript"]
+  }, {
+      "link": "https://wcoder.github.io/notes/how-to-build-forms-with-laravel",
+      "title": "Как создавать формы в Laravel",
+      "date": "2014-12-14 03:17:00 +0300",
+      "tags": ["памятка","laravel","php","сниппет","перевод"]
+  }, {
+      "link": "https://wcoder.github.io/notes/using-mvvm-light-with-xamarin-forms",
+      "title": "Памятка по использованию MVVM Light в проекте Xamarin Forms",
+      "date": "2014-11-23 14:00:00 +0300",
+      "tags": ["c#",".net","xaml","xamarin forms","ios","android","windows phone"]
+  }, {
+      "link": "https://wcoder.github.io/notes/system-tray-windows-phone-8",
+      "title": "Памятка по System Tray в Windows Phone 8",
+      "date": "2014-11-21 15:07:00 +0300",
+      "tags": ["windows phone","xaml","памятка"]
+  }, {
+      "link": "https://wcoder.github.io/notes/modal-window-with-pure-css",
+      "title": "Модальное окно на чистом CSS",
+      "date": "2014-11-10 16:59:00 +0300",
+      "tags": ["css"]
+  }, {
+      "link": "https://wcoder.github.io/notes/how-to-sit-correctly-at-the-computer",
+      "title": "Как правильно сидеть за компьютером?",
+      "date": "2014-11-10 01:38:00 +0300",
+      "tags": ["видео","здоровье","памятка"]
+  }, {
+      "link": "https://wcoder.github.io/notes/scan-qr-codes-with-xamarin-forms",
+      "title": "Сканирование QR-кодов, штрих-кодов в приложениях Xamarin.Forms",
+      "date": "2014-11-06 06:16:00 +0300",
+      "tags": ["c#",".net","xamarin","ios","android","windows phone","перевод"]
+  }, {
+      "link": "https://wcoder.github.io/notes/accordion-with-pure-css",
+      "title": "Aккордеон на чистом CSS",
+      "date": "2014-11-04 02:11:00 +0300",
+      "tags": ["css"]
+  }, {
+      "link": "https://wcoder.github.io/notes/parsing-date-from-twitter-and-facebook-with-csharp",
+      "title": "Парсинг даты из Twitter и Facebook в C#",
+      "date": "2014-10-06 01:40:00 +0300",
+      "tags": ["api","twitter","facebook","c#",".net"]
+  }, {
+      "link": "https://wcoder.github.io/notes/colorful-gradient-text-css3",
+      "title": "Красочный градиент текста с помощью CSS",
+      "date": "2014-10-04 01:42:00 +0300",
+      "tags": ["css","перевод"]
+  }, {
+      "link": "https://wcoder.github.io/notes/guide-markdown",
+      "title": "Памятка по markdown",
+      "date": "2014-09-27 19:44:00 +0300",
+      "tags": ["памятка","markdown"]
+  }, {
+      "link": "https://wcoder.github.io/notes/difference-two-dates-with-javascript",
+      "title": "Разность между двумя датами на JavaScript",
+      "date": "2014-09-23 02:18:00 +0300",
+      "tags": ["javascript"]
+  }, {
+      "link": "https://wcoder.github.io/notes/marquee-with-pure-css",
+      "title": "Бегущая строка на чистом CSS",
+      "date": "2014-09-22 08:10:00 +0300",
+      "tags": ["css","анимация"]
+  }, {
+      "link": "https://wcoder.github.io/notes/loader-with-pure-css",
+      "title": "Индикатор загрузки на чистом CSS",
+      "date": "2014-09-22 07:43:00 +0300",
+      "tags": ["css","анимация"]
+  }, {
+      "link": "https://wcoder.github.io/notes/inheritance-angular-controller",
+      "title": "Наследование в контроллере Angular",
+      "date": "2014-09-03 02:30:00 +0300",
+      "tags": ["javascript","angularjs","сниппет"]
+  }, {
+      "link": "https://wcoder.github.io/notes/wpf-application-for-export-data-from-vk",
+      "title": "WPF приложение для экспорта данных из Вконтакте",
+      "date": "2014-08-22 05:20:00 +0300",
+      "tags": ["wpf","c#","проекты","vk","api"]
+  }, {
+      "link": "https://wcoder.github.io/notes/swap-value-variables-with-javascript",
+      "title": "Как поменять значения двух переменных в JavaScript?",
+      "date": "2014-08-11 08:09:00 +0300",
+      "tags": ["javascript"]
+  }, {
+      "link": "https://wcoder.github.io/notes/exit-confirm-windows-phone-8",
+      "title": "Реализация подтверждения выхода из приложения в Windows Phone 8",
+      "date": "2014-08-05 01:23:00 +0300",
+      "tags": ["windows phone","c#",".net"]
+  }, {
+      "link": "https://wcoder.github.io/notes/my-counters-v1-0",
+      "title": "Мои счетчики v.1.0",
+      "date": "2014-08-02 20:57:00 +0300",
+      "tags": ["windows phone","проекты",".net"]
+  }, {
+      "link": "https://wcoder.github.io/notes/apache-benchmark",
+      "title": "Apache Benchmark - тест производительности сервера",
+      "date": "2014-07-21 01:20:00 +0300",
+      "tags": ["утилиты","тестирование"]
+  }, {
+      "link": "https://wcoder.github.io/notes/windows-sticky-notes-shortcuts",
+      "title": "Сочетания клавиш в Sticky Notes",
+      "date": "2014-07-21 00:38:00 +0300",
+      "tags": ["windows","программы"]
+  }, {
+      "link": "https://wcoder.github.io/notes/configuring-error-pages-in-nginx",
+      "title": "Настройка собственных страниц ошибок в Nginx",
+      "date": "2014-07-20 02:08:00 +0300",
+      "tags": ["сниппет","памятка","настройка","nginx"]
+  }, {
+      "link": "https://wcoder.github.io/notes/using-xamarin-forms-dependency-service-sqlite",
+      "title": "Используем Xamarin.Forms DependencyService на примере SQLite",
+      "date": "2014-07-18 14:29:00 +0300",
+      "tags": ["памятка","xamarin forms","c#","windows phone","android","ios","sqlite","сниппет"]
+  }, {
+      "link": "https://wcoder.github.io/notes/make-screenshots-with-opera",
+      "title": "Делаем скриншот сайта в Opera",
+      "date": "2014-07-15 20:23:00 +0300",
+      "tags": ["программы","opera"]
+  }, {
+      "link": "https://wcoder.github.io/notes/vim-commands",
+      "title": "Полезные команды Vim",
+      "date": "2014-07-12 00:34:00 +0300",
+      "tags": ["памятка","vim","редакторы"]
+  }, {
+      "link": "https://wcoder.github.io/notes/console-commands-for-mysql",
+      "title": "Команды для консольного управления MySQL",
+      "date": "2014-07-12 00:25:00 +0300",
+      "tags": ["памятка","mysql","базы данных"]
+  }, {
+      "link": "https://wcoder.github.io/notes/string-format-for-string-formating-in-javascript",
+      "title": "String.Format для форматирования строк в JavaScript",
+      "date": "2014-07-10 15:19:00 +0300",
+      "tags": ["сниппет","javascript"]
+  }, {
+      "link": "https://wcoder.github.io/notes/generator-short-links",
+      "title": "Генератор коротких ссылок",
+      "date": "2014-06-28 10:28:00 +0300",
+      "tags": ["php","javascript","проекты"]
+  }, {
+      "link": "https://wcoder.github.io/notes/qr-code-generator",
+      "title": "Генератор QR кодов",
+      "date": "2014-06-28 10:00:00 +0300",
+      "tags": ["javascript","проекты"]
+  }, {
+      "link": "https://wcoder.github.io/notes/dpi-in-wpf",
+      "title": "Как рассчитывается DPI в WPF приложениях?",
+      "date": "2014-06-25 20:18:00 +0300",
+      "tags": ["wpf"]
+  }, {
+      "link": "https://wcoder.github.io/notes/validation-upload-image-in-laravel",
+      "title": "Laravel - как проверить, что закачиваемый файл изображение?",
+      "date": "2014-06-07 11:53:00 +0300",
+      "tags": ["laravel","php"]
+  }, {
+      "link": "https://wcoder.github.io/notes/online-pdf-viewer",
+      "title": "Онлайн просмотрщик PDF",
+      "date": "2014-06-06 21:45:00 +0300",
+      "tags": ["pdf"]
+  }, {
+      "link": "https://wcoder.github.io/notes/random-fant-v-11",
+      "title": "Случайный фант v.1.1",
+      "date": "2014-06-03 21:31:00 +0300",
+      "tags": ["windows phone","проекты"]
+  }, {
+      "link": "https://wcoder.github.io/notes/catch-click-into-listview-winjs",
+      "title": "Как поймать событие нажатия кнопки внутри WinJs ListView?",
+      "date": "2014-05-31 21:08:00 +0300",
+      "tags": ["winjs","windows 8","javascript"]
+  }, {
+      "link": "https://wcoder.github.io/notes/charts-with-google-charts",
+      "title": "Диаграммы с помощью Google Charts",
+      "date": "2014-05-31 19:46:00 +0300",
+      "tags": ["javascript","api"]
+  }, {
+      "link": "https://wcoder.github.io/notes/laravel-add-environment-variable-in-nginx",
+      "title": "Добавляем переменную окружения Laravel в nginx",
+      "date": "2014-05-29 21:20:00 +0300",
+      "tags": ["памятка","nginx","laravel"]
+  }, {
+      "link": "https://wcoder.github.io/notes/random-fant-v-10",
+      "title": "Случайный фант v.1.0",
+      "date": "2014-05-25 00:55:00 +0300",
+      "tags": ["windows phone","проекты"]
+  }, {
+      "link": "https://wcoder.github.io/notes/add-appbar-in-windows-phone-8",
+      "title": "Добавление AppBar в Windows Phone 8",
+      "date": "2014-05-22 12:42:00 +0300",
+      "tags": ["xaml","windows phone","сниппет"]
+  }, {
+      "link": "https://wcoder.github.io/notes/implementation-inotifypropertychanged-for-wpf-apps",
+      "title": "Реализация INotifyPropertyChanged для WPF приложений",
+      "date": "2014-04-30 12:50:00 +0300",
+      "tags": ["wpf","c#","сниппет"]
+  }, {
+      "link": "https://wcoder.github.io/notes/remove-kmp-box-in-kmplayer",
+      "title": "Убираем KMP Box в KMPlayer",
+      "date": "2014-04-26 16:37:00 +0300",
+      "tags": ["windows","настройка","программы"]
+  }, {
+      "link": "https://wcoder.github.io/notes/binding-data-with-converters-in-xaml",
+      "title": "Использование конвертера при привязке данных в XAML",
+      "date": "2014-04-26 09:32:00 +0300",
+      "tags": ["wpf","xaml","c#",".net","сниппет"]
+  }, {
+      "link": "https://wcoder.github.io/notes/clones-of-2048",
+      "title": "Игра 2048. Клоны и аналоги",
+      "date": "2014-04-25 20:30:00 +0300",
+      "tags": ["игры"]
+  }, {
+      "link": "https://wcoder.github.io/notes/hide-settings-flyout",
+      "title": "Скрытие Settings Flyout",
+      "date": "2014-04-24 13:18:00 +0300",
+      "tags": ["windows 8","winjs","javascript"]
+  }, {
+      "link": "https://wcoder.github.io/notes/timer-in-wpf-app",
+      "title": "Таймер в WPF приложении",
+      "date": "2014-04-22 10:42:00 +0300",
+      "tags": [".net","c#","wpf","сниппет"]
+  }, {
+      "link": "https://wcoder.github.io/notes/get-data-with-httpclient",
+      "title": "Запрос данных с сервера используя HttpClient",
+      "date": "2014-04-09 20:30:00 +0300",
+      "tags": ["c#",".net","сниппет"]
+  }, {
+      "link": "https://wcoder.github.io/notes/setting-the-time-zone-in-laravel-4",
+      "title": "Настройка часового пояса в Laravel 4",
+      "date": "2014-04-06 19:45:00 +0300",
+      "tags": ["laravel","php"]
+  }, {
+      "link": "https://wcoder.github.io/notes/change-location-for-onedrive",
+      "title": "Как изменить путь расположения файлов SkyDrive (OneDrive) в Windows 8.1+",
+      "date": "2014-04-06 19:27:00 +0300",
+      "tags": ["onedrive","skydrive","windows","настройка"]
+  }, {
+      "link": "https://wcoder.github.io/notes/yandex-mail-in-windows-phone",
+      "title": "Настройка Яндекс.Почты в Windows Phone",
+      "date": "2014-04-01 12:57:00 +0300",
+      "tags": ["яндекс","windows phone","настройка"]
+  }, {
+      "link": "https://wcoder.github.io/notes/tetris-in-a-utorrent",
+      "title": "Тетрис в µTorrent",
+      "date": "2014-03-28 22:55:00 +0300",
+      "tags": ["тетрис","игры","программы"]
+  }, {
+      "link": "https://wcoder.github.io/notes/setup-lamp-in-ubuntu-for-local-development",
+      "title": "Памятка по настройке LAMP в Ubuntu для локальной разработки",
+      "date": "2014-03-22 00:59:00 +0300",
+      "tags": ["lamp","ubuntu","apache","сервер","памятка"]
+  }, {
+      "link": "https://wcoder.github.io/notes/connect-windows-phone-in-ubuntu",
+      "title": "Подключение Windows Phone в Ubuntu",
+      "date": "2014-03-22 00:32:00 +0300",
+      "tags": ["windows phone","ubuntu","linux mint","elementory os"]
+  }, {
+      "link": "https://wcoder.github.io/notes/install-skype-in-elementory-os-with-updates",
+      "title": "Установка Skype в Elementary OS с возможностью обновления",
+      "date": "2014-03-22 00:26:00 +0300",
+      "tags": ["elementary os","skype","ubuntu"]
+  }, {
+      "link": "https://wcoder.github.io/notes/hotkeys-in-elementory-os",
+      "title": "Горячие клавиши в Elementary OS",
+      "date": "2014-03-22 00:26:00 +0300",
+      "tags": ["elementary os","памятка"]
+  }, {
+      "link": "https://wcoder.github.io/notes/replace-threadsleep-in-windows-apps",
+      "title": "Замена Thread.Sleep в Windows Store приложениях",
+      "date": "2014-03-21 20:40:00 +0300",
+      "tags": ["c#","windows",".net"]
+  }, {
+      "link": "https://wcoder.github.io/notes/mount-sd-cards-with-ubuntu",
+      "title": "Монтирование SD карты в Ubuntu 13.04",
+      "date": "2014-03-18 01:33:00 +0300",
+      "tags": ["ubuntu","usb","linux","памятка"]
+  }, {
+      "link": "https://wcoder.github.io/notes/guide-to-basic-git-commands",
+      "title": "Памятка по основным командам Git",
+      "date": "2014-03-18 01:17:00 +0300",
+      "tags": ["памятка","git"]
+  }, {
+      "link": "https://wcoder.github.io/notes/setup-sublime-text-for-php-development",
+      "title": "Настройка Sublime Text для PHP разработки",
+      "date": "2014-03-18 01:01:00 +0300",
+      "tags": ["sublime text","php","инструменты","редакторы","программы","настройка"]
+  }, {
+      "link": "https://wcoder.github.io/notes/format-usb-drive-in-ubuntu",
+      "title": "Форматирование USB-флешки в Ubuntu",
+      "date": "2014-03-18 00:52:00 +0300",
+      "tags": ["ubuntu","linux","usb"]
+  }, {
+      "link": "https://wcoder.github.io/notes/localhost",
+      "title": "Первый пост про localhost",
+      "date": "2014-01-01 01:00:00 +0300",
+      "tags": ["jekyll","заметка"]
+  }]
+}

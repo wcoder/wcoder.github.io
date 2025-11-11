@@ -1,0 +1,266 @@
+<!DOCTYPE html> <html prefix="og: http://ogp.me/ns#" lang="ru"> <head> <meta charset="utf-8" /> <meta http-equiv="X-UA-Compatible" content="IE=edge" /> <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" /> <title>Множественные RecyclerView через ViewPager и TabLayout в Xamarin.Android - YP Tech Notes</title> <meta name="description" content="В этой статье вы увидите:" /> <meta name="keywords" content="xamarin, android, xamarin.android, c#, перевод" /> <meta name="author" content="Yauheni Pakala"> <meta property="og:title" content="Множественные RecyclerView через ViewPager и TabLayout в Xamarin.Android - YP Tech Notes" /> <meta property="og:description" content="В этой статье вы увидите:" /> <meta property="og:url" content="https://wcoder.github.io/notes/multiple-recyclerview-with-viewpager-and-tablayout-xamarin-android" /> <meta property="og:site_name" content="YP Tech Notes" /> <meta property="og:locale" content="ru_RU" /> <meta property="og:type" content="article" /> <meta property="article:author" content="Yauheni Pakala" /> <meta property="article:published_time" content="2017-07-20T15:50:00+03:00" /> <meta name="twitter:card" content="summary" /> <meta name="twitter:creator" content="@yauhenipakala" /> <meta name='yandex-verification' content='7cd440e16ce6e1c3' /> <link rel="icon" type="image/x-icon" href="/images/favicon.ico" /> <link rel="stylesheet" href="/css/main.css" /> <link rel="stylesheet" href="/css/github.min.css" /> <meta name="mobile-web-app-capable" content="yes" /> <meta name="apple-mobile-web-app-capable" content="yes" /> <meta name="application-name" content="YP Tech Notes" /> <meta name="apple-mobile-web-app-title" content="YP Tech Notes" /> <meta name="theme-color" content="#333" /> <meta name="msapplication-navbutton-color" content="#333" /> <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" /> <meta name="msapplication-starturl" content="/" /> <link rel="manifest" href="/api/manifest.json" /> <link rel="canonical" href="https://wcoder.github.io/notes/multiple-recyclerview-with-viewpager-and-tablayout-xamarin-android" /> <link rel="alternate" type="application/atom+xml" title="YP Tech Notes" href="https://wcoder.github.io/atom.xml" /> </head> <body> <header class="site-header"><div class="wrapper"> <a class="site-title" href="/" title="Перейти на главную">Tech Notes</a> <nav class="site-nav"> <a href="#" class="menu-icon" title="Развернуть меню"> <svg xmlns="http://www.w3.org/2000/svg" height="29" viewBox="0 0 48 48" width="48"><path d="M0 0h48v48h-48z" fill="none"></path><path d="M6 36h36v-4h-36v4zm0-10h36v-4h-36v4zm0-14v4h36v-4h-36z"></path> </svg> </a><div class="trigger"> <a class="page-link" href="https://ypakala.com/">Об авторе</a> <a class="page-link" href="/archive/">Архив</a> <a class="page-link" href="/search/">Поиск</a> <a class="page-link" href="/atom.xml"><i class="fa fa-rss"></i> RSS</a></div></nav></div></header><div class="page-content"><div class="wrapper"> <article class="post" itemscope itemtype="http://schema.org/BlogPosting"> <header class="post-header"><h1 class="post-title" itemprop="name headline">Множественные RecyclerView через ViewPager и TabLayout в Xamarin.Android</h1><p class="post-meta"> <time datetime="2017-07-20T15:50:00+03:00" itemprop="datePublished">20.07.2017 в 15:50</time></p></header><div class="post-content" itemprop="articleBody"><p>В этой статье вы увидите:</p><ul> <li>Работу с RecyclerView, ViewPager и TabLayout;</li> <li>Загрузку изображений по URL с использованием Glide;</li> <li>Использование Fragment и FragmentPagerAdapter;</li></ul><p>Для использования примеров кода, вам необходимо подключить следующие NuGet пакеты: <code>Xamarin.Android.Support.v4</code>, <code>Xamarin.Android.Support.Design</code> и <code>Glide.Xamarin</code> для загрузки и кеширования изображений без каких-либо исключений.</p><h2 id="разметка">Разметка</h2><p>Для этого проекта нам потребуется Material Theme, и вот почему:</p><ul> <li>Изменение свойств TabLayout (например, цвет, вид текста)</li> <li>Чтобы иметь возможность использовать <strong>AppCompatActivity</strong> и <strong>SupportFragmentManager</strong> и др.</li></ul><p>Чтобы использовать Material Theme, в директории ресурсов создайте поддиректорию <strong>values-21</strong>, а в ней новый XML-файл с именем “styles”.</p><p>Скопируйте в созданный файл, следующий XML-код:</p><pre><code class="language-xml">&lt;?xml version="1.0" encoding="UTF-8" ?&gt;
+&lt;resources&gt;
+	&lt;style name="MaterialTheme" parent="MaterialTheme.Base" /&gt;
+
+	&lt;style name="MaterialTheme.Base" parent="Theme.AppCompat.Light.NoActionBar"&gt;
+		&lt;item name="colorAccent"&gt;#3a67e0&lt;/item&gt;
+		&lt;item name="colorPrimary"&gt;#3a67e0&lt;/item&gt;
+		&lt;item name="colorPrimaryDark"&gt;#ffffff&lt;/item&gt;
+		&lt;item name="android:windowDrawsSystemBarBackgrounds"&gt;true&lt;/item&gt;
+		&lt;item name="android:statusBarColor"&gt;#0d47a1&lt;/item&gt;
+	&lt;/style&gt;
+
+	&lt;style name="TabLayoutTheme" parent="Widget.Design.TabLayout"&gt;
+		&lt;item name="tabIndicatorColor"&gt;#000000&lt;/item&gt;
+		&lt;item name="tabIndicatorHeight"&gt;2dp&lt;/item&gt;
+		&lt;item name="tabTextAppearance"&gt;@style/TabLayoutTextAppearance&lt;/item&gt;
+	&lt;/style&gt;
+
+	&lt;style name="TabLayoutTextAppearance" parent="TextAppearance.Design.Tab"&gt;
+		&lt;item name="textAllCaps"&gt;false&lt;/item&gt;
+		&lt;item name="android:textSize"&gt;19sp&lt;/item&gt;
+		&lt;item name="android:fontFamily"&gt;sans-serif-light&lt;/item&gt;
+	&lt;/style&gt;
+&lt;/resources&gt;
+</code></pre><p>Создайте новый макет (или используйте MainLayout), где будут располагаться <strong>ViewPager</strong> и <strong>TabLayout</strong>.</p><p>Скопируйте и вставьте следующий код:</p><pre><code class="language-xml">&lt;?xml version="1.0" encoding="utf-8"?&gt;
+&lt;LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	android:orientation="vertical"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"&gt;
+	&lt;android.support.v7.widget.Toolbar
+		android:id="@+id/toolbar"
+		android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:background="?attr/colorPrimary"
+		android:minHeight="?attr/actionBarSize" /&gt;
+	&lt;android.support.design.widget.TabLayout
+		app:tabMode="scrollable"
+		app:tabGravity="fill"
+		style="@style/TabLayoutTheme"
+		android:id="@+id/tabLayout"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content" /&gt;
+	&lt;android.support.v4.view.ViewPager
+		android:id="@+id/viewPager"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		app:layout_behavior="@string/appbar_scrolling_view_behavior" /&gt;
+&lt;/LinearLayout&gt;
+</code></pre><p>Для каждой страницы потребуется <strong>RecyclerViewLayout</strong>, поэтому вы должны создать новый макет для RecyclerView.</p><p>Скопируйте и вставьте следующий макет в RecyclerViewLayout:</p><pre><code class="language-xml">&lt;?xml version="1.0" encoding="utf-8"?&gt;
+&lt;android.support.v7.widget.RecyclerView xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	app:layout_behavior="@string/appbar_scrolling_view_behavior"
+	android:clipToPadding="false"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:id="@+id/recyclerView" /&gt;
+</code></pre><p>RecyclerView нуждается в разметке для каждого элемента, поэтому вы должны ее создать.</p><p>В этом примере есть ImageView и TextView:</p><pre><code class="language-xml">&lt;?xml version="1.0" encoding="utf-8"?&gt;
+&lt;RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical"
+	android:layout_width="match_parent"
+	android:layout_height="wrap_content"&gt;
+	&lt;ImageView
+		android:layout_margin="10dp"
+		android:layout_alignParentLeft="true"
+		android:layout_width="120dp"
+		android:layout_height="120dp"
+		android:id="@+id/imageView"
+		android:adjustViewBounds="true" /&gt;
+	&lt;TextView
+		android:layout_toEndOf="@id/imageView"
+		android:layout_marginStart="30dp"
+		android:id="@+id/textView"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:fontFamily="sans-serif"
+		android:textSize="21sp"
+		android:layout_centerVertical="true" /&gt;
+&lt;/RelativeLayout&gt;
+</code></pre><h2 id="код">Код</h2><p>На первым шаге, создадим класс фрагмента. Поскольку ViewPager всегда будет иметь единое представление для всех данных, приложение будет следовать определенной схеме, возвращая фрагменты.</p><p><code>Func&lt;T&gt;</code> предопределенный тип делегата для метода, который возвращает некоторое значение типа <code>T</code>, и мы можем использовать этот тип для ссылки на метод, возвращающий некоторое значение, которое будет представлять собой View.</p><pre><code class="language-csharp">public class RecyclerViewFragment : Android.Support.V4.App.Fragment
+{
+	readonly Func&lt;LayoutInflater, ViewGroup, Bundle, View&gt; view;
+
+	public RecyclerViewFragment(Func&lt;LayoutInflater, ViewGroup, Bundle, View&gt; view)
+	{
+		this.view = view;
+	}
+
+	public override void OnCreate(Bundle savedInstanceState)
+	{
+		base.OnCreate(savedInstanceState);
+	}
+
+	public override View OnCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
+	{
+		base.OnCreateView(inflater, container, savedInstanceState);
+
+		return view(inflater, container, savedInstanceState);
+	}
+}
+</code></pre><p><strong>FragmentPagerAdapter</strong> реализует <strong>PagerAdapter</strong>, представляет каждую страницу как фрагмент, который постоянно хранится в менеджере фрагментов, пока пользователь может вернуться на страницу. В этом примере <strong>FragmentPagerAdapter</strong> будет содержать объекты RecyclerView.</p><p>Метод <code>addFragmentView</code> будет добавлять фрагменты в поле <code>fragmentList</code> нашей Activity.</p><pre><code class="language-csharp">public class RecyclerViewFragmentPagerAdapter : FragmentPagerAdapter
+{
+	readonly List&lt;Fragment&gt; fragmentList = new List&lt;Fragment&gt;();
+	readonly ICharSequence[] titles;
+
+	public RecyclerViewFragmentPagerAdapter(FragmentManager fragmentManager, ICharSequence[] titles) : base(fragmentManager)
+	{
+		this.titles = titles;
+	}
+
+	public override int Count =&gt; fragmentList.Count;
+
+	public override Fragment GetItem(int position)
+	{
+		return fragmentList[position];
+	}
+
+	public override ICharSequence GetPageTitleFormatted(int position)
+	{
+		return titles[position];
+	}
+
+	public void addFragmentView(Func&lt;LayoutInflater, ViewGroup, Bundle, View&gt; fragmentView)
+	{
+		fragmentList.Add(new RecyclerViewFragment(fragmentView));
+	}
+}
+</code></pre><p>RecyclerView нуждается в некоторой модели данных для каждого элемента. В этом примере есть два свойства для TextView и ImageView.</p><pre><code class="language-csharp">public class RecyclerViewDataModel
+{
+	public string someString { get; set; }
+	public string imageUrl { get; set; }
+}
+</code></pre><p>Как и в случае с ListView, для вывода сложных объектов в RecyclerView необходимо определить свой адаптер. Поэтому определим собственный класс <code>RecyclerViewAdapter</code>, который должен наследоваться от абстрактного класса <em>RecyclerView.Adapter</em>.</p><p>Этот пример адаптера имеет возможность обработки клика по элементу.</p><pre><code class="language-csharp">public class RecyclerViewAdapter : RecyclerView.Adapter
+{
+	public List&lt;RecyclerViewDataModel&gt; dataModelList;
+	public Context context;
+	public event EventHandler&lt;int&gt; eventHandler;
+
+	public RecyclerViewAdapter(List&lt;RecyclerViewDataModel&gt; dataModelList, Context context)
+	{
+		this.dataModelList = dataModelList;
+		this.context = context;
+	}
+
+	public override int ItemCount =&gt; dataModelList.Count;
+
+	public override void OnBindViewHolder(RecyclerView.ViewHolder holder, int position)
+	{
+		var item = dataModelList[position];
+		var viewHolder = holder as RecyclerViewHolder;
+
+		if (holder == viewHolder &amp;&amp; viewHolder != null)
+		{
+			viewHolder.textView.Text = item.someString;
+
+			Glide.With(context).Load(item.imageUrl).Into(viewHolder.imageView);
+		}
+	}
+
+	public override RecyclerView.ViewHolder OnCreateViewHolder(ViewGroup parent, int viewType)
+	{
+		var view = LayoutInflater.From(parent.Context).Inflate(Resource.Layout.RecyclerViewItemLayout, parent, false);
+		var viewHolder = new RecyclerViewHolder(view, clickEvent);
+		return viewHolder;
+	}
+
+	public void clickEvent(int position)
+	{
+		if (eventHandler != null)
+			eventHandler(this, position);
+	}
+}
+
+public class RecyclerViewHolder : RecyclerView.ViewHolder
+{
+	public View view { get; set; }
+	public ImageView imageView { get; set; }
+	public TextView textView { get; set; }
+
+	public RecyclerViewHolder(View view, Action&lt;int&gt; eventHandler) : base(view)
+	{
+		this.view = view;
+		imageView = view.FindViewById&lt;ImageView&gt;(Resource.Id.imageView);
+		textView = view.FindViewById&lt;TextView&gt;(Resource.Id.textView);
+		view.Click += (sender, e) =&gt; eventHandler(AdapterPosition);
+	}
+
+}
+</code></pre><p>Так же, не забудем добавить определение следующих переменных:</p><pre><code class="language-csharp">[Activity(Theme = "@style/MaterialTheme", MainLauncher = true, Icon = "@mipmap/icon")]
+public class MainActivity : AppCompatActivity
+{
+	Android.Support.V7.Widget.Toolbar toolbar;
+	ViewPager viewPager;
+	TabLayout tabLayout;
+	RecyclerView recyclerView;
+	RecyclerViewAdapter recyclerViewAdapter;
+	RecyclerViewFragmentPagerAdapter recyclerViewFragmentPagerAdapter;
+	ICharSequence[] titles;
+	LinearLayoutManager linearLayoutManager;
+	List&lt;RecyclerViewDataModel&gt; dataModelList;
+
+	// . . .
+}
+</code></pre><p>Переменные должны быть инициализированы в методе <code>OnCreate</code></p><pre><code class="language-csharp">toolbar = FindViewById&lt;Android.Support.V7.Widget.Toolbar&gt;(Resource.Id.toolbar);
+SetSupportActionBar(toolbar);
+SupportActionBar.SetDisplayHomeAsUpEnabled(false);
+
+tabLayout = FindViewById&lt;TabLayout&gt;(Resource.Id.tabLayout);
+viewPager = FindViewById&lt;ViewPager&gt;(Resource.Id.viewPager);
+
+dataModelList = new List&lt;RecyclerViewDataModel&gt;();
+
+loadData();
+
+viewPager.Adapter = recyclerViewFragmentPagerAdapter;
+tabLayout.SetupWithViewPager(viewPager);
+</code></pre><p>Метод <code>loadData</code> заполняет dataModelList и возвращает фрагмент для каждого элемента из dataModelList</p><pre><code class="language-csharp">void loadData()
+{
+	for (int i = 0; i &lt;= 7; i++)
+	{
+		dataModelList.Add(new RecyclerViewDataModel
+		{
+			someString = "SomeString " + i,
+			imageUrl = "https://blog.xamarin.com/wp-content/uploads/2015/03/RDXWoY7W_400x400.png"
+		});
+	}
+
+	var sArray = dataModelList.Select(x =&gt; x.someString).ToArray();
+
+	titles = CharSequence.ArrayFromStringArray(sArray);
+
+	recyclerViewFragmentPagerAdapter = new RecyclerViewFragmentPagerAdapter(SupportFragmentManager, titles);
+
+	foreach (var item in dataModelList)
+	{
+		createFragment(dataModelList);
+	}
+}
+</code></pre><p>Метод <code>createFragment</code> вернет RecyclerView, после настройки адаптера, менеджера макетов и обработчика событий.</p><pre><code class="language-csharp">void createFragment(List&lt;RecyclerViewDataModel&gt; list)
+{
+	recyclerViewFragmentPagerAdapter.addFragmentView((arg1, arg2, arg3) =&gt;
+	{
+		var view = arg1.Inflate(Resource.Layout.RecyclerViewLayout, arg2, false);
+
+		recyclerView = view.FindViewById&lt;RecyclerView&gt;(Resource.Id.recyclerView);
+		linearLayoutManager = new LinearLayoutManager(this, LinearLayoutManager.Vertical, false);
+		recyclerViewAdapter = new RecyclerViewAdapter(list, this);
+
+		recyclerView.SetLayoutManager(linearLayoutManager);
+		recyclerView.SetAdapter(recyclerViewAdapter);
+
+		recyclerViewAdapter.NotifyDataSetChanged();
+
+		recyclerViewAdapter.eventHandler += (sender, e) =&gt;
+		{
+			// Доступ к данным выбранного элемента
+			var item = list[e];
+			Console.WriteLine(item.someString);
+		};
+
+		return view;
+
+	});
+}
+</code></pre><h2 id="результат">Результат</h2><p><a href="https://github.com/beraybentesen/Xamarin.MultipleRecyclerView">Исходный код проекта на GitHub</a></p><p>Теги: <a href="/tags/#xamarin">xamarin</a>, <a href="/tags/#android">android</a>, <a href="/tags/#xamarin.android">xamarin.android</a>, <a href="/tags/#c%23">c#</a>, <a href="/tags/#%D0%BF%D0%B5%D1%80%D0%B5%D0%B2%D0%BE%D0%B4">перевод</a></p><p class="edit-post-btn"> <!--noindex--><a href="https://github.com/wcoder/wcoder.github.io/edit/master/_posts/2017-07-20-multiple-recyclerview-with-viewpager-and-tablayout-xamarin-android.md" rel="nofollow" title="Редактировать страницу на GitHub">Редактировать</a><!--/noindex--></p><div class="share-btn"> <a class="btn-vk" data-id="vk" title="VK"><img alt="VK" width="16" src="/images/vk.svg" /></a> <a class="btn-facebook" data-id="fb" title="Facebook"><img alt="Facebook" width="16" src="/images/facebook.svg" /></a> <a class="btn-twitter" data-id="tw" title="Twitter"><img alt="Twitter" width="16" src="/images/twitter.svg" /></a> <a class="btn-telegram" data-id="tg" title="Telegram"><img alt="Telegram" width="16" src="/images/telegram.svg" /></a> <a class="btn-mail" data-id="mail" title="Email"><img alt="Email" width="16" src="/images/mail.svg" /></a></div></div></article></div></div><hr /><div class="wrapper"> <footer class="footer"><p class="copyrights"> &copy; 2014&ndash;<span itemprop="copyrightYear">2025</span></p><p xmlns:cc="http://creativecommons.org/ns#" class="license"> <a href="http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" title="This work is licensed under CC BY-SA 4.0"> <img style="height:20px!important;" src="https://licensebuttons.net/l/by-sa/4.0/88x31.png" alt="CC BY-SA 4.0"> </a></p></footer></div><script src="/js/highlight.pack.js"></script> <script src="/js/highlightjs-line-numbers.min.js"></script> <script> hljs.initHighlightingOnLoad(); hljs.initLineNumbersOnLoad(); </script> <script src="/js/share-buttons.js"></script> <!--Generated with Jekyll at Nov. 11, 2025 11:59:43 AM (+03)--> </body> </html>

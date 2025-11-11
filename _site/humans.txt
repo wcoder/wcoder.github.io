@@ -1,0 +1,12 @@
+/* TEAM */
+	Author: Yauheni Pakala
+	Contact: evgeniy.pakalo [*] gmail.com
+	Twitter: @yauhenipakala
+	Location: Belarus, Lithuania
+
+/* SITE */
+	Last update: 06/03/2022
+	Language: Russian, English
+	Doctype: HTML5
+	Components: Jekyll, JavaScript
+	IDE: Visual Studio Code

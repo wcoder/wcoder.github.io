@@ -1,0 +1,948 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="https://wcoder.github.io/atom.xml" rel="self" type="application/atom+xml" /><link href="https://wcoder.github.io/" rel="alternate" type="text/html" /><updated>2025-11-11T11:59:43+03:00</updated><id>https://wcoder.github.io/atom.xml</id><title type="html">YP Tech Notes</title><subtitle>Еще один техноблог, пишу о том что интересно.</subtitle><author><name>Yauheni Pakala</name></author><entry><title type="html">Xamarin.iOS: How to open app’s folder in Files.app programmatically</title><link href="https://wcoder.github.io/notes/xamarin-ios-how-to-open-app-folder-in-files-app" rel="alternate" type="text/html" title="Xamarin.iOS: How to open app’s folder in Files.app programmatically" /><published>2022-12-23T20:30:00+03:00</published><updated>2022-12-23T20:30:00+03:00</updated><id>https://wcoder.github.io/notes/xamarin-ios-how-to-open-app-folder-in-files-app</id><content type="html" xml:base="https://wcoder.github.io/notes/xamarin-ios-how-to-open-app-folder-in-files-app"><![CDATA[<h2 id="prerequisite">Prerequisite</h2>
+
+<p>Also note, that there is a prerequisite. You need to make app directory “public” so it shows on its own in the “On my iPhone” section in Files app. This requires <code>Info.plist</code> modification, and you can find <a href="https://learn.microsoft.com/en-us/xamarin/ios/app-fundamentals/file-system#sharing-with-the-files-app">documentation about this here</a>. Check it out to enable this for your app.</p>
+
+<h2 id="how-to-open-files-app">How to open Files app</h2>
+
+<p>Once you have enabled the public Documents folder, you need to construct a particular URL and use the <code>UIApplication</code> shared object to open it.</p>
+
+<p>To get path to the app documents folder you can use .NET API, in a shared code for example:</p>
+<pre><code class="language-cs">var documentsPath = Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData);
+</code></pre>
+<blockquote>
+  <p>documentsUrl = /var/mobile/Containers/Data/Application/DDC2D6E0-XXXX-XXXX-XXXX-D73463E1BA12/Documents</p>
+</blockquote>
+
+<p>That is an analog of pretty standard way in the iOS development world:</p>
+<pre><code class="language-cs">var documentsUrl = NSFileManager.DefaultManager.GetUrls(NSSearchPathDirectory.DocumentDirectory, NSSearchPathDomain.User).FirstOrDefault();
+</code></pre>
+<blockquote>
+  <p>documentsUrl = /var/mobile/Containers/Data/Application/DDC2D6E0-XXXX-XXXX-XXXX-D73463E1BA12/Documents</p>
+</blockquote>
+
+<p>Now just open it:</p>
+<pre><code class="language-cs">OpenPathInFiles(documentsPath);
+</code></pre>
+
+<p>The Files app can be opened with the URL scheme <code>shareddocuments://</code>.
+The function below can open the Files app, assuming the user hasn’t deleted it:</p>
+<pre><code class="language-cs">private void OpenPathInFiles(string path)
+{
+    var sharedUrl = NSUrl.FromString($"shareddocuments://{path}");
+    if (sharedUrl != null &amp;&amp; UIApplication.SharedApplication.CanOpenUrl(sharedUrl))
+    {
+        UIApplication.SharedApplication.OpenUrl(sharedUrl);
+    }
+}
+</code></pre>
+
+<p>Using this approach, you can also navigate to folders inside your app’s Documents folder:</p>
+
+<pre><code class="language-cs">var downloadsPath = Path.Combine(documentsPath, "Downloads");
+
+OpenPathInFiles(downloadsPath);
+</code></pre>
+<blockquote>
+  <p>downloadsPath = /var/mobile/Containers/Data/Application/DDC2D6E0-XXXX-XXXX-XXXX-D73463E1BA12/Documents/Downloads</p>
+</blockquote>
+
+<h2 id="resources">Resources</h2>
+
+<ul>
+  <li><a href="https://nemecek.be/blog/145/open-your-apps-documents-folder-programmatically-in-files-app">Open your app’s Documents folder programmatically in Files app</a></li>
+</ul>]]></content><author><name>Yauheni Pakala</name></author><category term="xamarin.ios" /><category term="ios" /><category term=".net" /><category term="заметка" /><summary type="html"><![CDATA[Prerequisite]]></summary></entry><entry><title type="html">Apple Configurator</title><link href="https://wcoder.github.io/notes/apple-configurator" rel="alternate" type="text/html" title="Apple Configurator" /><published>2022-08-26T12:49:00+03:00</published><updated>2022-08-26T12:49:00+03:00</updated><id>https://wcoder.github.io/notes/apple-configurator</id><content type="html" xml:base="https://wcoder.github.io/notes/apple-configurator"><![CDATA[<p>By default Apple Configurator stores their <code>.ipsw</code> archives in this path:</p>
+
+<pre><code class="language-no">~/Library/Group Containers/K36BKF7T3D.group.com.apple.configurator/Library/Caches/Firmware/
+</code></pre>
+
+<p>Files look like this:</p>
+
+<pre><code class="language-no">iPhone13,2,iPhone13,3_15.6.1_19G82_Restore.ipsw
+</code></pre>
+
+<p>By default iTunes Updater in Finder stores their files in this path:</p>
+
+<pre><code class="language-no">~/Library/iTunes/iPhone Software Updates/
+</code></pre>
+
+<p>Also, you can install/update custom image via <a href="https://support.apple.com/guide/apple-configurator-mac/use-the-command-line-tool-cad856a8ea58/mac">cfgutil</a> CLI:</p>
+
+<pre><code class="language-no">cfgutil -v restore -I ~/Desktop/iPhone13,2,iPhone13,3_15.6.1_19G82_Restore.ipsw
+</code></pre>
+
+<p>Custom images you can find here: https://ipsw.me/</p>]]></content><author><name>Yauheni Pakala</name></author><category term="apple" /><category term="ios" /><category term="заметка" /><summary type="html"><![CDATA[By default Apple Configurator stores their .ipsw archives in this path:]]></summary></entry><entry><title type="html">Using condition with regex in MSBuild</title><link href="https://wcoder.github.io/notes/msbuild-regex-condition" rel="alternate" type="text/html" title="Using condition with regex in MSBuild" /><published>2020-12-11T18:40:00+03:00</published><updated>2020-12-11T18:40:00+03:00</updated><id>https://wcoder.github.io/notes/msbuild-regex-condition</id><content type="html" xml:base="https://wcoder.github.io/notes/msbuild-regex-condition"><![CDATA[<h2 id="condition-with-regex">Condition with regex</h2>
+
+<p>Add properties for all <code>XToolkit</code> projects that do not contain “Tests” in the name:</p>
+
+<pre><code class="language-xml">&lt;PropertyGroup
+    Condition="$([System.Text.RegularExpressions.Regex]::IsMatch($(ProjectName), '^XToolkit.(.*)(?&amp;lt;!Tests)$'))"&gt;
+    &lt;!-- Your properties to add --&gt;
+&lt;/PropertyGroup&gt;
+</code></pre>
+<p>Result:</p>
+<pre><code>XToolkit.ProjectA - add
+XToolkit.ProjectA.SubProjectA - ok
+XToolkit.ProjectA.Tests - ignore
+XToolkit.ProjectB - add
+XToolkit.Tests - ignore
+</code></pre>
+
+<h2 id="condition-debug">Condition debug</h2>
+
+<ul>
+  <li>Add new target to project:</li>
+</ul>
+
+<pre><code class="language-xml">&lt;Target Name="MyTarget"&gt;
+    &lt;Message 
+        Condition="...your condition..."
+        Text="Applied to project: $(ProjectName)"
+        Importance="High" /&gt;
+&lt;/Target&gt;
+</code></pre>
+
+<ul>
+  <li>Run target:</li>
+</ul>
+
+<pre><code>msbuild ExampleProject.csproj /t:MyTarget
+</code></pre>]]></content><author><name>Yauheni Pakala</name></author><category term="msbuild" /><category term="regex" /><summary type="html"><![CDATA[Condition with regex]]></summary></entry><entry><title type="html">Понимание размера Framework в iOS</title><link href="https://wcoder.github.io/notes/ios-framework-size" rel="alternate" type="text/html" title="Понимание размера Framework в iOS" /><published>2018-04-27T12:30:00+03:00</published><updated>2018-04-27T12:30:00+03:00</updated><id>https://wcoder.github.io/notes/ios-framework-size</id><content type="html" xml:base="https://wcoder.github.io/notes/ios-framework-size"><![CDATA[<p>Обычно при разработке iOS приложения, приходится использовать различные библиотеки, распространяемые как framework. И зачастую их размер может вас удивить, поэтому давайте подробнее рассмотрим некоторые темы, почему это не должно вас пугать.</p>
+
+<h2 id="app-thinning">App Thinning</h2>
+
+<p>Apple оптимизирует пакет вашего приложения с помощью <a href="https://help.apple.com/xcode/mac/current/#/devbbdc5ce4f" title="What is app thinning?">процесса утоньшения</a>. Ваши пользователи загружают только код и ресурсы, необходимые конкретно для их устройства. Вы можете <a href="https://developer.apple.com/library/content/qa/qa1795/_index.html#//apple_ref/doc/uid/DTS40014195-CH1-MEASURE" title="Measure Your App">сгенерировать отчет о размере вашего приложения</a> с помощью Xcode или посмотреть отчет «Размер файлов магазина приложений» в iTunes Connect, чтобы узнать, каков будет фактический размер начальной загрузки вашего приложения. Обратите внимание, что эти цифры показывают максимальный размер, который будут загружать ваши пользователи. Дополнительную информацию о том, как оптимизируются обновления, см. далее.</p>
+
+<h2 id="архитектура-процессора">Архитектура процессора</h2>
+
+<p>Обычно framework включает в себя мульти-архитектурный бинарный код, который содержит части для <code>armv7</code>, <code>arm64</code>, <code>i386</code> и <code>x86_64</code> архитектур процессора. ARM используется для физического iOS устройства, в то время как <code>i386</code> и <code>x86_64</code> только для симулятора и будут вырезаны из вашего приложения во время сборки и архивации. Когда пользователь скачивает ваше приложение из App Store, он получает только ту архитектуру, которую требует его устройство.</p>
+
+<p><img src="https://help.apple.com/xcode/mac/current/en.lproj/Art/app_thinning_2x.png" alt="App Thinning" /></p>
+
+<h2 id="bitcode">Bitcode</h2>
+
+<p><a href="https://developer.apple.com/library/content/documentation/IDEs/Conceptual/AppDistributionGuide/AppThinning/AppThinning.html#//apple_ref/doc/uid/TP40012582-CH35-SW2" title="Bitcode">Bitcode</a> включен в ARM архитектуры, но не влияет на конечный размер вашего приложения. Bitcode - это неоптимизированное промежуточное представление кода, которое Apple использует для потенциальной перекомпиляции и повторной оптимизации бинарника вашего приложения после отправки в App Store. Как метаданные, предназначенные исключительно для оптимизации сборки, bitcode никогда не загружается вашими пользователями.</p>
+
+<p>Если в вашем проекте bitcode отключен, нет необходимости удалять его из фреймворков, которые его содержат. Независимо от того, использует ли ваше приложение bitcode, версия, которую App Store предоставляет вашим пользователям, никогда его не содержит.</p>
+
+<h2 id="обновления-приложений">Обновления приложений</h2>
+
+<p>При обновлении приложения ваши пользователи загружают только файлы, которые были изменены в этом обновлении. Эти частичные обновления обычно известны как «дельта-обновления». Если ресурсы и двоичные файлы в вашем приложении не изменились, они не будут перезагружены. См. <a href="https://developer.apple.com/library/content/qa/qa1779/_index.html" title="Reducing Download Size for iOS App Updates">Уменьшение размера файла обновлений iOS приложений</a>, для получения дополнительной информации о том, как использовать преимущества дельта-обновлений.</p>
+
+<h2 id="отладочные-символы">Отладочные символы</h2>
+
+<p>Обычно framework содержат файлы <code>dSYM</code> и <code>BCSymbolMap</code>. Они используются для <a href="https://developer.apple.com/library/content/technotes/tn2151/_index.html#//apple_ref/doc/uid/DTS40008184-CH1-SYMBOLICATION" title="Symbolicating Crash Reports">обозначения сбоев</a> и не включены в приложение, которое загружают пользователи.</p>
+
+<h2 id="дополнительно">Дополнительно</h2>
+<ul>
+  <li><a href="https://developer.apple.com/library/content/qa/qa1795/_index.html" title="Reducing the size of my App">Reducing the size of my App</a></li>
+  <li><a href="https://developer.apple.com/library/content/documentation/DeveloperTools/Conceptual/DynamicLibraries/100-Articles/OverviewOfDynamicLibraries.html" title="What Are Dynamic Libraries?">Overview of Dynamic Libraries</a></li>
+</ul>]]></content><author><name>Yauheni Pakala</name></author><category term="ios" /><category term="заметка" /><summary type="html"><![CDATA[Обычно при разработке iOS приложения, приходится использовать различные библиотеки, распространяемые как framework. И зачастую их размер может вас удивить, поэтому давайте подробнее рассмотрим некоторые темы, почему это не должно вас пугать.]]></summary></entry><entry><title type="html">Удаление параметров копирования/вставки из UITextField в Xamarin.iOS</title><link href="https://wcoder.github.io/notes/uitextfield-disable-paste-cut" rel="alternate" type="text/html" title="Удаление параметров копирования/вставки из UITextField в Xamarin.iOS" /><published>2018-04-25T18:10:00+03:00</published><updated>2018-04-25T18:10:00+03:00</updated><id>https://wcoder.github.io/notes/uitextfield-disable-paste-cut</id><content type="html" xml:base="https://wcoder.github.io/notes/uitextfield-disable-paste-cut"><![CDATA[<p>В некоторых случаях нам нужно отключить опции копирования и вставки для полей ввода <code>UITextField</code> в iOS, чтобы сделать это, вы должны выполнить следующие шаги:</p>
+
+<h3 id="шаг-1">Шаг 1</h3>
+
+<p>Создайте класс, который наследуется от <code>UITextField</code>.</p>
+
+<pre><code class="language-csharp">[Register(nameof(MyCustomTextField))]
+public class CustomTextField : UITextField
+</code></pre>
+
+<p>На этом этапе мы должны помнить о том, чтобы зарегистрировать наш класс, используя атрибут <strong>Register</strong>.</p>
+
+<h3 id="шаг-2">Шаг 2</h3>
+
+<p>Вам необходимо перегрузить метод <code>CanPerform</code> и вернуть <code>false</code>, чтобы указать, что этот параметр недоступен в элементе управления.</p>
+
+<p>В следующем коде показано как это сделать и для других возможных параметров:</p>
+
+<pre><code class="language-csharp">using Foundation;
+using ObjCRuntime;
+using System.Linq;
+
+// ...
+
+public override bool CanPerform(Selector action, NSObject withSender)
+{
+    switch (action.Name)
+    {
+        case "paste:":
+        case "cut:":
+        case "copy:":
+        case "_share:":
+        case "_define:":
+            return false;
+    }
+
+    return base.CanPerform(action, withSender);
+}
+</code></pre>
+
+<p>Как можно заметить, мы сравниваем имя пришедшего экземпляра <code>Selector</code> (что собирается отобразиться) с теми, которые мы хотим игнорировать.</p>
+
+<h3 id="шаг-3">Шаг 3</h3>
+
+<p>И, наконец, вы можете использовать этот класс в любом месте, где вам нужен подобный функционал.</p>
+
+<h3 id="результат">Результат</h3>
+
+<p>Пример, где стандартные параметры отключены и добавлены собственные:</p>
+
+<p><img src="https://raw.githubusercontent.com/wcoder/blog/master/uitextfield-paste/image.gif" alt="Демо" /></p>
+
+<h3 id="источники">Источники</h3>
+
+<ul>
+  <li><a href="https://developer.xamarin.com/api/type/MonoTouch.Foundation.RegisterAttribute/">RegisterAttribute</a></li>
+  <li><a href="https://developer.apple.com/documentation/uikit/uiresponder/1621105-canperformaction">canPerformAction(_:withSender:)</a></li>
+  <li><a href="https://medium.com/yandex-maps-ios/tooltip-menu-for-every-view-1aede0d4d3e7">Каждому View по всплывающему меню – Яндекс.Карты iOS</a></li>
+</ul>]]></content><author><name>Yauheni Pakala</name></author><category term="xamarin.ios" /><category term="заметка" /><category term="сниппет" /><summary type="html"><![CDATA[В некоторых случаях нам нужно отключить опции копирования и вставки для полей ввода UITextField в iOS, чтобы сделать это, вы должны выполнить следующие шаги:]]></summary></entry><entry><title type="html">Отказоустойчивое подключение к сети в Xamarin.Forms &amp;amp; MAUI</title><link href="https://wcoder.github.io/notes/resilient-network-connectivity-xamarin-forms" rel="alternate" type="text/html" title="Отказоустойчивое подключение к сети в Xamarin.Forms &amp;amp; MAUI" /><published>2018-03-17T18:25:00+03:00</published><updated>2018-03-17T18:25:00+03:00</updated><id>https://wcoder.github.io/notes/resilient-network-connectivity-xamarin-forms</id><content type="html" xml:base="https://wcoder.github.io/notes/resilient-network-connectivity-xamarin-forms"><![CDATA[<p>Мобильные сети относятся к наименее надежному типу сетей, и вашему приложению, скорее всего, придется общаться через нее, чтобы функционировать. Но, принимая во внимание потенциальность сбоев, мы должны обеспечить наше приложение возможностью приспосабливаться к плохому состоянию сети.</p>
+
+<p><img src="https://xamarinhelp.com/wp-content/uploads/2018/02/cell_network.png" alt="Сеть" /></p>
+
+<h2 id="httpclient">HttpClient</h2>
+
+<p>В большинстве случаев вы будете подключаться к API через <code>HttpClient</code>, как здесь:</p>
+
+<pre><code class="language-csharp">public class MyApiClass
+{
+    public readonly HttpClient _client;
+
+    public MyApiClass()
+    {
+        _client = new HttpClient();
+        _client.DefaultRequestHeaders.Accept.Clear();
+        // Предполагая, что вы подключаетесь к REST API, который принимает JSON
+        _client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+    }
+
+    public async Task GetAsync()
+    {
+        var result = await _client.GetAsync("https://someurl.com/product/1");
+    }
+
+    public async Task SendAsync()
+    {
+        var product = new Product { Name = "New Product" };
+
+        var json = JsonConvert.SerializeObject(product);
+
+        var result = await _client.SendAsync(new HttpRequestMessage()
+        {
+            RequestUri = new Uri("https://someurl.com/product"),
+            Content = new StringContent(json)
+        });
+    }
+}
+</code></pre>
+
+<blockquote>
+  <p><strong>Совет:</strong> Не использовать оператор <code>using</code> для <code>HttpClient</code>, хранить только один экземпляр для всего приложения. Он был разработан, чтобы работать таким образом.</p>
+</blockquote>
+
+<p>Есть множество мест, где мы можем потерпеть неудачу.</p>
+
+<ul>
+  <li><code>GetAsync</code>:
+    <ul>
+      <li><code>ArgumentNullException</code> - запрос был пустым;</li>
+      <li><code>HttpRequestException</code> - базовая сеть каким-то образом отказала;</li>
+      <li><code>InvalidOperationException</code> - сообщение уже выло отправлено.</li>
+    </ul>
+  </li>
+</ul>
+
+<p>Поэтому вы хотели бы обернуть вызовы, чтобы перехватить эти ошибки и разобраться с ними по мере необходимости. Но, допустим ошибки нет, теперь нам нужно проверить возвращаемый код состояния:</p>
+
+<pre><code class="language-csharp">public async Task GetAsync()
+{
+    var result = await _client.GetAsync("https://someurl.com/product/1");
+
+    if (result.IsSuccessStatusCode)
+    {
+        // Успех
+    }
+    else
+    {
+        // Возвращен код, отличный от 200
+    }
+}
+</code></pre>
+
+<p>Если код возвращается, хорошо, вы можете продолжать. Если это не так, то вы должны что-то с этим сделать. 400-е ошибки - это про то, что вы отправили неверный запрос к API, 500-е ошибки означают, что обратиться к API не удалось (ошибка на сервере).</p>
+
+<h2 id="проверка-подключения">Проверка подключения</h2>
+
+<p>Возможно, ваша страница имеет много сетевых вызовов. Поэтому, возможно, вы захотите сделать проверку что сетевое подключение есть, перед тем как пытаться делать запрос. Вы можете сделать это с помощью плагина <a href="https://github.com/jamesmontemagno/ConnectivityPlugin">Xam.Plugin.Connectivity</a>. Проверить подключение можно так:</p>
+
+<pre><code class="language-csharp">CrossConnectivity.Current.IsConnected
+</code></pre>
+
+<p>Если значение <code>false</code> вам не нужно делать сетевые вызовы. Если значение <code>true</code>, то сеть может пропасть уже при выполнении следующей строки кода, в результате чего возникнет <code>HttpRequestException</code>.</p>
+
+<h2 id="повторное-выполнение">Повторное выполнение</h2>
+
+<p>Если у вас есть проблемы с подключением, вы, возможно, захотите повторить запрос, если это был всего лишь кратковременный сбой. Вы можете сделать это с помощью <a href="https://github.com/App-vNext/Polly">Polly</a>. Здесь снова тот же метод <code>GetAsync</code>, но на этот раз он будет повторяться до трех раз, с двух секундной паузой между запросами, если возникает <code>HttpRequestException</code>. Вы также можете добавить дополнительные исключения, при которых нужна повторная попытка.</p>
+
+<pre><code class="language-csharp">public async Task GetAsync()
+{
+    var result = await Policy
+            .Handle&lt;HttpRequestException&gt;()
+            .WaitAndRetry(
+                retryCount: 3,
+                sleepDurationProvider: (attempt) =&gt; TimeSpan.FromSeconds(2))
+            .ExecuteAsync(async () =&gt; await _client.GetAsync("https://someurl.com/product/1"));
+
+    if (result.IsSuccessStatusCode) { } // Успех
+    else { } // Возвращен код, отличный от 200
+}
+</code></pre>
+
+<h2 id="выводы">Выводы</h2>
+
+<p>Лучший способ избежать проблем с подключением - не делать сетевые вызовы. Если вашему приложению все же нужно ходить в сеть, можно уменьшить число возможных вызовов, реализовав кэширование.</p>
+
+<p>Если вы используете <code>HttpClient</code> + <a href="https://github.com/paulcbetts/refit">Refit</a> (для упрощения вызовов к API) убедитесь, что используете связку правильно.</p>
+
+<p>Убедившись, что вы проверяете возможность подключения, проверьте наличие исключений и, возможно, повторите попытку. Затем проверьте коды состояния.</p>
+
+<p>Теперь вы можете легко заставить приложение работать с ненадежной сетью.</p>]]></content><author><name>Yauheni Pakala</name></author><category term="xamarin" /><category term="xamarin forms" /><category term="MAUI" /><category term="перевод" /><summary type="html"><![CDATA[Мобильные сети относятся к наименее надежному типу сетей, и вашему приложению, скорее всего, придется общаться через нее, чтобы функционировать. Но, принимая во внимание потенциальность сбоев, мы должны обеспечить наше приложение возможностью приспосабливаться к плохому состоянию сети.]]></summary></entry><entry><title type="html">Использование SkiaSharp для конвертации SVG в Xamarin.Forms ImageSource</title><link href="https://wcoder.github.io/notes/use-skiasharp-to-convert-svg-to-xamarin-forms-imagesource" rel="alternate" type="text/html" title="Использование SkiaSharp для конвертации SVG в Xamarin.Forms ImageSource" /><published>2018-03-17T17:10:00+03:00</published><updated>2018-03-17T17:10:00+03:00</updated><id>https://wcoder.github.io/notes/use-skiasharp-to-convert-svg-to-xamarin-forms-imagesource</id><content type="html" xml:base="https://wcoder.github.io/notes/use-skiasharp-to-convert-svg-to-xamarin-forms-imagesource"><![CDATA[<p>При работе с изображениями в проекте вашего приложения должно быть творится ад, пока вам нужно много различных разрешений для каждого изображения. Но, что если мы могли бы использовать векторную графику для изображений? К сожалению, Xamarin.Forms не поддерживает этого из коробки. Но это возможно с помощью <a href="https://github.com/mono/SkiaSharp">SkiaSharp</a>. SkiaSharp - кросс-платформенный API для 2D-графики, для платформы .NET, основанное на <a href="https://skia.org/">Skia Graphics Library</a> от Google.</p>
+
+<p>Есть пакет для Xamarin.Forms, который мы можем добавить в ваш проект, если хотим добавить Skia холст к нашим представлениям. Это здорово, но есть небольшое ограничение. Для примера, мы не можем использовать его для иконок в TabbedPage. Эта заметка покажет, как создать вспомогательный класс, который с помощью SkiaSharp преобразует SVG в ImageSource.</p>
+
+<p>Прежде всего, нам нужно установить два NuGet-пакета:</p>
+
+<ul>
+  <li>SkiaSharp.View.Forms</li>
+  <li>SkiaSharp.Svg</li>
+</ul>
+
+<p>Наш вспомогательный класс будет принимать четыре аргумента: имя файла, ширину, высоту, цвет:</p>
+
+<pre><code class="language-csharp">public class SvgHelper
+{
+    public static ImageSource GetAsImageSource(string svgImage, float width, float height, Color color)
+    {
+    }
+}
+</code></pre>
+
+<p>Чтобы сделать это правильно, нам нужно знать коэффициент масштаба для устройства, на котором работает приложение:</p>
+
+<pre><code class="language-csharp">var scaleFactor = 0;
+
+#if __IOS__
+    scaleFactor = (int)UIKit.UIScreen.MainScreen.Scale;
+#elif __ANDROID__
+     // В MainActivity добавлено статическое свойство Current.
+     scaleFactor = MainActivity.Current.Resources.DisplayMetrics.Density
+#endif
+</code></pre>
+
+<p>Следующий шаг, загрузка SVG изображения:</p>
+
+<pre><code class="language-csharp">var svg = new SkiaSharp.Extended.Svg.SKSvg();
+
+#if __IOS__
+    svg.Load(svgImage);
+#elif __ANDROID__
+    var assetStream = MainActivity.Current.Assets.Open(svgImage);
+    svg.Load(assetStream);
+#endif
+</code></pre>
+
+<p>Когда мы загрузили SVG, нам нужно с масштабировать его до размера, который вы передали методу:</p>
+
+<pre><code class="language-csharp">var svgSize = svg.Picture.CullRect;
+var svgMax = Math.Max(svgSize.Width, svgSize.Height);
+
+float canvasMin = Math.Min((int)(width * scaleFactor), (int)(height * scaleFactor));
+var scale = canvasMin / svgMax;
+var matrix = SKMatrix.MakeScale(scale, scale);
+</code></pre>
+
+<p>Теперь, пришло время для отрисовки изображения, для этого нам нужен холст. Его размер будет определен в растровом изображении, которое мы передадим конструктору <code>SKCanvas</code>. Мы также хотим использовать цвет, что бы не иметь несколько изображений для разных цветов.</p>
+
+<pre><code class="language-csharp">var bitmap = new SKBitmap((int)(width*scaleFactor), (int)(height*scaleFactor));
+
+var paint = new SKPaint()
+{
+    ColorFilter = SKColorFilter.CreateBlendMode(color.ToSKColor(), SKBlendMode.SrcIn)
+};
+
+var canvas = new SKCanvas(bitmap);
+canvas.DrawPicture(svg.Picture, ref matrix, paint);
+</code></pre>
+
+<p>Теперь у нас есть холст, следующим шагом будет конвертация холста в поток, чтобы мы могли создать из него Xamarin.Forms <code>ImageSource</code>.</p>
+
+<pre><code class="language-csharp">var image = SKImage.FromBitmap(bitmap);
+var encoded = image.Encode();
+var stream = encoded.AsStream();
+var source = ImageSource.FromStream(() =&gt; stream);
+
+return source;
+</code></pre>
+
+<p>Теперь мы можем использовать его, чтобы установить источник изображения.</p>
+
+<pre><code class="language-csharp">var image = new Image();
+image.Source = SvgHelper. GetAsImageSource("my_icon.svg", 30, 30, Color.Black);
+</code></pre>
+
+<p>Если вы хотите использовать это в XAML, одним из решений будет дополнительно создать MarkupExtension:</p>
+
+<pre><code class="language-csharp">public class DrawImageExtension : IMarkupExtension
+{
+    public object ProvideValue(IServiceProvider serviceProvider)
+    {
+        var source = SvgHelper.GetAsImageSource(FileName, Width, Height, Color);
+
+        return source;
+    }
+
+    public string FileName { get; set; }
+    public float Width { get; set; }
+    public float Height { get; set; }
+    public Color Color { get; set; }
+}
+</code></pre>
+
+<p>Нам просто нужно импортировать пространство имен для расширения, а затем уже использовать его так:</p>
+
+<pre><code class="language-xml">&lt;ContentPage
+     xmlns="http://xamarin.com/schemas/2014/forms"
+     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+     xmlns:ext="clr-namespace:MyApp.Extensions" x:Class="MyApp.MyPage"&gt;
+     &lt;StackLayout&gt;
+          &lt;Image Source="{ext:DrawImage FileName=my_icon.svg, Width=25, Height=25, Color=White}" /&gt;
+     &lt;/StackLayout&gt;
+&lt;/ContentPage&gt;
+</code></pre>
+
+<p>На этом все!</p>]]></content><author><name>Yauheni Pakala</name></author><category term="xamarin" /><category term="xamarin forms" /><category term="skiasharp" /><category term="svg" /><category term="перевод" /><summary type="html"><![CDATA[При работе с изображениями в проекте вашего приложения должно быть творится ад, пока вам нужно много различных разрешений для каждого изображения. Но, что если мы могли бы использовать векторную графику для изображений? К сожалению, Xamarin.Forms не поддерживает этого из коробки. Но это возможно с помощью SkiaSharp. SkiaSharp - кросс-платформенный API для 2D-графики, для платформы .NET, основанное на Skia Graphics Library от Google.]]></summary></entry><entry><title type="html">Реализуем Sliding Panel с использованием Xamarin.Forms &amp;amp; MAUI</title><link href="https://wcoder.github.io/notes/sliding-panel-xamarin-forms" rel="alternate" type="text/html" title="Реализуем Sliding Panel с использованием Xamarin.Forms &amp;amp; MAUI" /><published>2018-02-04T22:18:00+03:00</published><updated>2018-02-04T22:18:00+03:00</updated><id>https://wcoder.github.io/notes/sliding-panel-xamarin-forms</id><content type="html" xml:base="https://wcoder.github.io/notes/sliding-panel-xamarin-forms"><![CDATA[<p>Привет, в этом посте я продемонстрирую, как вы можете создать Sliding Panel в своем Xamarin.Forms приложении.</p>
+
+<p>Для этого примера было создано 4 варианта скользящих панелей (Sliding Panel):</p>
+
+<ul>
+  <li><a href="#pageup">PageUp</a></li>
+  <li><a href="#pageright">PageRight</a></li>
+  <li><a href="#pagedown">PageDown</a></li>
+  <li><a href="#pageleft">PageLeft</a></li>
+</ul>
+
+<p>На следующем рисунке показано, как были названы панели и значки, используемые в этом примере.</p>
+
+<p><img src="https://julianocustodiosite.files.wordpress.com/2018/01/12.png" alt="Схема реализации" /></p>
+
+<h2 id="pageup">PageUp</h2>
+
+<p>Создайте <code>AbsoluteLayout</code>, который появится при загрузке страницы и <code>StackLayout</code>, называемый <strong>«PageUp»</strong>, который будет панелью, которая будет скользить сверху вниз.</p>
+
+<blockquote>
+  <p>Обратите внимание, что для оконки открытия/закрытия определены <code>GestureRecognizers</code>.</p>
+</blockquote>
+
+<h3 id="xaml">XAML</h3>
+
+<pre><code class="language-xml">&lt;?xml version="1.0" encoding="utf-8" ?&gt;
+&lt;ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:DemoSlidingPanel"
+    x:Class="DemoSlidingPanel.MainPage"&gt;
+
+    &lt;AbsoluteLayout
+        x:Name="Page"
+        VerticalOptions="FillAndExpand" &gt;
+
+        &lt;StackLayout
+            AbsoluteLayout.LayoutBounds="0,0,1,1"
+            AbsoluteLayout.LayoutFlags="All"
+            BackgroundColor="White"&gt;
+            &lt;Image
+                Source="DownBlue.png"
+                HorizontalOptions="CenterAndExpand"
+                VerticalOptions="StartAndExpand"&gt;
+                &lt;Image.GestureRecognizers&gt;
+                    &lt;TapGestureRecognizer Tapped="DownBlue_Tapped" /&gt;
+                    &lt;PanGestureRecognizer PanUpdated="DownBlue_Tapped" /&gt;
+                &lt;/Image.GestureRecognizers&gt;
+            &lt;/Image&gt;
+        &lt;/StackLayout&gt;
+
+        &lt;StackLayout
+            x:Name="PageUp"
+            AbsoluteLayout.LayoutBounds="0,0,1,1"
+            AbsoluteLayout.LayoutFlags="All"
+            Orientation="Vertical"
+            VerticalOptions="FillAndExpand"
+            Spacing="0"&gt;
+            &lt;StackLayout
+                VerticalOptions="FillAndExpand"
+                BackgroundColor="#006df0"&gt;
+                &lt;Image
+                    Source="UpWhite.png"
+                    HorizontalOptions="CenterAndExpand"
+                    VerticalOptions="EndAndExpand"&gt;
+                    &lt;Image.GestureRecognizers&gt;
+                        &lt;TapGestureRecognizer Tapped="UpWhite_Tapped" /&gt;
+                        &lt;PanGestureRecognizer PanUpdated="UpWhite_Tapped" /&gt;
+                    &lt;/Image.GestureRecognizers&gt;
+                &lt;/Image&gt;
+            &lt;/StackLayout&gt;
+        &lt;/StackLayout&gt;
+    &lt;/AbsoluteLayout&gt;
+
+&lt;/ContentPage&gt;
+</code></pre>
+
+<h3 id="код">Код</h3>
+
+<p>При инициализации страницы присвойте <code>-1000</code> свойству <code>TranslationY</code>, ранее созданной панели. Это позволит отобразить эту страницу первой.
+Создайте методы <code>UpWhite_Tapped</code> и <code>DownBlue_Tapped</code>, которые будут вызываться при захвате <code>GestureRecognizers</code>.</p>
+
+<p><code>PageUp.TranslateTo</code> будет использоваться для выполнения группового перехода. Введите <code>0</code> для координаты <code>x</code> и <code>y</code> для отображения панели, а <code>-Page.Height</code> в координате <code>y</code>, чтобы скрыть панель.</p>
+
+<p><code>Easing.SinIn</code> - эффект, используемый для перехода.</p>
+
+<pre><code class="language-csharp">using System;
+using System.Text;
+using Xamarin.Forms;
+
+namespace DemoSlidingPanel
+{
+    public partial class MainPage : ContentPage
+    {
+        public MainPage()
+        {
+            InitializeComponent();
+
+            PageUp.TranslationY = -1000;
+        }
+
+        async void UpWhite_Tapped(object sender, EventArgs e)
+        {
+            await PageUp.TranslateTo(0, -Page.Height, 500, Easing.SinIn);
+        }
+
+        async void DownBlue_Tapped(object sender, EventArgs e)
+        {
+            await PageUp.TranslateTo(0, 0, 500, Easing.SinIn);
+        }
+    }
+}
+</code></pre>
+
+<h2 id="pageright">PageRight</h2>
+
+<p>Создайте <code>AbsoluteLayout</code>, который появится при загрузке страницы и <code>StackLayout</code> с именем <strong>«PageRight»</strong>, который будет панелью, которая будет перемещаться справа налево.</p>
+
+<blockquote>
+  <p>Обратите внимание, что для оконки открытия/закрытия определены <code>GestureRecognizers</code>.</p>
+</blockquote>
+
+<h3 id="xaml-1">XAML</h3>
+
+<pre><code class="language-xml">&lt;?xml version="1.0" encoding="utf-8" ?&gt;
+&lt;ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:DemoSlidingPanel"
+    x:Class="DemoSlidingPanel.MainPage"&gt;
+
+    &lt;AbsoluteLayout
+        x:Name="Page"
+        VerticalOptions="FillAndExpand"&gt;
+        &lt;StackLayout
+            AbsoluteLayout.LayoutBounds="0,0,1,1"
+            AbsoluteLayout.LayoutFlags="All"
+            BackgroundColor="White"&gt;
+                &lt;Image
+                    Source="LeftBlue.png"
+                    HorizontalOptions="EndAndExpand"
+                    VerticalOptions="CenterAndExpand"&gt;
+                    &lt;Image.GestureRecognizers&gt;
+                        &lt;TapGestureRecognizer Tapped="LeftBlue_Tapped" /&gt;
+                        &lt;PanGestureRecognizer PanUpdated="LeftBlue_Tapped" /&gt;
+                    &lt;/Image.GestureRecognizers&gt;
+                &lt;/Image&gt;
+        &lt;/StackLayout&gt;
+
+        &lt;StackLayout
+            x:Name="PageRight"
+            AbsoluteLayout.LayoutBounds="0,0,1,1"
+            AbsoluteLayout.LayoutFlags="All"
+            Orientation="Vertical"
+            VerticalOptions="FillAndExpand"
+            Spacing="0"&gt;
+            &lt;StackLayout
+                VerticalOptions="FillAndExpand"
+                BackgroundColor="#006df0"&gt;
+                &lt;Image
+                    Source="RightWhite.png"
+                    HorizontalOptions="StartAndExpand"
+                    VerticalOptions="CenterAndExpand"&gt;
+                    &lt;Image.GestureRecognizers&gt;
+                        &lt;TapGestureRecognizer Tapped="RightWhite_Tapped" /&gt;
+                        &lt;PanGestureRecognizer PanUpdated="RightWhite_Tapped" /&gt;
+                    &lt;/Image.GestureRecognizers&gt;
+                &lt;/Image&gt;
+            &lt;/StackLayout&gt;
+        &lt;/StackLayout&gt;
+
+    &lt;/AbsoluteLayout&gt;
+&lt;/ContentPage&gt;
+</code></pre>
+
+<h3 id="код-1">Код</h3>
+
+<p>При инициализации страницы назначьте <code>1000</code> свойству <code>TranslationX</code> ранее созданной панели. Это позволит отобразить эту страницу первой.
+Создайте методы <code>LeftBlue_Tapped</code> и <code>RightWhite_Tapped</code>, которые будут вызваны при захвате <code>GestureRecognizers</code>.</p>
+
+<p><code>PageRight.TranslateTo</code> будет служить для выполнения группового перехода. Введите <code>0</code> в координатах <code>x</code> и <code>y</code>, чтобы отобразить панель и <code>Page.Width</code> в координате <code>x</code>, чтобы скрыть панель.</p>
+
+<p><code>Easing.SinIn</code> - эффект, используемый для перехода.</p>
+
+<pre><code class="language-csharp">using System;
+using System.Text;
+using Xamarin.Forms;
+
+namespace DemoSlidingPanel
+{
+    public partial class MainPage : ContentPage
+    {
+        public MainPage()
+        {
+            InitializeComponent();
+
+            PageRight.TranslationX = 1000;
+        }
+
+        async void LeftBlue_Tapped(object sender, EventArgs e)
+        {
+            await PageRight.TranslateTo(0, 0, 500, Easing.SinIn);
+        }
+
+        async void RightWhite_Tapped(object sender, EventArgs e)
+        {
+            await PageRight.TranslateTo(Page.Width, 0, 500, Easing.SinIn);
+        }
+    }
+}
+</code></pre>
+
+<h2 id="pagedown">PageDown</h2>
+
+<p>Создайте <code>AbsoluteLayout</code>, который появится при загрузке страницы, и <code>StackLayout</code> с именем <strong>«PageDown»</strong>, который будет панелью, которая будет скользить снизу вверх.</p>
+
+<blockquote>
+  <p>Обратите внимание, что для оконки открытия/закрытия определены <code>GestureRecognizers</code>.</p>
+</blockquote>
+
+<h3 id="xaml-2">XAML</h3>
+
+<pre><code class="language-xml">&lt;?xml version="1.0" encoding="utf-8" ?&gt;
+&lt;ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:DemoSlidingPanel"
+    x:Class="DemoSlidingPanel.MainPage"&gt;
+
+    &lt;AbsoluteLayout
+        x:Name="Page"
+        VerticalOptions="FillAndExpand"&gt;
+        &lt;StackLayout
+            AbsoluteLayout.LayoutBounds="0,0,1,1"
+            AbsoluteLayout.LayoutFlags="All"
+            BackgroundColor="White"&gt;
+            &lt;Image
+                Source="UpBlue.png"
+                HorizontalOptions="CenterAndExpand"
+                VerticalOptions="EndAndExpand"&gt;
+                &lt;Image.GestureRecognizers&gt;
+                    &lt;TapGestureRecognizer Tapped="UpBlue_Tapped" /&gt;
+                    &lt;PanGestureRecognizer PanUpdated="UpBlue_Tapped" /&gt;
+                &lt;/Image.GestureRecognizers&gt;
+            &lt;/Image&gt;
+        &lt;/StackLayout&gt;
+
+        &lt;StackLayout
+            x:Name="PageDown"
+            AbsoluteLayout.LayoutBounds="0,0,1,1"
+            AbsoluteLayout.LayoutFlags="All"
+            Orientation="Vertical"
+            VerticalOptions="FillAndExpand"
+            Spacing="0"&gt;
+            &lt;StackLayout
+                VerticalOptions="FillAndExpand"
+                BackgroundColor="#006df0"&gt;
+                &lt;Image
+                    Source="DownWhite.png"
+                    HorizontalOptions="CenterAndExpand"
+                    VerticalOptions="StartAndExpand"&gt;
+                    &lt;Image.GestureRecognizers&gt;
+                        &lt;TapGestureRecognizer Tapped="DownWhite_Tapped" /&gt;
+                        &lt;PanGestureRecognizer PanUpdated="DownWhite_Tapped" /&gt;
+                    &lt;/Image.GestureRecognizers&gt;
+                &lt;/Image&gt;
+            &lt;/StackLayout&gt;
+        &lt;/StackLayout&gt;
+
+    &lt;/AbsoluteLayout&gt;
+&lt;/ContentPage&gt;
+</code></pre>
+
+<h3 id="код-2">Код</h3>
+
+<p>При инициализации страницы назначьте <code>1000</code> для свойства <code>TranslationY</code> ранее созданной панели. Это позволит отобразить эту страницу первой.
+Создайте методы <code>UpBlue_Tapped</code> и <code>DownWhite_Tapped</code>, которые будут вызваны при захвате <code>GestureRecognizers</code>.</p>
+
+<p><code>PageDown.TranslateTo</code> будет служить для выполнения группового перехода. Введите <code>0</code> в координатах <code>x</code> и <code>y</code>, чтобы отобразить панель и <code>Page.Height</code> в координате <code>y</code>, чтобы скрыть панель.</p>
+
+<p><code>Easing.SinIn</code> - эффект, используемый для перехода.</p>
+
+<pre><code class="language-csharp">using System;
+using System.Text;
+using Xamarin.Forms;
+
+namespace DemoSlidingPanel
+{
+    public partial class MainPage : ContentPage
+    {
+        public MainPage()
+        {
+            InitializeComponent();
+
+            PageDown.TranslationY = 1000;
+        }
+
+        async void UpBlue_Tapped(object sender, EventArgs e)
+        {
+            await PageDown.TranslateTo(0, 0, 500, Easing.SinIn);
+        }
+
+        async void DownWhite_Tapped(object sender, EventArgs e)
+        {
+            await PageDown.TranslateTo(0, Page.Height, 500, Easing.SinIn);
+        }
+    }
+}
+</code></pre>
+
+<h2 id="pageleft">PageLeft</h2>
+
+<p>Создайте <code>AbsoluteLayout</code>, который появится при загрузке страницы, и <code>StackLayout</code>, называемый <strong>«PageLeft»</strong>, который будет панелью, которая будет скользить снизу вверх.</p>
+
+<blockquote>
+  <p>Обратите внимание, что для оконки открытия/закрытия определены <code>GestureRecognizers</code>.</p>
+</blockquote>
+
+<h3 id="xaml-3">XAML</h3>
+
+<pre><code class="language-xml">&lt;?xml version="1.0" encoding="utf-8" ?&gt;
+&lt;ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:DemoSlidingPanel"
+    x:Class="DemoSlidingPanel.MainPage"&gt;
+
+    &lt;AbsoluteLayout
+        x:Name="Page"
+        VerticalOptions="FillAndExpand"&gt;
+        &lt;StackLayout
+            AbsoluteLayout.LayoutBounds="0,0,1,1"
+            AbsoluteLayout.LayoutFlags="All"
+            BackgroundColor="White"&gt;
+                &lt;Image
+                    Source="LeftBlue.png"
+                    HorizontalOptions="EndAndExpand"
+                    VerticalOptions="CenterAndExpand"&gt;
+                    &lt;Image.GestureRecognizers&gt;
+                        &lt;TapGestureRecognizer Tapped="LeftBlue_Tapped" /&gt;
+                        &lt;PanGestureRecognizer PanUpdated="LeftBlue_Tapped" /&gt;
+                    &lt;/Image.GestureRecognizers&gt;
+                &lt;/Image&gt;
+        &lt;/StackLayout&gt;
+
+        &lt;StackLayout
+            x:Name="PageLeft"
+            AbsoluteLayout.LayoutBounds="0,0,1,1"
+            AbsoluteLayout.LayoutFlags="All"
+            Orientation="Vertical"
+            VerticalOptions="FillAndExpand"
+            Spacing="0"&gt;
+            &lt;StackLayout
+                VerticalOptions="FillAndExpand"
+                BackgroundColor="#006df0"&gt;
+                &lt;Image
+                    Source="LeftWhite.png"
+                    HorizontalOptions="EndAndExpand"
+                    VerticalOptions="CenterAndExpand"&gt;
+                    &lt;Image.GestureRecognizers&gt;
+                        &lt;TapGestureRecognizer Tapped="LeftWhite_Tapped" /&gt;
+                        &lt;PanGestureRecognizer PanUpdated="LeftWhite_Tapped" /&gt;
+                    &lt;/Image.GestureRecognizers&gt;
+                &lt;/Image&gt;
+            &lt;/StackLayout&gt;
+        &lt;/StackLayout&gt;
+
+    &lt;/AbsoluteLayout&gt;
+&lt;/ContentPage&gt;
+</code></pre>
+
+<h3 id="код-3">Код</h3>
+
+<p>При инициализации страницы присвойте <code>-1000</code> свойству <code>TranslationX</code> ранее созданной панели. Это позволит отобразить эту страницу первой.
+Создайте методы <code>LeftWhite_Tapped</code> и <code>RightBlue_Tapped</code>, которые будут вызываться при захвате <code>GestureRecognizers</code>.</p>
+
+<p><code>PageLeft.TranslateTo</code> будет использоваться для выполнения группового перехода. Введите <code>0</code> в координатах <code>x</code> и <code>y</code> для отображения панели и <code>-Page.Width</code> в координате <code>x</code>, чтобы скрыть панель.</p>
+
+<p><code>Easing.SinIn</code> - эффект, используемый для перехода.</p>
+
+<pre><code class="language-csharp">using System;
+using System.Text;
+using Xamarin.Forms;
+
+namespace DemoSlidingPanel
+{
+    public partial class MainPage : ContentPage
+    {
+        public MainPage()
+        {
+            InitializeComponent();
+
+            PageLeft.TranslationX = -1000;
+        }
+
+        async void LeftWhite_Tapped(object sender, EventArgs e)
+        {
+            await PageLeft.TranslateTo(-Page.Width, 0, 500, Easing.SinIn);
+        }
+
+        async void RightBlue_Tapped(object sender, EventArgs e)
+        {
+            await PageLeft.TranslateTo(0, 0, 500, Easing.SinIn);
+        }
+    }
+}
+</code></pre>
+
+<h2 id="результат">Результат</h2>
+
+<p><img alt="Результат" src="https://julianocustodiosite.files.wordpress.com/2018/01/ezgif-com-gif-maker1.gif?w=300&amp;h=533&amp;zoom=2" width="300" /></p>
+
+<p>Исходный код <a href="https://github.com/juucustodio/SlidingPanel-Xamarin.Forms">доступен на Github</a>.</p>]]></content><author><name>Yauheni Pakala</name></author><category term="mobile" /><category term="xamarin forms" /><category term="MAUI" /><category term="перевод" /><summary type="html"><![CDATA[Привет, в этом посте я продемонстрирую, как вы можете создать Sliding Panel в своем Xamarin.Forms приложении.]]></summary></entry><entry><title type="html">Отключаем выделение выбранного элемента ListView с использованием эффектов в Xamarin Forms</title><link href="https://wcoder.github.io/notes/xamawin-override-select-state-using-effects" rel="alternate" type="text/html" title="Отключаем выделение выбранного элемента ListView с использованием эффектов в Xamarin Forms" /><published>2018-02-02T23:05:00+03:00</published><updated>2018-02-02T23:05:00+03:00</updated><id>https://wcoder.github.io/notes/xamawin-override-select-state-using-effects</id><content type="html" xml:base="https://wcoder.github.io/notes/xamawin-override-select-state-using-effects"><![CDATA[<p>ListView в Xamarin.Forms - это эффектный способ отображения повторяющихся элементов одинакового формата. Типичное применение включает какое-то взаимодействие с пользователем, например выбрать один элемент, а затем перейти на новый экран.</p>
+
+<p>В этой статье мы рассмотрим возможность отключения выделения для элементов списка. Хотя это просто в UWP, с использованием <code>SelectionMode</code>, Xamarin.Forms не предоставляет аналогичную функциональность из коробки (пока!), из-за различия способов, которым каждая платформа обрабатывает списки. К счастью, благодаря нашему хорошему другу PlatformEffect, реализовать эту функциональности - просто!</p>
+
+<p>Начнем с эффекта в iOS проекте:</p>
+
+<pre><code class="language-csharp">[assembly: ResolutionGroupName("MyEffects")]
+[assembly: ExportEffect(typeof(ListViewHighlightEffect), nameof(ListViewHighlightEffect))]
+namespace Effects.iOS.Effects
+{
+    public class ListViewHighlightEffect : PlatformEffect
+    {
+        protected override void OnAttached()
+        {
+            var listView = (UIKit.UITableView)Control;
+
+            listView.AllowsSelection = false; // !!!
+        }
+
+        protected override void OnDetached()
+        {
+
+        }
+    }
+}
+</code></pre>
+
+<p>Когда вы обратите внимание на Android, вы заметите, что эффект реализуется аналогично:</p>
+
+<pre><code class="language-csharp">[assembly: ResolutionGroupName("MyEffects")]
+[assembly: ExportEffect(typeof(ListViewHighlightEffect), nameof(ListViewHighlightEffect))]
+namespace Effects.Droid.Effects
+{
+    public class ListViewHighlightEffect : PlatformEffect
+    {
+        protected override void OnAttached()
+        {
+            var listView = (Android.Widget.ListView)Control;
+
+            listView.ChoiceMode = ChoiceMode.None; // !!!
+            listView.SetSelector(Android.Resource.Color.Transparent); // !!!
+        }
+
+        protected override void OnDetached()
+        {
+
+        }
+    }
+}
+</code></pre>
+<p>Вдобавок, мы можем сделать выделение прозрачным, <a href="https://gist.github.com/wcoder/0f2dc9cfe230764cc9caa7b5234a3fab#file-styles-xml-L22-L26">переопределив</a> значения цветов в styles.xml</p>
+
+<p>Теперь, мы просто применим эффект для нашего списка, вот так:</p>
+
+<pre><code class="language-csharp">MyListView.Effects.Add(Effect.Resolve("MyEffects.ListViewHighlightEffect"));
+</code></pre>
+
+<p>Результатом является отсутствие выделения элементов списка при выборе или прокрутке. Проверьте как это выглядит до и после на iOS:</p>
+
+<table><tr><td>
+<img src="https://iwritecodesometimes.files.wordpress.com/2018/01/jan-31-2018-14-33-18.gif?w=346&amp;h=629&amp;zoom=2" />
+</td><td>
+<img src="https://iwritecodesometimes.files.wordpress.com/2018/01/jan-31-2018-14-34-12.gif?w=346&amp;h=629&amp;zoom=2" />
+</td></tr></table>]]></content><author><name>Yauheni Pakala</name></author><category term="android" /><category term="ios" /><category term="xamarin forms" /><category term="сниппет" /><category term="перевод" /><summary type="html"><![CDATA[ListView в Xamarin.Forms - это эффектный способ отображения повторяющихся элементов одинакового формата. Типичное применение включает какое-то взаимодействие с пользователем, например выбрать один элемент, а затем перейти на новый экран.]]></summary></entry><entry><title type="html">Воспроизведение видео в приложении Xamarin Forms</title><link href="https://wcoder.github.io/notes/videoplayer-xamarin-forms" rel="alternate" type="text/html" title="Воспроизведение видео в приложении Xamarin Forms" /><published>2018-02-01T23:10:00+03:00</published><updated>2018-02-01T23:10:00+03:00</updated><id>https://wcoder.github.io/notes/videoplayer-xamarin-forms</id><content type="html" xml:base="https://wcoder.github.io/notes/videoplayer-xamarin-forms"><![CDATA[<p>Привет, в этом посте я продемонстрирую, как приложение Xamarin.Forms может воспроизводить видео.</p>
+
+<p>Для этого примера я буду считать, что вы уже создали приложение Xamarin.Forms. Если у вас есть какие-либо вопросы по этому поводу, я рекомендую прочитать руководство <a href="https://metanit.com/sharp/xamarin/2.1.php">«Создание проекта Xamarin.Forms»</a>.</p>
+
+<h2 id="добавление-nuget-пакета">Добавление NuGet пакета</h2>
+
+<p>Щелкните правой кнопкой мыши свое решение и выберите «Управление NuGet пакетами для решения»:</p>
+
+<p><img src="https://julianocustodiosite.files.wordpress.com/2018/01/11-e1516143419641.png" alt="Установка Nuget пакета" /></p>
+
+<p>Введите «<strong>Rox.Xamarin.Video</strong>» и выберите плагин, как показано на следующем рисунке:</p>
+
+<p><img src="https://julianocustodiosite.files.wordpress.com/2018/01/2-2-e1516218281793.png" alt="Найденый пакет" /></p>
+
+<p>Выберите все проекты и нажмите кнопку «Установить».</p>
+
+<p><img src="https://julianocustodiosite.files.wordpress.com/2018/01/2-21-e1516218331731.png" alt="Выделены все проекты" /></p>
+
+<h2 id="xaml">XAML</h2>
+
+<p>Добавим пространство имен <code>Rox.Xamarin.Video.Portable</code>, а затем элемент <code>VideoView</code> и настроим некоторые из его свойств:</p>
+
+<ul>
+  <li><strong>AutoPlay</strong> - автоматическое воспроизведение при загрузке страницы;</li>
+  <li><strong>LoopPlay</strong> - повтор проигрывания видео;</li>
+  <li><strong>ShowController</strong> - показывает панель c элементами управления;</li>
+  <li><strong>Source</strong> - устанавливает видео, которое вы хотите воспроизвести.</li>
+</ul>
+
+<pre><code class="language-xml">&lt;?xml version="1.0" encoding="utf-8" ?&gt;
+&lt;ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:DemoVideo"
+    xmlns:rox="clr-namespace:Rox;assembly=Rox.Xamarin.Video.Portable"
+    x:Class="DemoVideo.MainPage"&gt;
+
+    &lt;Grid&gt;
+        &lt;rox:VideoView
+            AutoPlay="True"
+            LoopPlay="True"
+            ShowController="True"
+            Source="https://instagram.fsod3-1.fna.fbcdn.net/vp/a4483470041412903563bd594a7172f8/5A615E69/t50.2886-16/20845171_798391080343591_101942135397285888_n.mp4" /&gt;
+    &lt;/Grid&gt;
+
+&lt;/ContentPage&gt;
+</code></pre>
+
+<h3 id="результат">Результат</h3>
+
+<p><img src="https://julianocustodiosite.files.wordpress.com/2018/01/ezgif-com-gif-maker-1.gif?w=299&amp;h=532&amp;zoom=2" alt="Результат" /></p>
+
+<p>Вот и все, пример <a href="https://github.com/juucustodio/VideoPlayer-Xamarin.Forms">доступен на GitHub</a></p>]]></content><author><name>Yauheni Pakala</name></author><category term="android" /><category term="ios" /><category term="xamarin forms" /><category term="video" /><category term="перевод" /><summary type="html"><![CDATA[Привет, в этом посте я продемонстрирую, как приложение Xamarin.Forms может воспроизводить видео.]]></summary></entry></feed>

@@ -1,0 +1,302 @@
+<!DOCTYPE html> <html prefix="og: http://ogp.me/ns#" lang="ru"> <head> <meta charset="utf-8" /> <meta http-equiv="X-UA-Compatible" content="IE=edge" /> <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" /> <title>Реализуем Sliding Panel с использованием Xamarin.Forms & MAUI - YP Tech Notes</title> <meta name="description" content="Привет, в этом посте я продемонстрирую, как вы можете создать Sliding Panel в своем Xamarin.Forms приложении." /> <meta name="keywords" content="mobile, xamarin forms, MAUI, перевод" /> <meta name="author" content="Yauheni Pakala"> <meta property="og:title" content="Реализуем Sliding Panel с использованием Xamarin.Forms & MAUI - YP Tech Notes" /> <meta property="og:description" content="Привет, в этом посте я продемонстрирую, как вы можете создать Sliding Panel в своем Xamarin.Forms приложении." /> <meta property="og:url" content="https://wcoder.github.io/notes/sliding-panel-xamarin-forms" /> <meta property="og:site_name" content="YP Tech Notes" /> <meta property="og:locale" content="ru_RU" /> <meta property="og:type" content="article" /> <meta property="article:author" content="Yauheni Pakala" /> <meta property="article:published_time" content="2018-02-04T22:18:00+03:00" /> <meta name="twitter:card" content="summary" /> <meta name="twitter:creator" content="@yauhenipakala" /> <meta name='yandex-verification' content='7cd440e16ce6e1c3' /> <link rel="icon" type="image/x-icon" href="/images/favicon.ico" /> <link rel="stylesheet" href="/css/main.css" /> <link rel="stylesheet" href="/css/github.min.css" /> <meta name="mobile-web-app-capable" content="yes" /> <meta name="apple-mobile-web-app-capable" content="yes" /> <meta name="application-name" content="YP Tech Notes" /> <meta name="apple-mobile-web-app-title" content="YP Tech Notes" /> <meta name="theme-color" content="#333" /> <meta name="msapplication-navbutton-color" content="#333" /> <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" /> <meta name="msapplication-starturl" content="/" /> <link rel="manifest" href="/api/manifest.json" /> <link rel="canonical" href="https://wcoder.github.io/notes/sliding-panel-xamarin-forms" /> <link rel="alternate" type="application/atom+xml" title="YP Tech Notes" href="https://wcoder.github.io/atom.xml" /> </head> <body> <header class="site-header"><div class="wrapper"> <a class="site-title" href="/" title="Перейти на главную">Tech Notes</a> <nav class="site-nav"> <a href="#" class="menu-icon" title="Развернуть меню"> <svg xmlns="http://www.w3.org/2000/svg" height="29" viewBox="0 0 48 48" width="48"><path d="M0 0h48v48h-48z" fill="none"></path><path d="M6 36h36v-4h-36v4zm0-10h36v-4h-36v4zm0-14v4h36v-4h-36z"></path> </svg> </a><div class="trigger"> <a class="page-link" href="https://ypakala.com/">Об авторе</a> <a class="page-link" href="/archive/">Архив</a> <a class="page-link" href="/search/">Поиск</a> <a class="page-link" href="/atom.xml"><i class="fa fa-rss"></i> RSS</a></div></nav></div></header><div class="page-content"><div class="wrapper"> <article class="post" itemscope itemtype="http://schema.org/BlogPosting"> <header class="post-header"><h1 class="post-title" itemprop="name headline">Реализуем Sliding Panel с использованием Xamarin.Forms & MAUI</h1><p class="post-meta"> <time datetime="2018-02-04T22:18:00+03:00" itemprop="datePublished">04.02.2018 в 22:18</time></p></header><div class="post-content" itemprop="articleBody"><p>Привет, в этом посте я продемонстрирую, как вы можете создать Sliding Panel в своем Xamarin.Forms приложении.</p><p>Для этого примера было создано 4 варианта скользящих панелей (Sliding Panel):</p><ul> <li><a href="#pageup">PageUp</a></li> <li><a href="#pageright">PageRight</a></li> <li><a href="#pagedown">PageDown</a></li> <li><a href="#pageleft">PageLeft</a></li></ul><p>На следующем рисунке показано, как были названы панели и значки, используемые в этом примере.</p><p><img src="https://julianocustodiosite.files.wordpress.com/2018/01/12.png" alt="Схема реализации" /></p><h2 id="pageup">PageUp</h2><p>Создайте <code>AbsoluteLayout</code>, который появится при загрузке страницы и <code>StackLayout</code>, называемый <strong>«PageUp»</strong>, который будет панелью, которая будет скользить сверху вниз.</p><blockquote><p>Обратите внимание, что для оконки открытия/закрытия определены <code>GestureRecognizers</code>.</p></blockquote> <h3 id="xaml">XAML</h3><pre><code class="language-xml">&lt;?xml version="1.0" encoding="utf-8" ?&gt;
+&lt;ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:DemoSlidingPanel"
+    x:Class="DemoSlidingPanel.MainPage"&gt;
+
+    &lt;AbsoluteLayout
+        x:Name="Page"
+        VerticalOptions="FillAndExpand" &gt;
+
+        &lt;StackLayout
+            AbsoluteLayout.LayoutBounds="0,0,1,1"
+            AbsoluteLayout.LayoutFlags="All"
+            BackgroundColor="White"&gt;
+            &lt;Image
+                Source="DownBlue.png"
+                HorizontalOptions="CenterAndExpand"
+                VerticalOptions="StartAndExpand"&gt;
+                &lt;Image.GestureRecognizers&gt;
+                    &lt;TapGestureRecognizer Tapped="DownBlue_Tapped" /&gt;
+                    &lt;PanGestureRecognizer PanUpdated="DownBlue_Tapped" /&gt;
+                &lt;/Image.GestureRecognizers&gt;
+            &lt;/Image&gt;
+        &lt;/StackLayout&gt;
+
+        &lt;StackLayout
+            x:Name="PageUp"
+            AbsoluteLayout.LayoutBounds="0,0,1,1"
+            AbsoluteLayout.LayoutFlags="All"
+            Orientation="Vertical"
+            VerticalOptions="FillAndExpand"
+            Spacing="0"&gt;
+            &lt;StackLayout
+                VerticalOptions="FillAndExpand"
+                BackgroundColor="#006df0"&gt;
+                &lt;Image
+                    Source="UpWhite.png"
+                    HorizontalOptions="CenterAndExpand"
+                    VerticalOptions="EndAndExpand"&gt;
+                    &lt;Image.GestureRecognizers&gt;
+                        &lt;TapGestureRecognizer Tapped="UpWhite_Tapped" /&gt;
+                        &lt;PanGestureRecognizer PanUpdated="UpWhite_Tapped" /&gt;
+                    &lt;/Image.GestureRecognizers&gt;
+                &lt;/Image&gt;
+            &lt;/StackLayout&gt;
+        &lt;/StackLayout&gt;
+    &lt;/AbsoluteLayout&gt;
+
+&lt;/ContentPage&gt;
+</code></pre><h3 id="код">Код</h3><p>При инициализации страницы присвойте <code>-1000</code> свойству <code>TranslationY</code>, ранее созданной панели. Это позволит отобразить эту страницу первой. Создайте методы <code>UpWhite_Tapped</code> и <code>DownBlue_Tapped</code>, которые будут вызываться при захвате <code>GestureRecognizers</code>.</p><p><code>PageUp.TranslateTo</code> будет использоваться для выполнения группового перехода. Введите <code>0</code> для координаты <code>x</code> и <code>y</code> для отображения панели, а <code>-Page.Height</code> в координате <code>y</code>, чтобы скрыть панель.</p><p><code>Easing.SinIn</code> - эффект, используемый для перехода.</p><pre><code class="language-csharp">using System;
+using System.Text;
+using Xamarin.Forms;
+
+namespace DemoSlidingPanel
+{
+    public partial class MainPage : ContentPage
+    {
+        public MainPage()
+        {
+            InitializeComponent();
+
+            PageUp.TranslationY = -1000;
+        }
+
+        async void UpWhite_Tapped(object sender, EventArgs e)
+        {
+            await PageUp.TranslateTo(0, -Page.Height, 500, Easing.SinIn);
+        }
+
+        async void DownBlue_Tapped(object sender, EventArgs e)
+        {
+            await PageUp.TranslateTo(0, 0, 500, Easing.SinIn);
+        }
+    }
+}
+</code></pre><h2 id="pageright">PageRight</h2><p>Создайте <code>AbsoluteLayout</code>, который появится при загрузке страницы и <code>StackLayout</code> с именем <strong>«PageRight»</strong>, который будет панелью, которая будет перемещаться справа налево.</p><blockquote><p>Обратите внимание, что для оконки открытия/закрытия определены <code>GestureRecognizers</code>.</p></blockquote> <h3 id="xaml-1">XAML</h3><pre><code class="language-xml">&lt;?xml version="1.0" encoding="utf-8" ?&gt;
+&lt;ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:DemoSlidingPanel"
+    x:Class="DemoSlidingPanel.MainPage"&gt;
+
+    &lt;AbsoluteLayout
+        x:Name="Page"
+        VerticalOptions="FillAndExpand"&gt;
+        &lt;StackLayout
+            AbsoluteLayout.LayoutBounds="0,0,1,1"
+            AbsoluteLayout.LayoutFlags="All"
+            BackgroundColor="White"&gt;
+                &lt;Image
+                    Source="LeftBlue.png"
+                    HorizontalOptions="EndAndExpand"
+                    VerticalOptions="CenterAndExpand"&gt;
+                    &lt;Image.GestureRecognizers&gt;
+                        &lt;TapGestureRecognizer Tapped="LeftBlue_Tapped" /&gt;
+                        &lt;PanGestureRecognizer PanUpdated="LeftBlue_Tapped" /&gt;
+                    &lt;/Image.GestureRecognizers&gt;
+                &lt;/Image&gt;
+        &lt;/StackLayout&gt;
+
+        &lt;StackLayout
+            x:Name="PageRight"
+            AbsoluteLayout.LayoutBounds="0,0,1,1"
+            AbsoluteLayout.LayoutFlags="All"
+            Orientation="Vertical"
+            VerticalOptions="FillAndExpand"
+            Spacing="0"&gt;
+            &lt;StackLayout
+                VerticalOptions="FillAndExpand"
+                BackgroundColor="#006df0"&gt;
+                &lt;Image
+                    Source="RightWhite.png"
+                    HorizontalOptions="StartAndExpand"
+                    VerticalOptions="CenterAndExpand"&gt;
+                    &lt;Image.GestureRecognizers&gt;
+                        &lt;TapGestureRecognizer Tapped="RightWhite_Tapped" /&gt;
+                        &lt;PanGestureRecognizer PanUpdated="RightWhite_Tapped" /&gt;
+                    &lt;/Image.GestureRecognizers&gt;
+                &lt;/Image&gt;
+            &lt;/StackLayout&gt;
+        &lt;/StackLayout&gt;
+
+    &lt;/AbsoluteLayout&gt;
+&lt;/ContentPage&gt;
+</code></pre><h3 id="код-1">Код</h3><p>При инициализации страницы назначьте <code>1000</code> свойству <code>TranslationX</code> ранее созданной панели. Это позволит отобразить эту страницу первой. Создайте методы <code>LeftBlue_Tapped</code> и <code>RightWhite_Tapped</code>, которые будут вызваны при захвате <code>GestureRecognizers</code>.</p><p><code>PageRight.TranslateTo</code> будет служить для выполнения группового перехода. Введите <code>0</code> в координатах <code>x</code> и <code>y</code>, чтобы отобразить панель и <code>Page.Width</code> в координате <code>x</code>, чтобы скрыть панель.</p><p><code>Easing.SinIn</code> - эффект, используемый для перехода.</p><pre><code class="language-csharp">using System;
+using System.Text;
+using Xamarin.Forms;
+
+namespace DemoSlidingPanel
+{
+    public partial class MainPage : ContentPage
+    {
+        public MainPage()
+        {
+            InitializeComponent();
+
+            PageRight.TranslationX = 1000;
+        }
+
+        async void LeftBlue_Tapped(object sender, EventArgs e)
+        {
+            await PageRight.TranslateTo(0, 0, 500, Easing.SinIn);
+        }
+
+        async void RightWhite_Tapped(object sender, EventArgs e)
+        {
+            await PageRight.TranslateTo(Page.Width, 0, 500, Easing.SinIn);
+        }
+    }
+}
+</code></pre><h2 id="pagedown">PageDown</h2><p>Создайте <code>AbsoluteLayout</code>, который появится при загрузке страницы, и <code>StackLayout</code> с именем <strong>«PageDown»</strong>, который будет панелью, которая будет скользить снизу вверх.</p><blockquote><p>Обратите внимание, что для оконки открытия/закрытия определены <code>GestureRecognizers</code>.</p></blockquote> <h3 id="xaml-2">XAML</h3><pre><code class="language-xml">&lt;?xml version="1.0" encoding="utf-8" ?&gt;
+&lt;ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:DemoSlidingPanel"
+    x:Class="DemoSlidingPanel.MainPage"&gt;
+
+    &lt;AbsoluteLayout
+        x:Name="Page"
+        VerticalOptions="FillAndExpand"&gt;
+        &lt;StackLayout
+            AbsoluteLayout.LayoutBounds="0,0,1,1"
+            AbsoluteLayout.LayoutFlags="All"
+            BackgroundColor="White"&gt;
+            &lt;Image
+                Source="UpBlue.png"
+                HorizontalOptions="CenterAndExpand"
+                VerticalOptions="EndAndExpand"&gt;
+                &lt;Image.GestureRecognizers&gt;
+                    &lt;TapGestureRecognizer Tapped="UpBlue_Tapped" /&gt;
+                    &lt;PanGestureRecognizer PanUpdated="UpBlue_Tapped" /&gt;
+                &lt;/Image.GestureRecognizers&gt;
+            &lt;/Image&gt;
+        &lt;/StackLayout&gt;
+
+        &lt;StackLayout
+            x:Name="PageDown"
+            AbsoluteLayout.LayoutBounds="0,0,1,1"
+            AbsoluteLayout.LayoutFlags="All"
+            Orientation="Vertical"
+            VerticalOptions="FillAndExpand"
+            Spacing="0"&gt;
+            &lt;StackLayout
+                VerticalOptions="FillAndExpand"
+                BackgroundColor="#006df0"&gt;
+                &lt;Image
+                    Source="DownWhite.png"
+                    HorizontalOptions="CenterAndExpand"
+                    VerticalOptions="StartAndExpand"&gt;
+                    &lt;Image.GestureRecognizers&gt;
+                        &lt;TapGestureRecognizer Tapped="DownWhite_Tapped" /&gt;
+                        &lt;PanGestureRecognizer PanUpdated="DownWhite_Tapped" /&gt;
+                    &lt;/Image.GestureRecognizers&gt;
+                &lt;/Image&gt;
+            &lt;/StackLayout&gt;
+        &lt;/StackLayout&gt;
+
+    &lt;/AbsoluteLayout&gt;
+&lt;/ContentPage&gt;
+</code></pre><h3 id="код-2">Код</h3><p>При инициализации страницы назначьте <code>1000</code> для свойства <code>TranslationY</code> ранее созданной панели. Это позволит отобразить эту страницу первой. Создайте методы <code>UpBlue_Tapped</code> и <code>DownWhite_Tapped</code>, которые будут вызваны при захвате <code>GestureRecognizers</code>.</p><p><code>PageDown.TranslateTo</code> будет служить для выполнения группового перехода. Введите <code>0</code> в координатах <code>x</code> и <code>y</code>, чтобы отобразить панель и <code>Page.Height</code> в координате <code>y</code>, чтобы скрыть панель.</p><p><code>Easing.SinIn</code> - эффект, используемый для перехода.</p><pre><code class="language-csharp">using System;
+using System.Text;
+using Xamarin.Forms;
+
+namespace DemoSlidingPanel
+{
+    public partial class MainPage : ContentPage
+    {
+        public MainPage()
+        {
+            InitializeComponent();
+
+            PageDown.TranslationY = 1000;
+        }
+
+        async void UpBlue_Tapped(object sender, EventArgs e)
+        {
+            await PageDown.TranslateTo(0, 0, 500, Easing.SinIn);
+        }
+
+        async void DownWhite_Tapped(object sender, EventArgs e)
+        {
+            await PageDown.TranslateTo(0, Page.Height, 500, Easing.SinIn);
+        }
+    }
+}
+</code></pre><h2 id="pageleft">PageLeft</h2><p>Создайте <code>AbsoluteLayout</code>, который появится при загрузке страницы, и <code>StackLayout</code>, называемый <strong>«PageLeft»</strong>, который будет панелью, которая будет скользить снизу вверх.</p><blockquote><p>Обратите внимание, что для оконки открытия/закрытия определены <code>GestureRecognizers</code>.</p></blockquote> <h3 id="xaml-3">XAML</h3><pre><code class="language-xml">&lt;?xml version="1.0" encoding="utf-8" ?&gt;
+&lt;ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:DemoSlidingPanel"
+    x:Class="DemoSlidingPanel.MainPage"&gt;
+
+    &lt;AbsoluteLayout
+        x:Name="Page"
+        VerticalOptions="FillAndExpand"&gt;
+        &lt;StackLayout
+            AbsoluteLayout.LayoutBounds="0,0,1,1"
+            AbsoluteLayout.LayoutFlags="All"
+            BackgroundColor="White"&gt;
+                &lt;Image
+                    Source="LeftBlue.png"
+                    HorizontalOptions="EndAndExpand"
+                    VerticalOptions="CenterAndExpand"&gt;
+                    &lt;Image.GestureRecognizers&gt;
+                        &lt;TapGestureRecognizer Tapped="LeftBlue_Tapped" /&gt;
+                        &lt;PanGestureRecognizer PanUpdated="LeftBlue_Tapped" /&gt;
+                    &lt;/Image.GestureRecognizers&gt;
+                &lt;/Image&gt;
+        &lt;/StackLayout&gt;
+
+        &lt;StackLayout
+            x:Name="PageLeft"
+            AbsoluteLayout.LayoutBounds="0,0,1,1"
+            AbsoluteLayout.LayoutFlags="All"
+            Orientation="Vertical"
+            VerticalOptions="FillAndExpand"
+            Spacing="0"&gt;
+            &lt;StackLayout
+                VerticalOptions="FillAndExpand"
+                BackgroundColor="#006df0"&gt;
+                &lt;Image
+                    Source="LeftWhite.png"
+                    HorizontalOptions="EndAndExpand"
+                    VerticalOptions="CenterAndExpand"&gt;
+                    &lt;Image.GestureRecognizers&gt;
+                        &lt;TapGestureRecognizer Tapped="LeftWhite_Tapped" /&gt;
+                        &lt;PanGestureRecognizer PanUpdated="LeftWhite_Tapped" /&gt;
+                    &lt;/Image.GestureRecognizers&gt;
+                &lt;/Image&gt;
+            &lt;/StackLayout&gt;
+        &lt;/StackLayout&gt;
+
+    &lt;/AbsoluteLayout&gt;
+&lt;/ContentPage&gt;
+</code></pre><h3 id="код-3">Код</h3><p>При инициализации страницы присвойте <code>-1000</code> свойству <code>TranslationX</code> ранее созданной панели. Это позволит отобразить эту страницу первой. Создайте методы <code>LeftWhite_Tapped</code> и <code>RightBlue_Tapped</code>, которые будут вызываться при захвате <code>GestureRecognizers</code>.</p><p><code>PageLeft.TranslateTo</code> будет использоваться для выполнения группового перехода. Введите <code>0</code> в координатах <code>x</code> и <code>y</code> для отображения панели и <code>-Page.Width</code> в координате <code>x</code>, чтобы скрыть панель.</p><p><code>Easing.SinIn</code> - эффект, используемый для перехода.</p><pre><code class="language-csharp">using System;
+using System.Text;
+using Xamarin.Forms;
+
+namespace DemoSlidingPanel
+{
+    public partial class MainPage : ContentPage
+    {
+        public MainPage()
+        {
+            InitializeComponent();
+
+            PageLeft.TranslationX = -1000;
+        }
+
+        async void LeftWhite_Tapped(object sender, EventArgs e)
+        {
+            await PageLeft.TranslateTo(-Page.Width, 0, 500, Easing.SinIn);
+        }
+
+        async void RightBlue_Tapped(object sender, EventArgs e)
+        {
+            await PageLeft.TranslateTo(0, 0, 500, Easing.SinIn);
+        }
+    }
+}
+</code></pre><h2 id="результат">Результат</h2><p><img alt="Результат" src="https://julianocustodiosite.files.wordpress.com/2018/01/ezgif-com-gif-maker1.gif?w=300&amp;h=533&amp;zoom=2" width="300" /></p><p>Исходный код <a href="https://github.com/juucustodio/SlidingPanel-Xamarin.Forms">доступен на Github</a>.</p><p><a href="https://julianocustodio.com/2018/01/26/sliding-panel/" name="original">Оригинал</a></p><p>Теги: <a href="/tags/#mobile">mobile</a>, <a href="/tags/#xamarin+forms">xamarin forms</a>, <a href="/tags/#MAUI">MAUI</a>, <a href="/tags/#%D0%BF%D0%B5%D1%80%D0%B5%D0%B2%D0%BE%D0%B4">перевод</a></p><p class="edit-post-btn"> <!--noindex--><a href="https://github.com/wcoder/wcoder.github.io/edit/master/_posts/2018-02-04-sliding-panel-xamarin-forms.md" rel="nofollow" title="Редактировать страницу на GitHub">Редактировать</a><!--/noindex--></p><div class="share-btn"> <a class="btn-vk" data-id="vk" title="VK"><img alt="VK" width="16" src="/images/vk.svg" /></a> <a class="btn-facebook" data-id="fb" title="Facebook"><img alt="Facebook" width="16" src="/images/facebook.svg" /></a> <a class="btn-twitter" data-id="tw" title="Twitter"><img alt="Twitter" width="16" src="/images/twitter.svg" /></a> <a class="btn-telegram" data-id="tg" title="Telegram"><img alt="Telegram" width="16" src="/images/telegram.svg" /></a> <a class="btn-mail" data-id="mail" title="Email"><img alt="Email" width="16" src="/images/mail.svg" /></a></div></div></article></div></div><hr /><div class="wrapper"> <footer class="footer"><p class="copyrights"> &copy; 2014&ndash;<span itemprop="copyrightYear">2025</span></p><p xmlns:cc="http://creativecommons.org/ns#" class="license"> <a href="http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" title="This work is licensed under CC BY-SA 4.0"> <img style="height:20px!important;" src="https://licensebuttons.net/l/by-sa/4.0/88x31.png" alt="CC BY-SA 4.0"> </a></p></footer></div><script src="/js/highlight.pack.js"></script> <script src="/js/highlightjs-line-numbers.min.js"></script> <script> hljs.initHighlightingOnLoad(); hljs.initLineNumbersOnLoad(); </script> <script src="/js/share-buttons.js"></script> <!--Generated with Jekyll at Nov. 11, 2025 11:59:43 AM (+03)--> </body> </html>
