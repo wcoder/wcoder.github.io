@@ -1,5 +1,0 @@
-Host: https://wcoder.github.io
-Sitemap: https://wcoder.github.io/sitemap.xml
-
-User-agent: *
-Disallow: /404.html
