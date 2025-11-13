@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Решаем возникающую ошибку «Synthetic SCSI Controller Error» при загрузке ISO образа
+redirect_to: "https://ypakala.com"
 date: 2015-07-15 01:40
 tags:
 - hyper-v

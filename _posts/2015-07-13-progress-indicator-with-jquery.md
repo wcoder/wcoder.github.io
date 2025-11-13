@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Прогресс выполнения Ajax запроса в jQuery
+redirect_to: "https://ypakala.com"
 date: 2015-07-13 17:51
 tags:
 - ajax

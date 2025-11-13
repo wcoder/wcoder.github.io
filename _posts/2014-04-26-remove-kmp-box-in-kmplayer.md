@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Убираем KMP Box в KMPlayer
+redirect_to: "https://ypakala.com"
 date: 2014-04-26 16:37
 tags:
 - windows

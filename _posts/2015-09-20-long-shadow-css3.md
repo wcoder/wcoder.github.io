@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Делаем длинную тень для текста на CSS3
+redirect_to: "https://ypakala.com"
 date: 2015-09-20 17:50
 tags:
 - заметка

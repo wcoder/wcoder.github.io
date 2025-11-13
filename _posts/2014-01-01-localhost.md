@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Первый пост про localhost
-
+redirect_to: "https://ypakala.com"
 date: 2014-01-01 01:00
 tags:
 - jekyll

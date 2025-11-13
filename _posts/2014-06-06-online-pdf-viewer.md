@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Онлайн просмотрщик PDF
+redirect_to: "https://ypakala.com"
 date: 2014-06-06 21:45
 tags:
 - pdf

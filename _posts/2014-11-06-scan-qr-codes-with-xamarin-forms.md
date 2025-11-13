@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Сканирование QR-кодов, штрих-кодов в приложениях Xamarin.Forms
+redirect_to: "https://ypakala.com"
 date: 2014-11-06 06:16
 original_url: http://blog.thomaslebrun.net/2014/09/xamarin-scanning-qrcode-in-a-xamarin-forms-application
 tags:

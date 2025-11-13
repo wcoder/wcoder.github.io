@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Получение IP-адреса по имени хоста с помощью C#
+redirect_to: "https://ypakala.com"
 date: 2014-12-21 03:42
 tags:
 - c#

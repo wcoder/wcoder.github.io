@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Как создавать формы в Laravel
+redirect_to: "https://ypakala.com"
 date: 2014-12-14 03:17
 original_url: http://clivern.com/how-to-build-forms-with-laravel/
 tags:

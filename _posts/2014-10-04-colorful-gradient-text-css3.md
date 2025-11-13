@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Красочный градиент текста с помощью CSS
+redirect_to: "https://ypakala.com"
 date: 2014-10-04 01:42
 original_url: http://creative-punch.net/2014/02/colorful-gradient-text-css3/
 tags:

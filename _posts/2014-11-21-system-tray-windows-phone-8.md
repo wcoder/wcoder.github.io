@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Памятка по System Tray в Windows Phone 8
+redirect_to: "https://ypakala.com"
 date: 2014-11-21 15:07
 tags:
 - windows phone

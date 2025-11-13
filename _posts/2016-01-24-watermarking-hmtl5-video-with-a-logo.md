@@ -1,6 +1,7 @@
 ---
 layout: post
 title: HTML5 видео с водяным знаком
+redirect_to: "https://ypakala.com"
 date: 2016-01-24 16:25
 tags:
 - css

@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Конвертирование изображения в DataURL с помощью JavaScript
+redirect_to: "https://ypakala.com"
 data: 2015-08-23 20:38:00
 tags:
 - сниппет

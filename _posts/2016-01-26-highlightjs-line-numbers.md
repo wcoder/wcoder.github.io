@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Нумерация строк в highlight.js
+redirect_to: "https://ypakala.com"
 date: 2016-01-26 22:25
 tags:
 - javascript

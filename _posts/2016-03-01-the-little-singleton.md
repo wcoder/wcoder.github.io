@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Маленький Singleton
+redirect_to: "https://ypakala.com"
 data: 2016-03-01 23:55
 original_url: https://blog.8thlight.com/uncle-bob/2015/06/30/the-little-singleton.html
 tags:

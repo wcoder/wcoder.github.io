@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Делаем загрузочную флешку
+redirect_to: "https://ypakala.com"
 date: 2015-04-19 22:43
 tags:
 - памятка

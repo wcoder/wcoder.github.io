@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Добавляем переменную окружения Laravel в nginx
+redirect_to: "https://ypakala.com"
 date: 2014-05-29 21:20
 tags:
 - памятка

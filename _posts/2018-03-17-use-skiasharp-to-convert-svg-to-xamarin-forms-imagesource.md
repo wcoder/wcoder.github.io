@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Использование SkiaSharp для конвертации SVG в Xamarin.Forms ImageSource
+redirect_to: "https://ypakala.com"
 date: 2018-03-17 17:10
 original_url: http://danielhindrikes.se/xamarin/use-skiasharp-to-convert-svg-to-xamarin-forms-imagesource/
 tags:

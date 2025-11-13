@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Подключение Windows Phone в Ubuntu
+redirect_to: "https://ypakala.com"
 date: 2014-03-22 00:32
 tags:
 - windows phone

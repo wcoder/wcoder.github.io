@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Мои счетчики v.1.0
+redirect_to: "https://ypakala.com"
 date: 2014-08-02 20:57
 tags:
 - windows phone

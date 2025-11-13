@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Генератор коротких ссылок
+redirect_to: "https://ypakala.com"
 date: 2014-06-28 10:28
 tags:
 - php

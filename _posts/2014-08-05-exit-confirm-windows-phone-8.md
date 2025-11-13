@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Реализация подтверждения выхода из приложения в Windows Phone 8
+redirect_to: "https://ypakala.com"
 date: 2014-08-05 01:23
 tags:
 - windows phone

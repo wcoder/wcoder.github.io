@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Полезные команды Vim
+redirect_to: "https://ypakala.com"
 date: 2014-07-12 00:34
 tags:
 - памятка

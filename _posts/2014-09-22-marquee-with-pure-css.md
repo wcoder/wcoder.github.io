@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Бегущая строка на чистом CSS
+redirect_to: "https://ypakala.com"
 date: 2014-09-22 08:10
 tags:
 - css

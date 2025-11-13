@@ -2,6 +2,7 @@
 layout: page
 title: Архив
 permalink: /archive/
+redirect_to: "https://ypakala.com/notes"
 ---
 
 [По тегам]({{ site.url }}/tags/)

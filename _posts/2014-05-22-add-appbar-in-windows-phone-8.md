@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Добавление AppBar в Windows Phone 8
+redirect_to: "https://ypakala.com"
 date: 2014-05-22 12:42
 tags:
 - xaml

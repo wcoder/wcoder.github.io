@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Включаем gzip-сжатие с использование .htaccess
+redirect_to: "https://ypakala.com"
 date: 2015-12-16 21:50
 original_url: http://www.xpertdeveloper.com/2012/04/htaccess-gzip-compression/
 tags:

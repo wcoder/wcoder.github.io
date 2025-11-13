@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Наследование в контроллере Angular
+redirect_to: "https://ypakala.com"
 date: 2014-09-03 02:30
 tags:
 - javascript

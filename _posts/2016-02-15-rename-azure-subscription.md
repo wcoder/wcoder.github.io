@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Как переименовать Windows Azure подписку?
+redirect_to: "https://ypakala.com"
 date: 2016-02-15 22:20
 original_url: http://rickrainey.com/windows-azure-how-tos/how-to-change-the-name-of-your-windows-azure-subscription/
 tags:

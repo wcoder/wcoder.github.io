@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Временное отключение экранной заставки при просмотре видео c помощью Caffeine
+redirect_to: "https://ypakala.com"
 date: 2015-02-27 03:32
 tags:
 - программы

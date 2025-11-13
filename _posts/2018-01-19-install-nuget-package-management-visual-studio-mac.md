@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Установка NuGet Package Manager для Visual Studio for Mac
+redirect_to: "https://ypakala.com"
 date: 2018-01-19 23:15
 tags:
 - visual studio

@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Реализуем Sliding Panel с использованием Xamarin.Forms & MAUI
+redirect_to: "https://ypakala.com"
 date: 2018-02-04 22:18
 original_url: https://julianocustodio.com/2018/01/26/sliding-panel/
 tags:

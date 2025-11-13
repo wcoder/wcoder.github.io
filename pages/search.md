@@ -2,6 +2,7 @@
 layout: page
 title: Поиск по сайту
 permalink: /search/
+redirect_to: "https://ypakala.com/notes"
 ---
 
 <div>

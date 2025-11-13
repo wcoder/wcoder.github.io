@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Изменение расположения стандартных папок пользователя
+redirect_to: "https://ypakala.com"
 date: 2015-02-27 03:48
 tags:
 - памятка

@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Проверка доступности сети в универсальных приложениях Windows
+redirect_to: "https://ypakala.com"
 date: 2015-09-13 13:12
 tags:
 - сниппет

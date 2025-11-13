@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Воспроизведение аудио-файлов в Xamarin.Forms
+redirect_to: "https://ypakala.com"
 date: 2016-03-02 23:20
 original_url: http://err2solution.com/2016/02/playing-audio-mp3-file-in-xamarin-forms/
 tags:

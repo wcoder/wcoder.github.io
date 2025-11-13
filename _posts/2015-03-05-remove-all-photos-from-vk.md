@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Как удалить все фотографии со страницы Вконтакте?
+redirect_to: "https://ypakala.com"
 date: 2015-03-05 05:11
 tags:
 - javascript

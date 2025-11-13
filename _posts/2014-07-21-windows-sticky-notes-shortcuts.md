@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Сочетания клавиш в Sticky Notes
+redirect_to: "https://ypakala.com"
 date: 2014-07-21 00:38
 tags:
 - windows

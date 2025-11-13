@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Вкладки на чистом CSS
+redirect_to: "https://ypakala.com"
 date: 2015-04-23 03:00
 tags:
 - css

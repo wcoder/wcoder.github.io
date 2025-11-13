@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Приступая к работе с Node.js и bcrypt
+redirect_to: "https://ypakala.com"
 date: 2015-11-26 18:28
 tags:
 - nodejs

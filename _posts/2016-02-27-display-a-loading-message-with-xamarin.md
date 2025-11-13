@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Выводим индикатор загрузки в iOS c помощью Xamarin
+redirect_to: "https://ypakala.com"
 date: 2016-02-27 23:50
 original_url: https://developer.xamarin.com/recipes/ios/standard_controls/popovers/display_a_loading_message/
 tags:

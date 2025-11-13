@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 10 способов генерации случайных паролей из коммандной строки
+redirect_to: "https://ypakala.com"
 date: 2014-12-24 04:23
 tags:
 - linux

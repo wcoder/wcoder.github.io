@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Настройка часового пояса в Laravel 4
+redirect_to: "https://ypakala.com"
 date: 2014-04-06 19:45
 tags:
 - laravel

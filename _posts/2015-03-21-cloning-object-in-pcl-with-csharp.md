@@ -1,6 +1,7 @@
 ---
 layout: post
 title: C# клонирование объектов в PCL
+redirect_to: "https://ypakala.com"
 date: 2015-03-21 23:25
 original_url: http://mallibone-blog.azurewebsites.net/post/cloning-objects-in-the-pcl
 tags:

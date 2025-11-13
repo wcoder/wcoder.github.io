@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Парсинг даты из Twitter и Facebook в C#
+redirect_to: "https://ypakala.com"
 date: 2014-10-06 01:40
 tags:
 - api

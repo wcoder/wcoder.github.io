@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Включаем опцию анализа кода в Xamarin Studio
+redirect_to: "https://ypakala.com"
 date: 2015-12-20 15:45
 original_url: http://ghost-azureb4c8.azurewebsites.net/resharper-ish-assistance-in-xamarin-studio/
 tags:

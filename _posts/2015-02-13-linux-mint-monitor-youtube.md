@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Как решить проблему выключения монитора при просмотре youtube в Linux Mint 17?
+redirect_to: "https://ypakala.com"
 date: 2015-02-13 05:03
 tags:
 - linux

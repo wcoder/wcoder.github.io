@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Отказоустойчивое подключение к сети в Xamarin.Forms & MAUI
+redirect_to: "https://ypakala.com"
 date: 2018-03-17 18:25
 original_url: https://xamarinhelp.com/resilient-network-connectivity-xamarin-forms/
 tags:

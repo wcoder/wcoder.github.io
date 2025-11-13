@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Используем Xamarin.Forms DependencyService на примере SQLite
+redirect_to: "https://ypakala.com"
 date: 2014-07-18 14:29
 tags:
 - памятка

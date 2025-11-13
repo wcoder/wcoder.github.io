@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Отключаем выделение выбранного элемента ListView с использованием эффектов в Xamarin Forms
+redirect_to: "https://ypakala.com"
 date: 2018-02-02 23:05
 original_url: https://iwritecodesometimes.net/2018/02/01/xamawin-override-select-state-using-effects/
 tags:

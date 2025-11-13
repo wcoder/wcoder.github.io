@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Gulp сниппеты
+redirect_to: "https://ypakala.com"
 date: 2016-03-14 01:00
 original_url: http://jonathanmh.com/gulp-recipes/
 tags:

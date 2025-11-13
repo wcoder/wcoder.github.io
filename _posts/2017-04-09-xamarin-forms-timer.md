@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Таймер в Xamarin Forms
+redirect_to: "https://ypakala.com"
 date: 2017-04-09 10:07
 original_url: https://xamarinhelp.com/xamarin-forms-timer/
 tags:

@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Как посмотреть файлы iOS приложения в iPhone Simulator?
+redirect_to: "https://ypakala.com"
 date: 2018-01-20 00:00
 tags:
 - ios

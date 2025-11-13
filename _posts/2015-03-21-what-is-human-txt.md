@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Что такое humans.txt?
+redirect_to: "https://ypakala.com"
 date: 2015-03-21 22:34
 tags:
 - сайты

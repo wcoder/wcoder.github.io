@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Отключаем аппаратную кнопку Back в UWP приложении
+redirect_to: "https://ypakala.com"
 date: 2016-01-20 23:25
 tags:
 - c#

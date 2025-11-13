@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Коды стран мира v.1.1
+redirect_to: "https://ypakala.com"
 date: 2016-04-15 17:28
 tags:
 - проекты

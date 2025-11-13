@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Apple Configurator
+redirect_to: "https://ypakala.com"
 date: 2022-08-26 12:49
 locale: en_US
 tags:

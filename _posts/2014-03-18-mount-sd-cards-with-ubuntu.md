@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Монтирование SD карты в Ubuntu 13.04
+redirect_to: "https://ypakala.com"
 date: 2014-03-18 01:33
 tags:
 - ubuntu

@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Тетрис в µTorrent
+redirect_to: "https://ypakala.com"
 date: 2014-03-28 22:55
 tags:
 - тетрис

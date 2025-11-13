@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Расширенный JavaScript API - Web Alarms API
+redirect_to: "https://ypakala.com"
 date: 2015-02-13 05:39
 tags:
 - javascript

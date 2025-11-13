@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Узнаем размера файла по URL с помощью C#
+redirect_to: "https://ypakala.com"
 date: 2015-12-29 23:40
 original_url: http://windowsapptutorials.com/tips/general-tips/retrieve-file-size-from-remote-url-using-c-sharp/
 tags:

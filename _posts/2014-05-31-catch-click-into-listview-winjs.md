@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Как поймать событие нажатия кнопки внутри WinJs ListView?
+redirect_to: "https://ypakala.com"
 date: 2014-05-31 21:08
 tags:
 - winjs

@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Случайный фант v.1.0
+redirect_to: "https://ypakala.com"
 date: 2014-05-25 00:55
 tags:
 - windows phone

@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Реализация INotifyPropertyChanged для WPF приложений
+redirect_to: "https://ypakala.com"
 date: 2014-04-30 12:50
 tags:
 - wpf

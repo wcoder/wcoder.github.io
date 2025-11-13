@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Using condition with regex in MSBuild
+redirect_to: "https://ypakala.com"
 date: 2020-12-11 18:40
 locale: en_US
 tags:

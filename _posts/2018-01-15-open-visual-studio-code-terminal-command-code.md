@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Как открыть Visual Studio Code из терминала в macOS?
+redirect_to: "https://ypakala.com"
 date: 2018-01-15 21:00
 tags:
 - visual studio code

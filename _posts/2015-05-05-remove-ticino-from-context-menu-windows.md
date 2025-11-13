@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Как убрать "Ticino" из контекстного меню Windows?
+redirect_to: "https://ypakala.com"
 date: 2015-05-05 02:58
 tags:
 - помощь

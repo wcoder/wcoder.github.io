@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Форматирование USB-флешки в Ubuntu
+redirect_to: "https://ypakala.com"
 date: 2014-03-18 0:52
 tags:
 - ubuntu

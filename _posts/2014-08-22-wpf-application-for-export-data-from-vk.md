@@ -1,6 +1,7 @@
 ---
 layout: post
 title: WPF приложение для экспорта данных из Вконтакте
+redirect_to: "https://ypakala.com"
 date: 2014-08-22 05:20
 tags:
 - wpf

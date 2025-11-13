@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Команды для консольного управления MySQL
+redirect_to: "https://ypakala.com"
 date: 2014-07-12 00:25
 tags:
 - памятка

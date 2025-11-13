@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Делаем загрузочную флешку с Windows 10
+redirect_to: "https://ypakala.com"
 date: 2015-08-16 19:33
 tags:
 - памятка
