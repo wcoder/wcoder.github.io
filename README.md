@@ -14,7 +14,7 @@ All the documentation is available here:
 For run safe `github-pages` version locally:
 
 ```sh
-bundle exec jekyll serve
+bundle exec jekyll serve --drafts -- --offline --dirty
 ```
 
 **Note:** you can add the `--watch` option when running `jekyll serve` to let Jekyll watch for file changes, which means the site will be rebuilt when a file is modified.
