@@ -1,1 +1,1 @@
-# Moved to 👉 [yauhenipakala](https://github.com/yauhenipakala/wcoder.github.io) 👈
+# Moved to 👉 [ypakala.com/notes](https://ypakala.com/notes) 👈
