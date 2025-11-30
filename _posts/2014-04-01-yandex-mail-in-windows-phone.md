@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Настройка Яндекс.Почты в Windows Phone
+redirect_to: "https://ypakala.com"
 date: 2014-04-01 12:57
 tags:
 - яндекс

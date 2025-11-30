@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Настройка Sublime Text для PHP разработки
+redirect_to: "https://ypakala.com"
 date: 2014-03-18 01:01
 tags:
 - sublime text

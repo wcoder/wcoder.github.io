@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Выделение всех элементов на странице с помощью CSS
+redirect_to: "https://ypakala.com"
 date: 2015-04-02 02:47
 tags:
 - css

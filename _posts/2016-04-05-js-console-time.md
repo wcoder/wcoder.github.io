@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Измеряем время выполнения с помощью console.time и console.timeEnd
+redirect_to: "https://ypakala.com"
 date: 2016-04-05 22:20
 original_url: https://davidwalsh.name/console-time
 tags:

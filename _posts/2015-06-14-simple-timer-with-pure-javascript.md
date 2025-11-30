@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Простой таймер на чистом JavaScript
+redirect_to: "https://ypakala.com"
 date: 2015-06-14 22:29
 tags:
 - javascript

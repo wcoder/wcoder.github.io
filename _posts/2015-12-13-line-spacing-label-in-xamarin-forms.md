@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Межстрочный интервал для Label в Xamarin.Forms
+redirect_to: "https://ypakala.com"
 date: 2015-12-13 14:30
 original_url: http://thetechstudio.ghost.io/line-spacing-label-in-xamarin-forms/
 tags:

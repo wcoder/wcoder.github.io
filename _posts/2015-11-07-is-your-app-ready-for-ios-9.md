@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Ваше приложение готово к iOS9?
+redirect_to: "https://ypakala.com"
 date: 2015-11-07 18:25
 original_url: https://blog.xamarin.com/is-your-app-ready-for-ios-9/
 tags:

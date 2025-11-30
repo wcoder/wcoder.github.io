@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Как изменить путь расположения файлов SkyDrive (OneDrive) в Windows 8.1+
+redirect_to: "https://ypakala.com"
 date: 2014-04-06 19:27
 tags:
 - onedrive

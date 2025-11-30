@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Переход компьютера в режим гибернации через определенное время
+redirect_to: "https://ypakala.com"
 date: 2015-07-21 19:42
 tags:
 - windows

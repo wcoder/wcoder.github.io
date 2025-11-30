@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Как поменять значения двух переменных в JavaScript?
+redirect_to: "https://ypakala.com"
 date: 2014-08-11 08:09
 tags:
 - javascript

@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Форматирование JSON в C#
+redirect_to: "https://ypakala.com"
 date: 2015-08-24 00:15
 tags:
 - c#

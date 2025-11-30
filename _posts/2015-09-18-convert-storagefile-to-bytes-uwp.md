@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Конвертирование StorageFile в массив байтов в универсальных приложениях Windows
+redirect_to: "https://ypakala.com"
 date: 2015-09-18 16:23
 tags:
 - сниппет

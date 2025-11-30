@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Модальное окно на чистом CSS
+redirect_to: "https://ypakala.com"
 date: 2014-11-10 16:59
 tags:
 - css

@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Меню навигации с выпадающим списком на чистом CSS
+redirect_to: "https://ypakala.com"
 date: 2015-04-02 03:57
 tags:
 - css

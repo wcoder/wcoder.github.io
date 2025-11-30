@@ -1,6 +1,7 @@
 ---
 layout: post
 title: DRY о знании
+redirect_to: "https://ypakala.com"
 date: 2015-11-07 19:41
 original_url: http://verraes.net/2014/08/dry-is-about-knowledge/
 tags:

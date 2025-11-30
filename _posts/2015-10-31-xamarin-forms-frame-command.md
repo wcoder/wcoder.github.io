@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Выполняем команду при нажатии на Frame
+redirect_to: "https://ypakala.com"
 date: 2015-10-31 23:10
 tags:
 - xamarin forms

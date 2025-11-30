@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Используем подсказки в UWP приложениях
+redirect_to: "https://ypakala.com"
 date: 2016-03-26 17:40
 tags:
 - xaml

@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Теги для блога на чистом CSS
+redirect_to: "https://ypakala.com"
 date: 2015-07-13 17:30
 tags:
 - css

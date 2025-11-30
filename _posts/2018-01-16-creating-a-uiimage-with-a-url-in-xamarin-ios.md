@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Получение изображения по URL в Xamarin.iOS
+redirect_to: "https://ypakala.com"
 date: 2018-01-16 21:40
 tags:
 - xamarin.ios

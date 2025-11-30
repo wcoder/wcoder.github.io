@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Laravel - как проверить, что закачиваемый файл изображение?
+redirect_to: "https://ypakala.com"
 date: 2014-06-07 11:53
 tags:
 - laravel

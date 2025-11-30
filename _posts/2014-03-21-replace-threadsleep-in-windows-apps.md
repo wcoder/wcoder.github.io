@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Замена Thread.Sleep в Windows Store приложениях
+redirect_to: "https://ypakala.com"
 date: 2014-03-21 20:40
 tags:
 - c#

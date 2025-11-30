@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Установка индикатора погоды в Elementory OS
+redirect_to: "https://ypakala.com"
 date: 2015-08-29 22:18
 tags:
 - elementary os

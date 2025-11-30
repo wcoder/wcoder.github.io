@@ -1,6 +1,7 @@
 ---
 layout: post
 title: О проекте электронной версии расписания физико-математического факультета BRSU
+redirect_to: "https://ypakala.com"
 date: 2015-09-12 15:13
 tags:
 - проекты

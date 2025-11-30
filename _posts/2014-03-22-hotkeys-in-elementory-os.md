@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Горячие клавиши в Elementary OS
+redirect_to: "https://ypakala.com"
 date: 2014-03-22 00:26
 tags:
 - elementary os

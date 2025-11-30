@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Расширенное управление памятью в Xamarin iOS и Android
+redirect_to: "https://ypakala.com"
 date: 2015-07-14 00:07
 tags:
 - xamarin

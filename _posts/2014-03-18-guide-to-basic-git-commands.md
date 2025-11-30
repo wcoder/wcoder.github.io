@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Памятка по основным командам Git
+redirect_to: "https://ypakala.com"
 date: 2014-03-18 01:17
 tags:
 - памятка

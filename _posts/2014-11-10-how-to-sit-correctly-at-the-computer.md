@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Как правильно сидеть за компьютером?
+redirect_to: "https://ypakala.com"
 date: 2014-11-10 01:38
 tags:
 - видео

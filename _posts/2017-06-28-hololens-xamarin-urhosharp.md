@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Введение в UrhoSharp для HoloLens
+redirect_to: "https://ypakala.com"
 date: 2017-06-28 13:00
 original_url: https://xamarinhelp.com/hololens-xamarin-urhosharp/
 tags:

@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Отмена последнего коммита в Git
+redirect_to: "https://ypakala.com"
 date: 2015-08-23 19:00
 tags:
 - git

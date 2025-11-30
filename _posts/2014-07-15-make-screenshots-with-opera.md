@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Делаем скриншот сайта в Opera
+redirect_to: "https://ypakala.com"
 date: 2014-07-15 20:23
 tags:
 - программы

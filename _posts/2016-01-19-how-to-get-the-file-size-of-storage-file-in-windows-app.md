@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Получаем размер файла в UWP приложении
+redirect_to: "https://ypakala.com"
 date: 2016-01-19 23:32
 tags:
 - c#

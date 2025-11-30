@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Памятка по использованию MVVM Light в проекте Xamarin Forms
+redirect_to: "https://ypakala.com"
 date: 2014-11-23 14:00
 tags:
 - c#

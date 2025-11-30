@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Начало работы с Xamarin.Forms 2.0 и Windows 10 Preview
+redirect_to: "https://ypakala.com"
 date: 2015-11-29 21:35
 original_url: https://blog.xamarin.com/getting-started-with-xamarin-forms-windows-10-preview/
 tags:

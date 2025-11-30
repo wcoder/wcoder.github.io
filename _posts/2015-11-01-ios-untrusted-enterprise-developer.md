@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Возникает сообщение «Untrusted Enterprise Developer»
+redirect_to: "https://ypakala.com"
 date: 2015-11-01 00:41
 tags:
 - ios

@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Индикатор загрузки на чистом CSS
+redirect_to: "https://ypakala.com"
 date: 2014-09-22 07:43
 tags:
 - css

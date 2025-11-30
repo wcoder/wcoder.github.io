@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Автоматические форматирование текстового поля с помощью MvvmCross и конвертеров
+redirect_to: "https://ypakala.com"
 date: 2015-09-04 11:51
 original_url: http://www.gregshackles.com/auto-formatting-text-inputs-with-mvvmcross-and-value-converters/
 tags:

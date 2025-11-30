@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Переводим строку в base64 и обратно на JavaScript
+redirect_to: "https://ypakala.com"
 date: 2015-07-12 23:38
 tags:
 - javascript

@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Visual Studio - Добавляем Chrome в режиме инкогнито
+redirect_to: "https://ypakala.com"
 date: 2015-07-13 16:33
 tags:
 - программы

@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Конвертирование StorageFile в BitmapImage в универсальных приложениях Windows
+redirect_to: "https://ypakala.com"
 date: 2015-12-27 14:10
 tags:
 - сниппет

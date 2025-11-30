@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Определяем что документ был загружен с помощью JavaScript
+redirect_to: "https://ypakala.com"
 date: 2015-08-23 20:19
 tags:
 - сниппет

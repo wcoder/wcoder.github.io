@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Простое клонирование/копирование массива в JavaScript
+redirect_to: "https://ypakala.com"
 date: 2014-12-20 09:23
 tags:
 - перевод

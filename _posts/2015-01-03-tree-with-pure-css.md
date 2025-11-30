@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Ёлка на чистом CSS
+redirect_to: "https://ypakala.com"
 date: 2015-01-03 02:32
 tags:
 - css

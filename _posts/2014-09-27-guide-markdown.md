@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Памятка по markdown
+redirect_to: "https://ypakala.com"
 date: 2014-09-27 19:44
 tags:
 - памятка

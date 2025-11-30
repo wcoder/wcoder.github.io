@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Xamarin.iOS: How to open app's folder in Files.app programmatically"
+redirect_to: "https://ypakala.com"
 date: 2022-12-23 20:30
 locale: en_US
 tags:

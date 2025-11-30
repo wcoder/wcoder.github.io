@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Памятка по настройке LAMP в Ubuntu для локальной разработки
+redirect_to: "https://ypakala.com"
 date: 2014-03-22 00:59
 tags:
 - lamp

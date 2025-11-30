@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Создание кастомных ячеек для UITableView с помощью Xamarin и XIB
+redirect_to: "https://ypakala.com"
 date: 2016-03-16 23:40
 tags:
 - ios

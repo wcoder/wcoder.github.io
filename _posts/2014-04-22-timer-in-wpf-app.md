@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Таймер в WPF приложении
+redirect_to: "https://ypakala.com"
 date: 2014-04-22 10:42
 tags:
 - .net

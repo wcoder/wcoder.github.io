@@ -1,6 +1,7 @@
 ---
 layout: post
 title: String.Format для форматирования строк в JavaScript
+redirect_to: "https://ypakala.com"
 date: 2014-07-10 15:19
 tags:
 - сниппет

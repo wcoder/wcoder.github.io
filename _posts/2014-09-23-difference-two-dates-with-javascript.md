@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Разность между двумя датами на JavaScript
+redirect_to: "https://ypakala.com"
 date: 2014-09-23 02:18
 tags:
 - javascript

@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Понимание размера Framework в iOS
+redirect_to: "https://ypakala.com"
 date: 2018-04-27 12:30
 tags:
 - ios

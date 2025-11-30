@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Настройка собственных страниц ошибок в Nginx
+redirect_to: "https://ypakala.com"
 date: 2014-07-20 02:08
 tags:
 - сниппет

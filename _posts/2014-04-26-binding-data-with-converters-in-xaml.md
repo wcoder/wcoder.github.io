@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Использование конвертера при привязке данных в XAML
+redirect_to: "https://ypakala.com"
 date: 2014-04-26 09:32
 tags:
 - wpf

@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Более лучший способ выбора изображений из галерии или камеры в UWP приложениях
+redirect_to: "https://ypakala.com"
 date: 2016-03-20 22:00
 tags:
 - c#

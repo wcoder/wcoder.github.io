@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Скрытие Settings Flyout
+redirect_to: "https://ypakala.com"
 date: 2014-04-24 13:18
 tags:
 - windows 8

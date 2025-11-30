@@ -1,6 +1,7 @@
 ---
 layout: post
 title: BitmapIcon - используем изображение как иконку
+redirect_to: "https://ypakala.com"
 date: 2016-01-10 01:11
 original_url: http://grogansoft.com/blog/?p=1186
 tags:

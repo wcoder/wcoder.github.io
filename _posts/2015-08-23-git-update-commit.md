@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Обновление комментария к коммиту в Git
+redirect_to: "https://ypakala.com"
 date: 2015-08-23 19:13
 tags:
 - git

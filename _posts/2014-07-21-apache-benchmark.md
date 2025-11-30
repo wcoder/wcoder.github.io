@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Apache Benchmark - тест производительности сервера
+redirect_to: "https://ypakala.com"
 date: 2014-07-21 01:20
 tags:
 - утилиты

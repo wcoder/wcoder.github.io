@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Aккордеон на чистом CSS
+redirect_to: "https://ypakala.com"
 date: 2014-11-04 02:11
 tags:
 - css

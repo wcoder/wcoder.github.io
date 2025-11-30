@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Многозадачность в Android. Часть 2 - 7 шаблонов использования многопоточности в Android
+redirect_to: "https://ypakala.com"
 date: 2017-08-31 21:20
 original_url: https://www.toptal.com/android/android-threading-all-you-need-to-know
 tags:

@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Github-виджет для сайта
+redirect_to: "https://ypakala.com"
 date: 2015-07-12 22:56
 tags:
 - github

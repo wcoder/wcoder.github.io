@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Воспроизведение видео в приложении Xamarin Forms
+redirect_to: "https://ypakala.com"
 date: 2018-02-01 23:10
 original_url: https://julianocustodio.com/2018/01/18/videoplayer/
 tags:

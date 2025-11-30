@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Запрос данных с сервера используя HttpClient
+redirect_to: "https://ypakala.com"
 date: 2014-04-09 20:30
 tags:
 - c#

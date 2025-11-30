@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Немного подробнее о том, как работает Xamarin.iOS
+redirect_to: "https://ypakala.com"
 date: 2016-02-19 00:45
 original_url: http://blogs.edwardwilde.com/2013/04/13/how-does-xamarin-ios-aka-monotouch-work/
 tags:

@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Пример простого HTTP GET запроса на Go
+redirect_to: "https://ypakala.com"
 date: 2015-07-11 23:13
 tags:
 - go

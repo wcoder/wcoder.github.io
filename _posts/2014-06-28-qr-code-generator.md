@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Генератор QR кодов
+redirect_to: "https://ypakala.com"
 date: 2014-06-28 10:00
 tags:
 - javascript

@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Диаграммы с помощью Google Charts
+redirect_to: "https://ypakala.com"
 date: 2014-05-31 19:46
 tags:
 - javascript
